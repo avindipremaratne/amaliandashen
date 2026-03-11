@@ -1,0 +1,213 @@
+{
+  "id": "4a90542a-9278-41f9-8d73-ce9ee90afc72",
+  "initialPrompt": "Create a website inspired by https://wedding-invitation-68o0.onrender.com/",
+  "siteName": "wedding-invitation-68o0.onrender.com",
+  "brandBook": {
+    "tones": [
+      "traditional",
+      "medium"
+    ],
+    "designStyle": {
+      "primaryStyle": [
+        "Elegant"
+      ],
+      "supportingStyles": [
+        "Minimalist",
+        "Classic"
+      ]
+    },
+    "toneOfVoice": "Elegant, Romantic, Personal, Informative, Sophisticated",
+    "graphicElements": {
+      "icons": "Minimalist, line-based icons in white or a subtle metallic accent color, used sparingly for navigation or information cues.",
+      "stickers": "None.",
+      "illustrations": "None, focus on photography and typography."
+    },
+    "designSummary": "**The Timeless Romance: A Fusion of Classic Elegance and Digital Intimacy**\n\nThe vision is to create a digital wedding invitation that embodies timeless romance and sophisticated elegance, mirroring the quiet luxury of a high-end event. The design will leverage generous whitespace and a refined dark color palette to evoke a sense of calm and exclusivity. Typography will be the hero, with a classic serif for headings and a clean sans-serif for body text, ensuring readability and a premium feel. The overall aesthetic aims to be inviting, personal, and memorable, guiding guests through the wedding details with grace and clarity.\n\n**Execution Blueprint:**\n1. **Layout Philosophy:** Embrace a symmetrical, balanced layout with ample negative space. Content sections will be clearly defined by whitespace and subtle typographic hierarchy, avoiding clutter.\n2. **Typography as Ornament:** Headlines will use an elegant script font to convey romance, while body text will be in a highly legible, clean sans-serif. This contrast creates visual interest and guides the user's eye.\n3. **Color Harmony:** A dark, sophisticated background will be paired with a rich, deep primary color and a subtle accent. Text will be light for maximum contrast and readability.\n4. **Component Refinement:** Buttons and interactive elements will be understated, focusing on clean lines and clear calls to action, avoiding heavy styling or ornamentation.\n5. **Spatial Rhythm:** A consistent 8px base unit will govern all spacing, ensuring a harmonious and polished visual rhythm throughout the site.",
+    "layout": {
+      "grid": {
+        "margins": "Generous, creating distinct content blocks",
+        "padding": "Consistent, applied within content blocks to frame information",
+        "compositionApproach": "Symmetrical 12-column grid with clear section breaks",
+        "spacing": {
+          "gaps": "Base unit: 8px. Grid gaps are 24px (3x base unit).",
+          "rows": "Flexible, based on content",
+          "columns": "12 columns",
+          "compositionApproach": "Not specified"
+        }
+      },
+      "layoutDna": {
+        "contrastSpectrum": "High contrast between dark backgrounds and light text/elements",
+        "densitySpectrum": "Spacious, with generous negative space",
+        "textVsImageEmphasis": "Balanced, with elegant typography taking precedence in informational sections, and imagery used for atmosphere and key moments",
+        "complexitySpectrum": "Low, focusing on clarity and essential information",
+        "gridAlignmentSpectrum": "Symmetrical and balanced, with elements aligned to a strict grid",
+        "negativeSpaceUsage": "Extensive, used to create a sense of luxury and focus"
+      },
+      "heroSectionLayout": "**Elegant Monogram Reveal**\nComposition (Tailwind Spec): Full-screen container (h-screen grid place-items-center p-8). A large, stylized monogram of 'D & H' (using 'Great Vibes' or a similar decorative font) is centered. Below it, the wedding date 'December 13, 2025' in 'Montserrat' (text-xl font-bold).\nSignature Hook (Framer Motion Spec): The monogram and date elements use Framer Motion's `variants` for a staggered fade-in and slight upward translation. `initial={{ opacity: 0, y: 30 }}` and `animate={{ opacity: 1, y: 0 }}` with a `transition: { staggerChildren: 0.1, delayChildren: 0.5 }` on the parent container."
+    },
+    "components": {
+      "images": "Layout Role: Full-bleed background for atmospheric sections, or carefully placed within content blocks to complement text. | Gallery Type: Simple, elegant grid or carousel for photo uploads, with clean borders or no borders.",
+      "buttons": "Primary: background-color: #863D24, color: #FFFFFF, border-radius: 0px, padding: 12px 24px, font-weight: 600. Secondary: background-color: transparent, color: #FFFFFF, border: 1px solid #FFFFFF, border-radius: 0px, padding: 12px 24px, font-weight: 500.",
+      "containers": "Method: Whitespace, Style: Significant vertical margins (e.g., 80px) between sections. Content blocks may have a subtle background overlay or be defined purely by typography and spacing."
+    },
+    "palette": {
+      "colors": {
+        "customColors": [
+          {
+            "name": "accent",
+            "value": "#863D24"
+          },
+          {
+            "name": "link",
+            "value": "#D4CDBF"
+          },
+          {
+            "name": "destructive",
+            "value": "#ff0000"
+          },
+          {
+            "name": "destructiveForeground",
+            "value": "#FFFFFF"
+          }
+        ],
+        "background": "#000000",
+        "secondary": "#000000",
+        "foreground": "#FFFFFF",
+        "secondaryForeground": "#FFFFFF",
+        "primaryForeground": "#FFFFFF",
+        "primary": "#863D24"
+      },
+      "paletteUsageGuide": "The primary color (#863D24) is used for key calls to action and decorative elements. The background is a deep black (#000000), providing a sophisticated canvas. Primary text is white (#FFFFFF) for high contrast and readability. The accent color is the same as primary, reinforcing brand identity. A link color (#D4CDBF) is used for subtle interactive elements and secondary text.",
+      "paletteAccessibilityNotes": "Ensure sufficient contrast between text colors and background colors. The primary color (#863D24) has good contrast against the white foreground (#FFFFFF) for buttons. White text (#FFFFFF) on black background (#000000) meets WCAG AA contrast requirements. The link color (#D4CDBF) should be tested for contrast against its background when used."
+    },
+    "typography": {
+      "headings": {
+        "font": {
+          "fontFamily": "Great Vibes",
+          "role": "heading",
+          "fontJustification": ""
+        },
+        "headingsAccessibilityNotes": "The script font 'Great Vibes' can be challenging for users with visual impairments or cognitive differences. Limit its use to large display headings and ensure body text is highly legible. Avoid using it for small text or critical information.",
+        "headingsSimilarFonts": [],
+        "headingsUsageGuide": "Use 'Great Vibes' for all major headings, titles, and prominent text elements to convey a romantic and elegant feel. Ensure sufficient size and spacing for legibility."
+      },
+      "paragraphs": {
+        "font": {
+          "fontFamily": "Montserrat",
+          "role": "body",
+          "fontJustification": ""
+        },
+        "paragraphsUsageGuide": "Use 'Montserrat' for all body text, descriptions, and informational content. This clean sans-serif font ensures excellent readability and complements the elegance of the headings.",
+        "paragraphsSimilarFonts": [],
+        "paragraphsAccessibilityNotes": "'Montserrat' is a highly legible sans-serif font, suitable for body text. Ensure adequate font size and line height for comfortable reading."
+      },
+      "customFontFamilies": {},
+      "fontSizes": [
+        {
+          "name": "xs",
+          "size": "0.75rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0.02em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "sm",
+          "size": "0.875rem",
+          "lineHeight": "1.3",
+          "letterSpacing": "0.03em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "base",
+          "size": "1rem",
+          "lineHeight": "1.5",
+          "letterSpacing": "0.03em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "lg",
+          "size": "1.125rem",
+          "lineHeight": "1.5",
+          "letterSpacing": "0.04em",
+          "fontWeight": "500"
+        },
+        {
+          "name": "xl",
+          "size": "1.25rem",
+          "lineHeight": "1.4",
+          "letterSpacing": "0.04em",
+          "fontWeight": "500"
+        },
+        {
+          "name": "2xl",
+          "size": "1.5rem",
+          "lineHeight": "1.3",
+          "letterSpacing": "0.05em",
+          "fontWeight": "600"
+        },
+        {
+          "name": "3xl",
+          "size": "1.875rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0.05em",
+          "fontWeight": "600"
+        },
+        {
+          "name": "4xl",
+          "size": "2.25rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0.06em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "5xl",
+          "size": "3rem",
+          "lineHeight": "1.1",
+          "letterSpacing": "0.06em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "6xl",
+          "size": "3.75rem",
+          "lineHeight": "1.1",
+          "letterSpacing": "0.07em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "7xl",
+          "size": "4.5rem",
+          "lineHeight": "1.05",
+          "letterSpacing": "0.07em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "8xl",
+          "size": "6rem",
+          "lineHeight": "1.05",
+          "letterSpacing": "0.08em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "9xl",
+          "size": "8rem",
+          "lineHeight": "1.05",
+          "letterSpacing": "0.08em",
+          "fontWeight": "700"
+        }
+      ],
+      "welcomeSectionTypography": {
+        "placement": "Centered, prominent display",
+        "implementation": "Large 'Great Vibes' font for the couple's names, followed by 'Montserrat' for the wedding date and a brief tagline."
+      }
+    },
+    "originImagesUrls": []
+  },
+  "attachments": {
+    "contentImagesUrls": [],
+    "inspirationImagesUrls": [
+      "https://wixmp-c562ea68f10846b458285ce5.wixmp.com/scraped-screenshots/screenshot-1773202171017.webp"
+    ]
+  },
+  "status": "READY",
+  "plan": "\n\n```json\n{\n  \"sections\": [\n    {\n      \"id\": \"overview\",\n      \"title\": \"## Overview\",\n      \"content\": \"This website is a wedding invitation site for Dilum and Heshani's wedding celebration on December 13, 2025, featuring event details, schedule, RSVP functionality, and photo sharing capabilities.\"\n    },\n    {\n      \"id\": \"key-features\",\n      \"title\": \"## Key features\",\n      \"content\": \"- **View Wedding Details**: Display the couple's names, wedding date, venue information, and event schedule.\\n- **View Event Schedule**: Show the timeline of wedding day activities including ceremony time, reception, cocktail hour, dinner, toasts, and fireworks.\\n- **Submit RSVP**: Allow guests to confirm their attendance for the wedding.\\n- **Upload Photos**: Enable guests to share their memories by uploading photos from the event.\\n- **View Contact Information**: Display contact details for both Dilum and Heshani for guest communication.\",\n      \"metadata\": [\n        { \"id\": \"view-wedding-details\", \"name\": \"View Wedding Details\" },\n        { \"id\": \"view-event-schedule\", \"name\": \"View Event Schedule\" },\n        { \"id\": \"submit-rsvp\", \"name\": \"Submit RSVP\" },\n        { \"id\": \"upload-photos\", \"name\": \"Upload Photos\" },\n        { \"id\": \"view-contact-information\", \"name\": \"View Contact Information\" }\n      ]\n    },\n    {\n      \"id\": \"structure\",\n      \"title\": \"## Structure\",\n      \"content\": \"- **Header (Reusable)**: Contains the couple's names and navigation links to key sections.\\n- **Home Page**: Displays the wedding announcement, couple's names, wedding date, and main call-to-action for RSVP.\\n- **Event Details Page**: Shows the complete wedding schedule including ceremony location (St. Mary's Church at 3:30 PM) and reception venue (Hotel Royal Ramesses at 7:00 PM) with detailed timeline of activities.\\n- **RSVP Page**: Features a form for guests to confirm their attendance and provide necessary details.\\n- **Photo Gallery Page**: Allows guests to upload and view shared wedding photos and memories.\\n- **Contact Page**: Displays contact information for Dilum and Heshani for guest inquiries.\\n- **Footer (Reusable)**: Contains additional links and wedding information.\"\n    }\n  ],\n  \"apps\": [\n    {\n      \"id\": \"wix-cms\",\n      \"keyFeatures\": [\n        { \"id\": \"view-wedding-details\", \"name\": \"View Wedding Details\" },\n        { \"id\": \"view-event-schedule\", \"name\": \"View Event Schedule\" },\n        { \"id\": \"submit-rsvp\", \"name\": \"Submit RSVP\" },\n        { \"id\": \"upload-photos\", \"name\": \"Upload Photos\" },\n        { \"id\": \"view-contact-information\", \"name\": \"View Contact Information\" }\n      ]\n    }\n  ],\n  \"version\": \"4.0.1\"\n}\n```"
+}
