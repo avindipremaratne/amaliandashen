@@ -9,9 +9,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-heading text-2xl md:text-3xl text-foreground tracking-wide">
-            Dilum & Heshani
-          </Link>
+          <Link to="/" className="font-heading text-2xl md:text-3xl text-foreground tracking-wide">Amali & Ashen</Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
