@@ -127,7 +127,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-stone-50 font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Header />
-      
       {/* 1. HERO SECTION */}
       <section className="relative h-[85vh] min-h-[600px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -161,14 +160,11 @@ export default function HomePage() {
                 Save the Date
               </p>
               <div className="w-12 h-[1px] bg-primary/60 my-2" />
-              <p className="text-white/90 tracking-[0.2em] text-xs md:text-sm uppercase">
-                13 December 2025
-              </p>
+              <p className="text-white/90 tracking-[0.2em] text-xs md:text-sm uppercase">A</p>
             </div>
           </FadeIn>
         </div>
       </section>
-
       {/* 2. INVITATION & COUNTDOWN SECTION */}
       <section className="py-24 bg-stone-50 relative">
         <div className="container mx-auto px-4 flex flex-col items-center">
@@ -216,7 +212,6 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
-
       {/* 3. TIMING / SCHEDULE SECTION */}
       <section className="py-24 bg-stone-100 relative border-t border-stone-200">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -272,7 +267,6 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
-
       {/* 4. ADDRESS / VENUE SECTION */}
       <section className="py-24 bg-[#EBE9E4] relative overflow-hidden">
         {/* Subtle background texture/image */}
@@ -328,7 +322,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* 5. RSVP & CONTACT SECTION */}
       <section className="py-24 bg-stone-50 relative">
         <div className="container mx-auto px-4 flex flex-col items-center">
@@ -432,7 +425,6 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
-
       {/* 6. GALLERY SECTION */}
       <section className="py-24 bg-stone-100 border-t border-stone-200">
         <div className="container mx-auto px-4">
@@ -500,7 +492,6 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
-
       <Footer />
     </div>
   );
