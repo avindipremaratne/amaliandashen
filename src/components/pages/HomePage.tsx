@@ -182,21 +182,32 @@ export default function HomePage() {
               The Day is Coming!
             </h2>
             
-            <div className="flex justify-center items-center gap-4 md:gap-8 text-stone-800">
+            <div className="flex justify-center items-center gap-3 md:gap-6 text-stone-800">
               {[
                 { value: countdown.days, label: 'Days' },
                 { value: countdown.hours, label: 'Hours' },
                 { value: countdown.minutes, label: 'Minutes' },
                 { value: countdown.seconds, label: 'Seconds' }
               ].map((item, index) => (
-                <div key={index} className="flex flex-col items-center w-16 md:w-24">
-                  <span className="text-4xl md:text-6xl font-bold font-heading tracking-tighter">
+                <motion.div 
+                  key={index} 
+                  className="flex flex-col items-center w-16 md:w-24 bg-white/50 backdrop-blur-sm p-4 md:p-6 rounded-lg border border-stone-200/50 hover:bg-white/70 transition-all duration-300"
+                  whileHover={{ scale: 1.05, y: -4 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                >
+                  <motion.span 
+                    key={`${index}-${item.value}`}
+                    className="text-4xl md:text-6xl font-bold font-heading tracking-tighter text-primary"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     {String(item.value).padStart(2, '0')}
-                  </span>
-                  <span className="text-xs md:text-sm uppercase tracking-widest text-stone-500 mt-2">
+                  </motion.span>
+                  <span className="text-xs md:text-sm uppercase tracking-widest text-stone-500 mt-2 font-medium">
                     {item.label}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </FadeIn>
