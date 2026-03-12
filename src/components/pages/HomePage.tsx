@@ -60,7 +60,7 @@ export default function HomePage() {
 
   // Countdown Logic
   useEffect(() => {
-    const weddingDate = new Date('2025-12-13T15:30:00').getTime();
+    const weddingDate = new Date('2026-08-27T15:30:00').getTime();
     
     const updateCountdown = () => {
       const now = new Date().getTime();
