@@ -21,7 +21,9 @@ export default {
             fontFamily: {
                 heading: ["Roboto"],
                 paragraph: ["Montserrat"],
-                montserrat: ["montserrat", "sans-serif"]
+                montserrat: ["montserrat", "sans-serif"],
+                "luxurious-script": ["luxurious-script", "cursive"],
+                "dancing-script": ["dancing script", "cursive"]
             },
             colors: {
                 primary: '#863D24',
