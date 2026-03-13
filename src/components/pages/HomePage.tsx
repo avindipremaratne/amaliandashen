@@ -159,7 +159,7 @@ export default function HomePage() {
               <p className="text-white/90 tracking-[0.3em] font-medium uppercase font-montserrat text-2xl md:text-4xl">
                 Save the Date
               </p>
-              <p className="text-white/90 tracking-[0.2em] uppercase text-5xl md:text-4xl">27th August 2026</p>
+              <p className="text-white/90 tracking-[0.2em] uppercase text-5xl md:text-4xl">27 | August | 2026</p>
             <div className="w-12 h-[1px] bg-primary/60 my-2" />
               </div>
           </FadeIn>
