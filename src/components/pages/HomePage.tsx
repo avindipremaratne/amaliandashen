@@ -149,11 +149,13 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white leading-tight mb-4"
-            style={{ fontFamily: "Parisienne, cursive" }}>
-              Amali & Ashen
-            </h1>
-          </FadeIn>
+  <h1
+    className="text-5xl md:text-7xl lg:text-8xl text-white mb-4"
+    style={{ fontFamily: "Parisienne, cursive", fontWeight: 400 }}
+  >
+    Amali & Ashen
+  </h1>
+</FadeIn>
 
           <FadeIn delay={0.6}>
             <div className="flex flex-col items-center gap-2 mt-4">
