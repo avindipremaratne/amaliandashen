@@ -149,7 +149,8 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-white font-light tracking-wide mb-4" style={{ fontFamily: "Great Vibes, cursive" }}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white leading-tight mb-4"
+            style={{ fontFamily: "Parisienne, cursive" }}>
               Amali & Ashen
             </h1>
           </FadeIn>
