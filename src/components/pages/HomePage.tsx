@@ -149,25 +149,33 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.4}>
-  <h1
-    className="text-5xl md:text-7xl lg:text-[110px] text-white mb-4 leading-tight"
-    style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
-  >
-    Amali & Ashen
-  </h1>
-</FadeIn>
-
-
+            <h1
+              className="text-5xl md:text-7xl lg:text-[110px] text-white mb-4 leading-tight"
+              style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
+            >
+              Amali & Ashen
+            </h1>
+          </FadeIn>
 
           <FadeIn delay={0.6}>
-            <div className="flex flex-col items-center gap-2 mt-4">
-              <p className="text-white/90 tracking-[0.50em] font-medium uppercase font-montserrat text-2xl md:text-4xl" style={{ letterSpacing: "0.10em" }}>
+            <div className="flex flex-col items-center gap-2 mt-4 px-4 text-center">
+              <p
+                className="text-white/90 font-medium uppercase font-montserrat text-base sm:text-lg md:text-2xl lg:text-3xl"
+                style={{ letterSpacing: "0.28em" }}
+              >
                 SAVE THE DATE
               </p>
-              <p className="text-white/90 tracking-[0.2em] uppercase text-5xl md:text-4xl" style={{ letterSpacing: "0.10em" }}>27 | August | 2026</p>
-            <div className="w-12 h-[1px] bg-primary/60 my-2" />
-              </div>
-          </FadeIn>
+
+              <p
+                className="text-white/90 uppercase text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+                style={{ letterSpacing: "0.10em" }}
+              >
+                27 | August | 2026
+              </p>
+
+    <div className="w-10 sm:w-12 md:w-14 h-px bg-primary/60 my-2" />
+  </div>
+</FadeIn>
         </div>
       </section>
       {/* 2. INVITATION & COUNTDOWN SECTION */}
