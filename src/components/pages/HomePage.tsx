@@ -1,14 +1,14 @@
 // WI-HPI
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Calendar, MapPin, Phone, MessageCircle, ChevronRight, Loader2 } from 'lucide-react';
-import { Image } from '@/components/ui/image';
-import { Button } from '@/components/ui/button';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { BaseCrudService } from '@/integrations';
+import Header from '@/components/Header';
+import { Button } from '@/components/ui/button';
+import { Image } from '@/components/ui/image';
 import { EventSchedule, GuestPhotos } from '@/entities';
+import { BaseCrudService } from '@/integrations';
+import { motion } from 'framer-motion';
+import { Calendar, Loader2, MapPin, MessageCircle, Phone } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // --- Animation Components ---
 
@@ -157,7 +157,7 @@ export default function HomePage() {
           <FadeIn delay={0.6}>
             <div className="flex flex-col items-center gap-2 mt-4">
               <p className="text-white/90 tracking-[0.10em] font-medium uppercase font-montserrat text-2xl md:text-4xl">
-                SAVE THE DATE
+                S AVE THE DATE
               </p>
               <p className="text-white/90 tracking-[0.2em] uppercase text-5xl md:text-4xl">27 | August | 2026</p>
             <div className="w-12 h-[1px] bg-primary/60 my-2" />
