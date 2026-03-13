@@ -156,7 +156,7 @@ export default function HomePage() {
           
           <FadeIn delay={0.6}>
             <div className="flex flex-col items-center gap-2 mt-4">
-              <p className="text-white/90 tracking-[0.3em] font-medium uppercase font-montserrat text-2xl md:text-4xl">
+              <p className="text-white/90 tracking-[0.5em] font-medium uppercase font-montserrat text-2xl md:text-4xl">
                 Save the Date
               </p>
               <p className="text-white/90 tracking-[0.2em] uppercase text-5xl md:text-4xl">27 | August | 2026</p>
