@@ -148,12 +148,21 @@ export default function HomePage() {
             />
           </FadeIn>
 
-          <FadeIn delay={0.4}>
+          {/* <FadeIn delay={0.4}>
   <h1
     className="text-5xl md:text-7xl lg:text-8xl text-white mb-4"
     style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
   >
     Amali & Ashen
+  </h1>
+</FadeIn> */}
+
+<FadeIn delay={0.4}>
+  <h1
+    className="text-4xl md:text-6xl lg:text-7xl text-white mb-4 leading-tight"
+    style={{ fontFamily: "Ephesis, cursive" }}
+  >
+    Amali <span className="text-3xl md:text-5xl lg:text-6xl">&</span> Ashen
   </h1>
 </FadeIn>
 
