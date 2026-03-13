@@ -12,15 +12,15 @@ import { EventSchedule, GuestPhotos } from '@/entities';
 
 // --- Animation Components ---
 
-const FadeIn = ({ 
-  children, 
-  delay = 0, 
-  className = "", 
+const FadeIn = ({
+  children,
+  delay = 0,
+  className = "",
   direction = "up",
   duration = 0.7
-}: { 
-  children: React.ReactNode; 
-  delay?: number; 
+}: {
+  children: React.ReactNode;
+  delay?: number;
   className?: string;
   direction?: "up" | "down" | "left" | "right" | "none";
   duration?: number;
@@ -50,7 +50,7 @@ const FadeIn = ({
 
 export default function HomePage() {
   const navigate = useNavigate();
-  
+
   // State
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [scheduleItems, setScheduleItems] = useState<EventSchedule[]>([]);
@@ -61,11 +61,11 @@ export default function HomePage() {
   // Countdown Logic
   useEffect(() => {
     const weddingDate = new Date('2026-08-27T15:30:00').getTime();
-    
+
     const updateCountdown = () => {
       const now = new Date().getTime();
       const distance = weddingDate - now;
-      
+
       if (distance > 0) {
         setCountdown({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -75,7 +75,7 @@ export default function HomePage() {
         });
       }
     };
-    
+
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
     return () => clearInterval(interval);
@@ -130,33 +130,33 @@ export default function HomePage() {
       {/* 1. HERO SECTION */}
       <section className="relative h-[85vh] min-h-[600px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="https://wedding-invitation-68o0.onrender.com/Hero%20image.jpeg" 
+          <Image
+            src="https://wedding-invitation-68o0.onrender.com/Hero%20image.jpeg"
             alt="Dilum and Heshani"
             className="w-full h-full object-cover object-top"
           />
           {/* Gradient overlay to ensure text readability while keeping the image visible */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent" />
         </div>
-        
+
         <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl">
           <FadeIn delay={0.2} direction="down">
-            <Image 
-              src="https://wedding-invitation-68o0.onrender.com/DH.png" 
+            <Image
+              src="https://wedding-invitation-68o0.onrender.com/DH.png"
               alt="DH Logo"
               className="w-16 h-16 md:w-20 md:h-20 mb-6 object-contain opacity-90"
             />
           </FadeIn>
-          
+
           <FadeIn delay={0.4}>
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-white font-light tracking-wide mb-4" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
               Amali & Ashen
             </h1>
           </FadeIn>
-          
+
           <FadeIn delay={0.6}>
             <div className="flex flex-col items-center gap-2 mt-4">
-              <p className="text-white/90 tracking-[0.15em] font-medium uppercase font-montserrat text-2xl md:text-4xl">
+              <p className="text-white/90 tracking-[0.10em] font-medium uppercase font-montserrat text-2xl md:text-4xl">
                 S A V E   T H E   D A T E
               </p>
               <p className="text-white/90 tracking-[0.2em] uppercase text-5xl md:text-4xl">27 | August | 2026</p>
@@ -168,9 +168,9 @@ export default function HomePage() {
       {/* 2. INVITATION & COUNTDOWN SECTION */}
       <section className="py-24 bg-stone-50 relative">
         <div className="container mx-auto px-4 flex flex-col items-center">
-          
+
           <FadeIn className="w-full max-w-md mx-auto mb-20">
-            <Image 
+            <Image
               src="https://wedding-invitation-68o0.onrender.com/fullinvitation.png"
               alt="Wedding Invitation Envelope"
               className="w-full h-auto drop-shadow-2xl hover:scale-[1.02] transition-transform duration-700"
@@ -181,7 +181,7 @@ export default function HomePage() {
             <h2 className="font-heading text-4xl md:text-5xl text-stone-800 mb-8" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
               The Day is Coming!
             </h2>
-            
+
             <div className="flex justify-center items-center gap-3 md:gap-6 text-stone-800">
               {[
                 { value: countdown.days, label: 'Days' },
@@ -189,13 +189,13 @@ export default function HomePage() {
                 { value: countdown.minutes, label: 'Minutes' },
                 { value: countdown.seconds, label: 'Seconds' }
               ].map((item, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   className="flex flex-col items-center w-16 md:w-24 bg-white/50 backdrop-blur-sm p-4 md:p-6 rounded-lg border border-stone-200/50 hover:bg-white/70 transition-all duration-300"
                   whileHover={{ scale: 1.05, y: -4 }}
                   transition={{ type: "spring", stiffness: 300, damping: 10 }}
                 >
-                  <motion.span 
+                  <motion.span
                     key={`${index}-${item.value}`}
                     className="text-4xl md:text-6xl font-bold font-heading tracking-tighter text-primary"
                     initial={{ opacity: 0, y: 10 }}
@@ -214,7 +214,7 @@ export default function HomePage() {
 
           <FadeIn delay={0.4} className="w-full max-w-5xl mt-12">
             <div className="relative aspect-[21/9] overflow-hidden rounded-sm">
-              <Image 
+              <Image
                 src="https://wedding-invitation-68o0.onrender.com/countdownImage.jpg"
                 alt="Couple on beach"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
@@ -243,12 +243,12 @@ export default function HomePage() {
                   <FadeIn key={item._id || index} delay={index * 0.1} direction="left" className="relative pl-8 md:pl-16">
                     {/* Timeline Dot */}
                     <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_0_4px_rgba(134,61,36,0.1)]" />
-                    
+
                     {/* Time */}
                     <div className="md:absolute md:-left-36 md:top-0 md:w-28 md:text-right font-heading text-stone-900 font-semibold text-lg mb-2 md:mb-0">
                       {item.startTime}
                     </div>
-                    
+
                     {/* Content */}
                     <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow duration-300">
                       <h3 className="font-heading text-xl text-stone-900 mb-2">{item.eventName}</h3>
@@ -269,7 +269,7 @@ export default function HomePage() {
               Come join us and happily ever after!
             </p>
             <div className="relative aspect-[21/9] overflow-hidden rounded-sm max-w-5xl mx-auto">
-              <Image 
+              <Image
                 src="https://wedding-invitation-68o0.onrender.com/timeline.jpg"
                 alt="Couple with car"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
@@ -282,7 +282,7 @@ export default function HomePage() {
       <section className="py-24 bg-[#EBE9E4] relative overflow-hidden">
         {/* Subtle background texture/image */}
         <div className="absolute inset-0 opacity-20 mix-blend-multiply">
-          <Image 
+          <Image
             src="https://wedding-invitation-68o0.onrender.com/Elegant%20Event.png"
             alt="Texture"
             className="w-full h-full object-cover"
@@ -305,7 +305,7 @@ export default function HomePage() {
               <h3 className="font-heading text-2xl text-stone-900 mb-4">Wedding Ceremony</h3>
               <p className="text-stone-600 mb-2">St. Mary&apos;s Church, Thudella, Ja ela</p>
               <p className="text-stone-600 font-medium mb-8">Time : 3.30PM</p>
-              <Button 
+              <Button
                 onClick={() => window.open('https://maps.google.com/?q=St.+Mary\'s+Church+Thudella+Ja+ela', '_blank')}
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-white rounded-none px-8 py-6 tracking-widest uppercase text-xs transition-all duration-300"
@@ -322,7 +322,7 @@ export default function HomePage() {
               <h3 className="font-heading text-2xl text-stone-900 mb-4">Reception</h3>
               <p className="text-stone-600 mb-2">Hotel Royal Ramesses, Adriana Ballroom, Seeduwa</p>
               <p className="text-stone-600 font-medium mb-8">Time : 7.00PM</p>
-              <Button 
+              <Button
                 onClick={() => window.open('https://maps.google.com/?q=Hotel+Royal+Ramesses+Seeduwa', '_blank')}
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-white rounded-none px-8 py-6 tracking-widest uppercase text-xs transition-all duration-300"
@@ -336,11 +336,11 @@ export default function HomePage() {
       {/* 5. RSVP & CONTACT SECTION */}
       <section className="py-24 bg-stone-50 relative">
         <div className="container mx-auto px-4 flex flex-col items-center">
-          
+
           {/* Dark RSVP Card */}
           <FadeIn className="w-full max-w-md bg-[#111111] text-white p-12 flex flex-col items-center text-center shadow-2xl mb-16 relative overflow-hidden group">
             <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700">
-              <Image 
+              <Image
                 src="https://wedding-invitation-68o0.onrender.com/Rsvp.jpeg"
                 alt="RSVP Background"
                 className="w-full h-full object-cover"
@@ -348,18 +348,18 @@ export default function HomePage() {
             </div>
             <div className="relative z-10 flex flex-col items-center w-full">
               <p className="text-xs tracking-[0.3em] text-stone-400 mb-8 uppercase">Dilum & Heshani</p>
-              
+
               {/* Stylized RSVP Text */}
               <div className="relative w-full flex justify-center items-center my-8">
                 <h2 className="text-7xl md:text-8xl font-heading font-light tracking-widest" style={{ fontFamily: "'Playfair Display', serif" }}>
                   RSVP
                 </h2>
               </div>
-              
+
               <p className="text-xs tracking-[0.2em] text-stone-400 mt-8 mb-2 uppercase">Kindly Respond By</p>
               <p className="text-2xl font-heading tracking-widest uppercase">Nov 30</p>
-              
-              <Button 
+
+              <Button
                 onClick={() => navigate('/rsvp')}
                 className="mt-10 bg-white text-black hover:bg-stone-200 rounded-none px-10 py-6 tracking-widest uppercase text-xs transition-all duration-300 w-full"
               >
@@ -381,7 +381,7 @@ export default function HomePage() {
                 Contact Heshani
               </h3>
               <div className="flex flex-col gap-3">
-                <Button 
+                <Button
                   onClick={() => window.open('https://wa.me/94764919991', '_blank')}
                   variant="outline"
                   className="w-full border-stone-300 text-stone-700 hover:bg-stone-50 rounded-none flex items-center justify-center gap-2"
@@ -389,7 +389,7 @@ export default function HomePage() {
                   <MessageCircle size={16} />
                   WhatsApp
                 </Button>
-                <Button 
+                <Button
                   onClick={() => window.open('tel:+94764919991', '_blank')}
                   variant="outline"
                   className="w-full border-stone-300 text-stone-700 hover:bg-stone-50 rounded-none flex items-center justify-center gap-2"
@@ -405,7 +405,7 @@ export default function HomePage() {
                 Contact Dilum
               </h3>
               <div className="flex flex-col gap-3">
-                <Button 
+                <Button
                   onClick={() => window.open('https://wa.me/94775314997', '_blank')}
                   variant="outline"
                   className="w-full border-stone-300 text-stone-700 hover:bg-stone-50 rounded-none flex items-center justify-center gap-2"
@@ -413,7 +413,7 @@ export default function HomePage() {
                   <MessageCircle size={16} />
                   WhatsApp
                 </Button>
-                <Button 
+                <Button
                   onClick={() => window.open('tel:+94775314997', '_blank')}
                   variant="outline"
                   className="w-full border-stone-300 text-stone-700 hover:bg-stone-50 rounded-none flex items-center justify-center gap-2"
@@ -426,7 +426,7 @@ export default function HomePage() {
           </div>
 
           <FadeIn delay={0.5}>
-            <Button 
+            <Button
               onClick={handleAddToCalendar}
               className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 py-6 tracking-widest uppercase text-xs transition-all duration-300 flex items-center gap-2"
             >
@@ -465,12 +465,12 @@ export default function HomePage() {
                   if (index === 6) spanClasses = "col-span-2 row-span-1";
 
                   return (
-                    <FadeIn 
-                      key={photo._id || index} 
-                      delay={index * 0.1} 
+                    <FadeIn
+                      key={photo._id || index}
+                      delay={index * 0.1}
                       className={`relative overflow-hidden group ${spanClasses}`}
                     >
-                      <Image 
+                      <Image
                         src={photo.photo || 'https://static.wixstatic.com/media/b5e630_50292974e6234a2a9755f1575991a807~mv2.png?originWidth=192&originHeight=192'}
                         alt={photo.caption || 'Journey moment'}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -486,7 +486,7 @@ export default function HomePage() {
           </div>
 
           <FadeIn delay={0.4} className="mt-24 flex flex-col items-center text-center">
-            <Image 
+            <Image
               src="https://wedding-invitation-68o0.onrender.com/ovalshape.png"
               alt="Decorative"
               className="w-32 h-auto mb-8 opacity-60"
@@ -494,7 +494,7 @@ export default function HomePage() {
             <h3 className="font-heading text-2xl text-stone-800 mb-8" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
               Share Your Memories with us on our wedding day
             </h3>
-            <Button 
+            <Button
               onClick={() => navigate('/gallery')}
               className="bg-primary hover:bg-primary/90 text-white rounded-none px-10 py-6 tracking-widest uppercase text-xs transition-all duration-300"
             >
