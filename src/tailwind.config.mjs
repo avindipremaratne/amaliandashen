@@ -19,8 +19,9 @@ export default {
                 '9xl': ['6rem', { lineHeight: '1', letterSpacing: '-0.01em', fontWeight: 'bold' }],
             },
             fontFamily: {
-                heading: "Roboto",
-                paragraph: "Montserrat"
+                heading: ["Roboto"],
+                paragraph: ["Montserrat"],
+                montserrat: ["montserrat", "sans-serif"]
             },
             colors: {
                 primary: '#863D24',
