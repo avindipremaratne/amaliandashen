@@ -133,7 +133,7 @@ export default function HomePage() {
           <Image
             src="https://wedding-invitation-68o0.onrender.com/Hero%20image.jpeg"
             alt="Dilum and Heshani"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-center"
           />
           {/* Gradient overlay to ensure text readability while keeping the image visible */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent" />
@@ -191,7 +191,7 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.2} className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl text-stone-800 mb-8" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
+            <h2 className="font-heading text-4xl md:text-5xl text-stone-800 mb-8" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}>
               The Day is Coming!
             </h2>
 
