@@ -150,7 +150,7 @@ export default function HomePage() {
 
           <FadeIn delay={0.4}>
             <h1
-              className="text-5xl md:text-7xl lg:text-[110px] text-white mb-4 leading-tight"
+              className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight"
               style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
             >
               Amali & Ashen
