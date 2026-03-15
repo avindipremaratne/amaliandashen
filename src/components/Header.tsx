@@ -20,10 +20,16 @@ export default function Header() {
               Home
             </Link>
             <Link
-              to="/schedule"
+              to="#schedule"
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
               Schedule
+            </Link>
+            <Link
+              to="#venue"
+              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+            >
+              Venue
             </Link>
             <Link
               to="/rsvp"
