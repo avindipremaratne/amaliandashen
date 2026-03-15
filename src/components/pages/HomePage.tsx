@@ -157,7 +157,6 @@ export default function HomePage() {
               className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight font-normal "
               data-editable="true"style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
               data-editable-type="heading"
-              data-font-size="6xl"
             >
               Amali & Ashen
             </h1>
