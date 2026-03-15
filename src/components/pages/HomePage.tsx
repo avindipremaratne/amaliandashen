@@ -146,8 +146,8 @@ export default function HomePage() {
             <Image
               src="https://static.wixstatic.com/media/b5e630_4505c194d8bf4cf3b50278688e5f39a8~mv2.png"
               className="w-16 h-16 md:w-20 md:h-20 mb-6 object-contain opacity-90"
-              originWidth={7000}
-              originHeight={7000} />
+              originWidth={6250}
+              originHeight={6250} />
           </FadeIn>
 
           <FadeIn delay={0.4}>
