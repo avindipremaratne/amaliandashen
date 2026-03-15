@@ -7,7 +7,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { CheckCircle2, Phone, MessageCircle } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import FontManager from '@/components/FontManager';
 import { BaseCrudService } from '@/integrations';
 import { RSVPs } from '@/entities';
 import { useFonts } from '@/hooks/useFonts';
@@ -93,7 +92,6 @@ export default function RSVPPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <FontManager />
       
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden">
