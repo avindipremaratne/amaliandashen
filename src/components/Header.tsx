@@ -72,14 +72,14 @@ export default function Header() {
               Schedule
             </Link>
             <Link
-              to="/rsvp"
+              to="#rsvp"
               onClick={() => setIsMenuOpen(false)}
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
               RSVP
             </Link>
             <Link
-              to="/gallery"
+              to="#gallery"
               onClick={() => setIsMenuOpen(false)}
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
