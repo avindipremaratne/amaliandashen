@@ -25,9 +25,7 @@ export default {
                 "luxurious-script": ["luxurious-script", "cursive"],
                 "dancing-script": ["dancing script", "cursive"],
                 cinzel: ["cinzel", "serif"],
-                fraunces: ["fraunces", "serif"],
-                "pinyon-script": ["pinyon-script", "pinyon script", "cursive"],
-                ephesis: ["Ephesis", "cursive"]
+                fraunces: ["fraunces", "serif"]
             },
             colors: {
                 primary: '#863D24',
