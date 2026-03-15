@@ -1,12 +1,12 @@
 // WI-HPI
+import FontManager from '@/components/FontManager';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import FontManager from '@/components/FontManager';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
 import { EventSchedule, GuestPhotos } from '@/entities';
-import { BaseCrudService } from '@/integrations';
 import { useFonts } from '@/hooks/useFonts';
+import { BaseCrudService } from '@/integrations';
 import { motion } from 'framer-motion';
 import { Calendar, Loader2, MapPin, MessageCircle, Phone } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
@@ -155,7 +155,7 @@ export default function HomePage() {
           <FadeIn delay={0.4}>
             <h1
               className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight"
-              style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
+             // style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
               data-editable="true"
               data-editable-type="heading"
               data-font-family="Ephesis, cursive"

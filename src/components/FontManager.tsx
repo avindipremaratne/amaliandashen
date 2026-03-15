@@ -27,12 +27,11 @@ export default function FontManager() {
     <div className="fixed bottom-4 right-4 z-40">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+        className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-paragraph"
         aria-label="Open font manager"
       >
         🎨 Fonts
       </button>
-
       {isOpen && (
         <div className="absolute bottom-16 right-0 bg-card border border-border rounded-lg p-4 w-64 shadow-lg">
           <h3 className="font-heading text-sm font-bold text-foreground mb-4">Font Settings</h3>
