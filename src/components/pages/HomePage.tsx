@@ -155,7 +155,7 @@ export default function HomePage() {
           <FadeIn delay={0.4}>
             <h1
               className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight font-pinyon-script"
-             // style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
+              style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
               data-editable="true"
               data-editable-type="heading"
               data-font-family="Ephesis, cursive"
