@@ -128,7 +128,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-stone-50 font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Header />
       {/* 1. HERO SECTION */}
-      <section className="relative h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
+      <section id="home" className="relative h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://wedding-invitation-68o0.onrender.com/Hero%20image.jpeg"
