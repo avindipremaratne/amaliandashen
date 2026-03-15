@@ -154,8 +154,7 @@ export default function HomePage() {
 
           <FadeIn delay={0.4}>
             <h1
-              className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight font-pinyon-script"
-              style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
+              className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight font-heading"
               data-editable="true"
               data-editable-type="heading"
               data-font-family="Ephesis, cursive"
@@ -199,7 +198,7 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.2} className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl text-stone-800 mb-8" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}>
+            <h2 className="font-heading text-4xl md:text-5xl text-stone-800 mb-8">
               The Day is Coming!
             </h2>
 
