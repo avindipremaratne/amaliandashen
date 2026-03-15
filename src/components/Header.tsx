@@ -14,7 +14,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              to="/"
+              to="#home"
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
               Home
