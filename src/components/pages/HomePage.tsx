@@ -387,6 +387,32 @@ export default function HomePage() {
             </p>
           </FadeIn>
 
+          {/* Contact Columns */}
+          <div className="grid md:grid-cols-2 gap-8 w-full max-w-3xl mb-16">
+            <FadeIn delay={0.3} direction="up" className="bg-white p-8 border border-stone-200 text-center">
+              <h3 className="font-heading text-xl text-stone-900 mb-6" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
+                Contact Heshani
+              </h3>
+              <div className="flex flex-col gap-3">
+                <Button
+                  onClick={() => window.open('https://wa.me/94764919991', '_blank')}
+                  variant="outline"
+                  className="w-full border-stone-300 text-stone-700 hover:bg-stone-50 rounded-none flex items-center justify-center gap-2"
+                >
+                  <MessageCircle size={16} />
+                  WhatsApp
+                </Button>
+                <Button
+                  onClick={() => window.open('tel:+94764919991', '_blank')}
+                  variant="outline"
+                  className="w-full border-stone-300 text-stone-700 hover:bg-stone-50 rounded-none flex items-center justify-center gap-2"
+                >
+                  <Phone size={16} />
+                  Call
+                </Button>
+              </div>
+            </FadeIn>
+
             <FadeIn delay={0.4} direction="up" className="bg-white p-8 border border-stone-200 text-center">
               <h3 className="font-heading text-xl text-stone-900 mb-6" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
                 Contact Dilum
