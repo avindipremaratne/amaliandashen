@@ -292,7 +292,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* 4. ADDRESS / VENUE SECTION */}
-      <section className="py-24 bg-[#EBE9E4] relative overflow-hidden">
+      <section id="venue" className="py-24 bg-[#EBE9E4] relative overflow-hidden">
         {/* Subtle background texture/image */}
         <div className="absolute inset-0 opacity-20 mix-blend-multiply">
           <Image
