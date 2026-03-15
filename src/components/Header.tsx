@@ -58,14 +58,14 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4 border-t border-border pt-4">
             <Link
-              to="/"
+              to="#home"
               onClick={() => setIsMenuOpen(false)}
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
               Home
             </Link>
             <Link
-              to="/schedule"
+              to="#schedule"
               onClick={() => setIsMenuOpen(false)}
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
