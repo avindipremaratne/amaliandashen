@@ -1,6 +1,4 @@
-import { useFontStore, FontSettings } from '@/stores/fontStore';
-import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { FontSettings, useFontStore } from '@/stores/fontStore';
 import { useState } from 'react';
 
 const AVAILABLE_FONTS = [
@@ -23,7 +21,7 @@ export default function FontManager() {
     });
   };
 
-  return (
+  //return (
     // <div className="fixed bottom-4 right-4 z-40">
     //   <button
     //     onClick={() => setIsOpen(!isOpen)}
