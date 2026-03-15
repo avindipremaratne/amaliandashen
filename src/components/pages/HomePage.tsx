@@ -154,7 +154,7 @@ export default function HomePage() {
 
           <FadeIn delay={0.4}>
             <h1
-              className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight font-heading"
+              className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight font-pinyon-script font-normal"
               data-editable="true"
               data-editable-type="heading"
               data-font-family="Ephesis, cursive"
