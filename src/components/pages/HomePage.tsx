@@ -144,8 +144,8 @@ export default function HomePage() {
         <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl">
           <FadeIn delay={0.2} direction="down">
             <Image
-              src="https://static.wixstatic.com/media/b5e630_4505c194d8bf4cf3b50278688e5f39a8~mv2.png"
-              className="w-16 h-16 md:w-20 md:h-20 mb-6 object-contain opacity-90"
+              src="https://static.wixstatic.com/media/b5e630_ad949e3a33a4483f9a2d7ea583685e86~mv2.png"
+              className="w-16 h-16 md:w-20 md:h-20 mb-6 object-contain opacity-90 border-0 border-solid border-gray-200"
               originWidth={6250}
               originHeight={6250} />
           </FadeIn>
