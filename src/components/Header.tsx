@@ -72,6 +72,12 @@ export default function Header() {
               Schedule
             </Link>
             <Link
+              to="#venue"
+              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+            >
+              Venue
+            </Link>
+            <Link
               to="#rsvp"
               onClick={() => setIsMenuOpen(false)}
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
