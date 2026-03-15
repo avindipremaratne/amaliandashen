@@ -129,7 +129,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-stone-50 font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Header />
-
       {/* 1. HERO SECTION */}
       <section id="home" className=" scroll-mt-24 relative h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -145,10 +144,10 @@ export default function HomePage() {
         <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl">
           <FadeIn delay={0.2} direction="down">
             <Image
-              src="https://www.canva.com/design/DAHD_SSmBcA/IlaImtzo28j3ZgtPRFTYvQ/view?embed%22"
-              alt="DH Logo"
+              src="https://static.wixstatic.com/media/b5e630_3fefdd660fe14c848b53006c9340c4f0~mv2.png"
               className="w-16 h-16 md:w-20 md:h-20 mb-6 object-contain opacity-90"
-            />
+              originWidth={3000}
+              originHeight={3000} />
           </FadeIn>
 
           <FadeIn delay={0.4}>
