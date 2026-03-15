@@ -347,7 +347,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* 5. RSVP & CONTACT SECTION */}
-      <section className="py-24 bg-stone-50 relative">
+      <section id="rsvp" className="py-24 bg-stone-50 relative">
         <div className="container mx-auto px-4 flex flex-col items-center">
 
           {/* Dark RSVP Card */}
