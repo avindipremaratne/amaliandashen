@@ -23,7 +23,9 @@ export default {
                 paragraph: ["Montserrat"],
                 montserrat: ["montserrat", "sans-serif"],
                 "luxurious-script": ["luxurious-script", "cursive"],
-                "dancing-script": ["dancing script", "cursive"]
+                "dancing-script": ["dancing script", "cursive"],
+                cinzel: ["cinzel", "serif"],
+                fraunces: ["fraunces", "serif"]
             },
             colors: {
                 primary: '#863D24',
