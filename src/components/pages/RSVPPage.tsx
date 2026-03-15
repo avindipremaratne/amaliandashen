@@ -7,8 +7,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { CheckCircle2, Phone, MessageCircle } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import FontManager from '@/components/FontManager';
 import { BaseCrudService } from '@/integrations';
 import { RSVPs } from '@/entities';
+import { useFonts } from '@/hooks/useFonts';
 
 // Animated reveal component
 const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className, delay = 0 }) => {
@@ -57,6 +59,7 @@ export default function RSVPPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  useFonts(); // Initialize font system
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -90,6 +93,7 @@ export default function RSVPPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <FontManager />
       
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden">

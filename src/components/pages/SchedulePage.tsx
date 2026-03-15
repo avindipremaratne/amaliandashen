@@ -3,9 +3,11 @@ import { Image } from '@/components/ui/image';
 import { Clock, MapPin } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import FontManager from '@/components/FontManager';
 import { BaseCrudService } from '@/integrations';
 import { EventSchedule } from '@/entities';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
+import { useFonts } from '@/hooks/useFonts';
 
 // Animated reveal component
 const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className, delay = 0 }) => {
@@ -47,6 +49,7 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
 export default function SchedulePage() {
   const [scheduleItems, setScheduleItems] = useState<EventSchedule[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  useFonts(); // Initialize font system
 
   useEffect(() => {
     const fetchSchedule = async () => {
@@ -65,6 +68,7 @@ export default function SchedulePage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <FontManager />
       
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden">

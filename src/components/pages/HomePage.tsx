@@ -1,10 +1,12 @@
 // WI-HPI
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import FontManager from '@/components/FontManager';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
 import { EventSchedule, GuestPhotos } from '@/entities';
 import { BaseCrudService } from '@/integrations';
+import { useFonts } from '@/hooks/useFonts';
 import { motion } from 'framer-motion';
 import { Calendar, Loader2, MapPin, MessageCircle, Phone } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
@@ -50,6 +52,7 @@ const FadeIn = ({
 
 export default function HomePage() {
   const navigate = useNavigate();
+  useFonts(); // Initialize font system
 
   // State
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -127,6 +130,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-stone-50 font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Header />
+      <FontManager />
       {/* 1. HERO SECTION */}
       <section id="home" className=" scroll-mt-24 relative h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
