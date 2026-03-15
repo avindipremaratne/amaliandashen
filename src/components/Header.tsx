@@ -32,13 +32,13 @@ export default function Header() {
               Venue
             </Link>
             <Link
-              to="/rsvp"
+              to="#rsvp"
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
               RSVP
             </Link>
             <Link
-              to="/gallery"
+              to="#gallery"
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
               Gallery
