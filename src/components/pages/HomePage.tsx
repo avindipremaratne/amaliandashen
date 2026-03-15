@@ -450,7 +450,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* 6. GALLERY SECTION */}
-      <section className="py-24 bg-stone-100 border-t border-stone-200">
+      <section id="gallery" className="py-24 bg-stone-100 border-t border-stone-200">
         <div className="container mx-auto px-4">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl text-stone-800" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
