@@ -1,4 +1,5 @@
 // WI-HPI
+import FontManager from '@/components/FontManager';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
@@ -129,6 +130,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-stone-50 font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Header />
+      <FontManager />
       {/* 1. HERO SECTION */}
       <section id="home" className=" scroll-mt-24 relative h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
