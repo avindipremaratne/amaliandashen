@@ -161,7 +161,6 @@ export default function HomePage() {
             <div className="flex flex-col items-center gap-2 mt-4 px-4 text-center">
               <p
                 className="text-white/90 font-medium uppercase font-montserrat text-base sm:text-lg md:text-2xl lg:text-3xl"
-                style={{ letterSpacing: "0.28em" }}
               >
                 SAVE THE DATE
               </p>
