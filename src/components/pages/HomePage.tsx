@@ -154,13 +154,16 @@ export default function HomePage() {
 
   <FadeIn delay={0.6}>
     <div className="flex flex-col items-center gap-1 px-4 text-center">
-      <p className="text-white/90 font-medium uppercase text-base sm:text-lg md:text-2xl lg:text-3xl font-fraunces">
-        SAVE THE DATE
+       <p
+        className="text-white/90 text-base sm:text-lg md:text-2xl lg:text-3xl italic"
+        style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300 }}
+      >
+        Save the Date
       </p>
 
       <p
-        className="text-white/90 uppercase text-xl sm:text-2xl md:text-3xl lg:text-4xl"
-        style={{ letterSpacing: "0.10em" }}
+        className="text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+        style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, letterSpacing: "0.15em" }}
       >
         27 | August | 2026
       </p>
