@@ -156,7 +156,7 @@ export default function HomePage() {
     <div className="flex flex-col items-center gap-1 px-4 text-center">
        <p
         className="text-white/90 text-base sm:text-lg md:text-2xl lg:text-3xl"
-        style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300 }}
+        style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
       >
         SAVE THE DATE
       </p>
