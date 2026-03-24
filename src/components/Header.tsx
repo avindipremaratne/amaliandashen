@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const logoUrl = 'https://static.wixstatic.com/media/b5e630_8e5ae5ef2b3e4d56a215fa9c6c3ea0f8~mv2.png?originWidth=128&originHeight=128';
+  const logoUrl = 'https://static.wixstatic.com/media/b5e630_2011f68d0afe4bd28663c7aa8e1979d7~mv2.png?originWidth=128&originHeight=128';
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
@@ -13,12 +13,16 @@ export default function Header() {
         <div className="flex items-center justify-between gap-2">
 
           {/* Logo/Image Box */}
-              <Image
-                src={logoUrl}
-                alt="Event logo"
-                className="w-12 h-12 md:w-16 md:h-16 mb-6 object-contain opacity-90 border-0 border-solid border-gray-200"
-                width={128}
-              />
+             <div className="flex items-center h-full">
+  <Image
+    src={logoUrl}
+    alt="Event logo"
+    className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-90"
+    width={48}
+    height={48}
+    sizes="(max-width: 768px) 40px, 48px"
+  />
+</div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
