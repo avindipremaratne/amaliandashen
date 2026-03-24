@@ -143,35 +143,33 @@ export default function HomePage() {
 
         <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl">
 
-          <FadeIn delay={0.4}>
-            <h1
-              className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight font-normal "
-              data-editable="true"style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
-              data-editable-type="heading"
-            >
-              Amali & Ashen
-            </h1>
-          </FadeIn>
+  <FadeIn delay={0.4}>
+    <h1
+      className="text-6xl md:text-7xl lg:text-[130px] text-white leading-none font-normal"
+      style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
+    >
+      Amali & Ashen
+    </h1>
+  </FadeIn>
 
-          <FadeIn delay={0.6}>
-            <div className="flex flex-col items-center gap-2 mt-4 px-4 text-center">
-              <p
-                className="text-white/90 font-medium uppercase text-base sm:text-lg md:text-2xl lg:text-3xl font-fraunces"
-              >
-                SAVE THE DATE
-              </p>
+  <FadeIn delay={0.6}>
+    <div className="flex flex-col items-center gap-1 px-4 text-center">
+      <p className="text-white/90 font-medium uppercase text-base sm:text-lg md:text-2xl lg:text-3xl font-fraunces">
+        SAVE THE DATE
+      </p>
 
-              <p
-                className="text-white/90 uppercase text-xl sm:text-2xl md:text-3xl lg:text-4xl"
-                style={{ letterSpacing: "0.10em" }}
-              >
-                27 | August | 2026
-              </p>
+      <p
+        className="text-white/90 uppercase text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+        style={{ letterSpacing: "0.10em" }}
+      >
+        27 | August | 2026
+      </p>
 
-    <div className="w-10 sm:w-12 md:w-14 h-px bg-primary/60 my-2" />
-  </div>
-</FadeIn>
-        </div>
+      <div className="w-10 sm:w-12 md:w-14 h-px bg-primary/60 mt-2" />
+    </div>
+  </FadeIn>
+
+</div>
       </section>
       {/* 2. INVITATION & COUNTDOWN SECTION */}
       <section className="scroll-mt-24 py-24 bg-stone-50 relative">
