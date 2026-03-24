@@ -13,16 +13,12 @@ export default function Header() {
         <div className="flex items-center justify-between gap-4">
 
           {/* Logo/Image Box */}
-          <div className="hidden md:flex items-center">
-            <div className="relative h-12 w-32 bg-secondary/50 rounded-lg border border-border overflow-hidden flex items-center justify-center">
               <Image
                 src={logoUrl}
                 alt="Event logo"
                 className="w-16 h-16 md:w-20 md:h-20 mb-6 object-contain opacity-90 border-0 border-solid border-gray-200"
                 width={128}
               />
-            </div>
-          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
