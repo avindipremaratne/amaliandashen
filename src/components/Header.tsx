@@ -1,7 +1,7 @@
+import { Image } from '@/components/ui/image';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Header() {
               <Image
                 src={logoUrl}
                 alt="Event logo"
-                className="w-full h-full object-cover"
+                className="w-16 h-16 md:w-20 md:h-20 mb-6 object-contain opacity-90 border-0 border-solid border-gray-200"
                 width={128}
               />
             </div>
