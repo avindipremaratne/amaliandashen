@@ -145,7 +145,7 @@ export default function HomePage() {
            <FadeIn delay={0.2} direction="down">
     <Image
       src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
-      className="w-32 h-32 md:w-20 md:h-20 mb-6 object-contain opacity-90 border-0 border-solid border-gray-200"
+      className="w-32 h-32 md:w-48 md:h-48 mb-6 object-contain opacity-90 border-0 border-solid border-gray-200"
       width={80}
       height={80}
       sizes="(max-width: 768px) 64px, 80px"
