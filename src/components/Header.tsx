@@ -16,7 +16,7 @@ export default function Header() {
               <Image
                 src={logoUrl}
                 alt="Event logo"
-                className="w-16 h-16 md:w-20 md:h-20 mb-6 object-contain opacity-90 border-0 border-solid border-gray-200"
+                className="w-12 h-12 md:w-16 md:h-16 mb-6 object-contain opacity-90 border-0 border-solid border-gray-200"
                 width={128}
               />
 
