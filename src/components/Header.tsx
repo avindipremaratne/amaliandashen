@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +10,17 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
+
+          {/* Logo/Image Box */}
+          <div className="hidden md:block">
+            <Image
+              src="https://static.wixstatic.com/media/b5e630_4a6c3ecbb3ee4a8bba3fbad9386d7191~mv2.png?originWidth=128&originHeight=128"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="rounded-lg"
+            />
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
