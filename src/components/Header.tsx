@@ -20,6 +20,7 @@ export default function Header() {
                 alt="Event logo" 
                 className="w-full h-full object-cover"
                 width={128}
+                replaceable
               />
             </div>
           </div>
