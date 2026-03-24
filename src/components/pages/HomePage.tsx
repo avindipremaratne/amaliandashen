@@ -158,7 +158,7 @@ export default function HomePage() {
         className="text-white/90 text-base sm:text-lg md:text-2xl lg:text-3xl italic"
         style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300 }}
       >
-        Save the Date
+        SAVE THE DATE
       </p>
 
       <p
