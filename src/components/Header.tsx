@@ -30,7 +30,7 @@ export default function Header() {
           {/* Logo/Image Box */}
           <div className="flex items-center h-full group relative">
             <div className="relative">
-              <Image src={logoUrl} alt="Event logo" className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-90 cursor-pointer hover:opacity-100 transition-opacity"  />
+              <Image src="" alt="Event logo" className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-90 cursor-pointer hover:opacity-100 transition-opacity"  />
 
             </div>
 
