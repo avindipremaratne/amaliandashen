@@ -30,24 +30,9 @@ export default function Header() {
           {/* Logo/Image Box */}
           <div className="flex items-center h-full group relative">
             <div className="relative">
-              <Image src={logoUrl} alt="Event logo" className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-90 cursor-pointer hover:opacity-100 transition-opacity" onClick={() => setIsEditMode(!isEditMode)} />
-              {isEditMode && (
-                <div className="absolute top-full left-0 mt-2 bg-card border border-border rounded-lg p-3 shadow-lg z-50">
-                  <label className="flex items-center gap-2 cursor-pointer text-foreground hover:text-link transition-colors">
-                    <span className="text-xs font-paragraph">Change Logo</span>
-                    <input
-                      type="file"
-                      accept="image/*"
-                      onChange={handleLogoUpload}
-                      disabled={isUploadingLogo}
-                      className="hidden"
-                    />
-                  </label>
-                  {isUploadingLogo && (
-                    <p className="text-xs text-muted-foreground mt-2">Uploading...</p>
-                  )}
+              <Image src={logoUrl} alt="Event logo" className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-90 cursor-pointer hover:opacity-100 transition-opacity"  />
+
                 </div>
-              )}
             </div>
 
           </div>
