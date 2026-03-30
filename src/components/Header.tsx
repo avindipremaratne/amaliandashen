@@ -1,7 +1,7 @@
+import { Image } from '@/components/ui/image';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,12 +14,11 @@ export default function Header() {
           {/* Logo/Image Box */}
           <div className="hidden md:block">
             <Image
-              src="https://static.wixstatic.com/media/b5e630_4a6c3ecbb3ee4a8bba3fbad9386d7191~mv2.png?originWidth=128&originHeight=128"
-              alt="Logo"
+              src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
               width={40}
               height={40}
               className="rounded-lg"
-            />
+               />
           </div>
 
           {/* Desktop Navigation */}
