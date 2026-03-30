@@ -1,7 +1,7 @@
+import { Image } from '@/components/ui/image';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +32,6 @@ export default function Header() {
             <div className="relative">
               <Image src={logoUrl} alt="Event logo" className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-90 cursor-pointer hover:opacity-100 transition-opacity"  />
 
-                </div>
             </div>
 
           </div>
