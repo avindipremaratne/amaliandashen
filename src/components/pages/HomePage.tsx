@@ -133,7 +133,7 @@ export default function HomePage() {
       <section id="home" className=" scroll-mt-24 relative h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://wedding-invitation-68o0.onrender.com/Hero%20image.jpeg"
+            src="https://static.wixstatic.com/media/b5e630_a774da94b50741b1acb9f2844db892da~mv2.png?originWidth=1600&originHeight=896"
             alt="Dilum and Heshani"
             className="w-full h-full object-cover object-center"
           />
