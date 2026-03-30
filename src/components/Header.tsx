@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const logoUrl = 'https://static.wixstatic.com/media/b5e630_2011f68d0afe4bd28663c7aa8e1979d7~mv2.png?originWidth=128&originHeight=128';
+  const logoUrl = 'https://static.wixstatic.com/media/b5e630_9fb6b8cc9dfb458eb5ba5dedc72f62e4~mv2.png?originWidth=128&originHeight=128';
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
