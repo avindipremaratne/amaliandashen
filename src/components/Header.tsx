@@ -1,39 +1,25 @@
-import { Image } from '@/components/ui/image';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [logoUrl, setLogoUrl] = useState('https://static.wixstatic.com/media/b5e630_9fb6b8cc9dfb458eb5ba5dedc72f62e4~mv2.png?originWidth=128&originHeight=128');
-  const [isUploadingLogo, setIsUploadingLogo] = useState(false);
-  const [isEditMode, setIsEditMode] = useState(false);
-
-  const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      setIsUploadingLogo(true);
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        setLogoUrl(event.target?.result as string);
-        setIsUploadingLogo(false);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-      <div className="container mx-auto px-6 md:px-12 py-2">
-        <div className="flex items-center justify-between gap-2">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
 
           {/* Logo/Image Box */}
-          <div className="flex items-center h-full group relative">
-            <div className="relative">
-              <Image src="" alt="Event logo" className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-90 cursor-pointer hover:opacity-100 transition-opacity"  />
-
-            </div>
-
+          <div className="hidden md:block">
+            <Image
+              src="https://static.wixstatic.com/media/b5e630_4a6c3ecbb3ee4a8bba3fbad9386d7191~mv2.png?originWidth=128&originHeight=128"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="rounded-lg"
+            />
           </div>
 
           {/* Desktop Navigation */}

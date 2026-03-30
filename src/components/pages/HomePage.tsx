@@ -133,7 +133,7 @@ export default function HomePage() {
       <section id="home" className=" scroll-mt-24 relative h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://static.wixstatic.com/media/b5e630_a774da94b50741b1acb9f2844db892da~mv2.png?originWidth=1600&originHeight=896"
+            src="https://wedding-invitation-68o0.onrender.com/Hero%20image.jpeg"
             alt="Dilum and Heshani"
             className="w-full h-full object-cover object-center"
           />
@@ -142,37 +142,47 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl">
-
-  <FadeIn delay={0.4}>
-    <h1
-      className="text-6xl md:text-7xl lg:text-[130px] text-white leading-none font-normal"
-      style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
-    >
-      Amali & Ashen
-    </h1>
+           <FadeIn delay={0.2} direction="down">
+    <Image
+      src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
+      className="w-32 h-32 md:w-48 md:h-48 mb-6 object-contain opacity-90 border-0 border-solid border-gray-200"
+      width={80}
+      height={80}
+      sizes="(max-width: 768px) 64px, 80px"
+      originWidth={6250}
+      originHeight={6250}
+    />
   </FadeIn>
 
-  <FadeIn delay={0.6}>
-    <div className="flex flex-col items-center gap-1 px-4 text-center">
-       <p
-        className="text-white/90 text-base sm:text-lg md:text-2xl lg:text-3xl"
-        style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
-      >
-        SAVE THE DATE
-      </p>
+          <FadeIn delay={0.4}>
+            <h1
+              className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight font-normal "
+              data-editable="true"style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
+              data-editable-type="heading"
+            >
+              Amali & Ashen
+            </h1>
+          </FadeIn>
 
-      <p
-        className="text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
-        style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, letterSpacing: "0.15em" }}
-      >
-        27 | August | 2026
-      </p>
+          <FadeIn delay={0.6}>
+            <div className="flex flex-col items-center gap-2 mt-4 px-4 text-center">
+              <p
+                className="text-white/90 font-medium uppercase text-base sm:text-lg md:text-2xl lg:text-3xl font-fraunces"
+              >
+                SAVE THE DATE
+              </p>
 
-      <div className="w-10 sm:w-12 md:w-14 h-px bg-primary/60 mt-2" />
-    </div>
-  </FadeIn>
+              <p
+                className="text-white/90 uppercase text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+                style={{ letterSpacing: "0.10em" }}
+              >
+                27 | August | 2026
+              </p>
 
-</div>
+    <div className="w-10 sm:w-12 md:w-14 h-px bg-primary/60 my-2" />
+  </div>
+</FadeIn>
+        </div>
       </section>
       {/* 2. INVITATION & COUNTDOWN SECTION */}
       <section className="scroll-mt-24 py-24 bg-stone-50 relative">

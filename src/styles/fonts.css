@@ -1,17 +1,10 @@
 /* This file is generated and will include all the font faces of the font families from tailwind.config */
 /* heading - Roboto */
 /* cyrillic-ext */
-@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 .ephesis-regular {
   font-family: "Ephesis", cursive;
   font-weight: 400;
-  font-style: normal;
-}
-
-.cormorant-garamond {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
   font-style: normal;
 }
 @font-face {
