@@ -1,5 +1,5 @@
 import { Image } from '@/components/ui/image';
-import { Menu, X, Upload } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -36,18 +36,7 @@ export default function Header() {
               height={48}
               sizes="(max-width: 768px) 40px, 48px"
             />
-            {/* Upload Button */}
-            <label className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer rounded">
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleLogoUpload}
-                disabled={isUploadingLogo}
-                className="hidden"
-                aria-label="Upload logo image"
-              />
-              <Upload size={16} className="text-foreground" />
-            </label>
+
           </div>
 
           {/* Desktop Navigation */}
