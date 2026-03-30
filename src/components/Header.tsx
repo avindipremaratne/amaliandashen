@@ -15,8 +15,8 @@ export default function Header() {
           <div className="hidden md:block">
             <Image
               src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
-              width={40}
-              height={40}
+              width={60}
+              height={60}
               className="rounded-lg"
                />
           </div>
