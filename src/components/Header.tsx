@@ -5,8 +5,21 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [logoUrl, setLogoUrl] = useState('https://static.wixstatic.com/media/b5e630_9fb6b8cc9dfb458eb5ba5dedc72f62e4~mv2.png?originWidth=128&originHeight=128');
+  const [isUploadingLogo, setIsUploadingLogo] = useState(false);
+  const [isEditMode, setIsEditMode] = useState(false);
 
-
+  const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setIsUploadingLogo(true);
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setLogoUrl(event.target?.result as string);
+        setIsUploadingLogo(false);
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   return (
