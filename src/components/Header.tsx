@@ -1,11 +1,25 @@
 import { Image } from '@/components/ui/image';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Upload } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const logoUrl = 'https://static.wixstatic.com/media/b5e630_9fb6b8cc9dfb458eb5ba5dedc72f62e4~mv2.png?originWidth=128&originHeight=128';
+  const [logoUrl, setLogoUrl] = useState('https://static.wixstatic.com/media/b5e630_9fb6b8cc9dfb458eb5ba5dedc72f62e4~mv2.png?originWidth=128&originHeight=128');
+  const [isUploadingLogo, setIsUploadingLogo] = useState(false);
+
+  const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setIsUploadingLogo(true);
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setLogoUrl(event.target?.result as string);
+        setIsUploadingLogo(false);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
@@ -13,16 +27,28 @@ export default function Header() {
         <div className="flex items-center justify-between gap-2">
 
           {/* Logo/Image Box */}
-             <div className="flex items-center h-full">
-  <Image
-    src={logoUrl}
-    alt="Event logo"
-    className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-90"
-    width={48}
-    height={48}
-    sizes="(max-width: 768px) 40px, 48px"
-  />
-</div>
+          <div className="flex items-center h-full group relative">
+            <Image
+              src={logoUrl}
+              alt="Event logo"
+              className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-90"
+              width={48}
+              height={48}
+              sizes="(max-width: 768px) 40px, 48px"
+            />
+            {/* Upload Button */}
+            <label className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer rounded">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleLogoUpload}
+                disabled={isUploadingLogo}
+                className="hidden"
+                aria-label="Upload logo image"
+              />
+              <Upload size={16} className="text-foreground" />
+            </label>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
