@@ -18,8 +18,7 @@ export default function Header() {
               width={70}
             height={70}
       sizes="(max-width: 768px) 64px, 80px"
-      originWidth={6250}
-      originHeight={6250}
+
               className="rounded-lg"
                />
           </div>
