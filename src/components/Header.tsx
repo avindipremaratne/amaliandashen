@@ -21,6 +21,7 @@ export default function Header() {
     width={48}
     height={48}
     sizes="(max-width: 768px) 40px, 48px"
+    enableReplace
   />
 </div>
 
