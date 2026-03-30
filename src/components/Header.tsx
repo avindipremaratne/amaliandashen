@@ -7,6 +7,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [logoUrl, setLogoUrl] = useState('https://static.wixstatic.com/media/b5e630_9fb6b8cc9dfb458eb5ba5dedc72f62e4~mv2.png?originWidth=128&originHeight=128');
   const [isUploadingLogo, setIsUploadingLogo] = useState(false);
+  const [isEditMode, setIsEditMode] = useState(false);
 
   const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -28,14 +29,34 @@ export default function Header() {
 
           {/* Logo/Image Box */}
           <div className="flex items-center h-full group relative">
-            <Image
-              src={logoUrl}
-              alt="Event logo"
-              className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-90"
-              width={48}
-              height={48}
-              sizes="(max-width: 768px) 40px, 48px"
-            />
+            <div className="relative">
+              <Image
+                src={logoUrl}
+                alt="Event logo"
+                className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-90 cursor-pointer hover:opacity-100 transition-opacity"
+                width={48}
+                height={48}
+                sizes="(max-width: 768px) 40px, 48px"
+                onClick={() => setIsEditMode(!isEditMode)}
+              />
+              {isEditMode && (
+                <div className="absolute top-full left-0 mt-2 bg-card border border-border rounded-lg p-3 shadow-lg z-50">
+                  <label className="flex items-center gap-2 cursor-pointer text-foreground hover:text-link transition-colors">
+                    <span className="text-xs font-paragraph">Change Logo</span>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleLogoUpload}
+                      disabled={isUploadingLogo}
+                      className="hidden"
+                    />
+                  </label>
+                  {isUploadingLogo && (
+                    <p className="text-xs text-muted-foreground mt-2">Uploading...</p>
+                  )}
+                </div>
+              )}
+            </div>
 
           </div>
 
