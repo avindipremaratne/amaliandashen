@@ -11,7 +11,6 @@
 .cormorant-garamond-regular {
   font-family: "Cormorant Garamond", serif;
   font-style: normal;
-  /* Note: Removing the fixed font-weight here allows Tailwind's font-light/font-normal to work */
 }
 
 @font-face {
