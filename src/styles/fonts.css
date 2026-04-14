@@ -7,7 +7,7 @@
   font-weight: 400;
   font-style: normal;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap');
 .bodoni-moda-regular {
   font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;
