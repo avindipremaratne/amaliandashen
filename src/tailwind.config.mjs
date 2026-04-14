@@ -27,7 +27,8 @@ export default {
                 cinzel: ["cinzel", "serif"],
                 fraunces: ["fraunces", "serif"],
                 "pinyon-script": ["pinyon-script", "pinyon script", "cursive"],
-                "victoria-titling-mt-w90": ["victoria-titling-mt-w90", "serif"]
+                "victoria-titling-mt-w90": ["victoria-titling-mt-w90", "serif"],
+                "bodoni-moda": ["bodoni-moda", "bodoni moda", "serif"]
             },
             colors: {
                 primary: '#863D24',
