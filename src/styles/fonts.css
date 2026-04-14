@@ -10,8 +10,9 @@
 @import url('https://googleapis.com');
 .cormorant-garamond-regular {
   font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: regular;
 }
-
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
