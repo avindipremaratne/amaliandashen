@@ -26,7 +26,8 @@ export default {
                 "dancing-script": ["dancing script", "cursive"],
                 cinzel: ["cinzel", "serif"],
                 fraunces: ["fraunces", "serif"],
-                "pinyon-script": ["pinyon-script", "pinyon script", "cursive"]
+                "pinyon-script": ["pinyon-script", "pinyon script", "cursive"],
+                "victoria-titling-mt-w90": ["victoria-titling-mt-w90", "serif"]
             },
             colors: {
                 primary: '#863D24',
