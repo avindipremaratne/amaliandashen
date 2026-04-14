@@ -7,11 +7,12 @@
   font-weight: 400;
   font-style: normal;
 }
-@import url('https://googleapis.com');
-.cormorant-garamond-regular {
-  font-family: "Cormorant Garamond", serif;
+
+.bodoni-moda-regular {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: regular;
+  font-style: normal;
 }
 @font-face {
   font-family: 'Roboto';
