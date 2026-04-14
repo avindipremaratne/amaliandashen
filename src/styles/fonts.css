@@ -10,9 +10,10 @@
 @import url('https://googleapis.com');
 .cormorant-garamond-regular {
   font-family: "Cormorant Garamond", serif;
-  font-weight: 400;
   font-style: normal;
+  /* Note: Removing the fixed font-weight here allows Tailwind's font-light/font-normal to work */
 }
+
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
