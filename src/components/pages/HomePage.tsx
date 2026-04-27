@@ -233,7 +233,7 @@ export default function HomePage() {
       <section id="schedule" className="scroll-mt-24 py-24 bg-stone-100 relative border-t border-stone-200">
         <div className="container mx-auto px-4 max-w-4xl">
           <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl text-stone-800" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
+            <h2 className="font-heading text-4xl md:text-5xl text-stone-800" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}>
               Timing
             </h2>
           </FadeIn>
