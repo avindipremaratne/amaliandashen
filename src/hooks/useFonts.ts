@@ -1,10 +1,19 @@
-import { useEffect } from 'react';
 import { useFontStore } from '@/stores/fontStore';
+import { useEffect } from 'react';
 
 export function useFonts() {
   const { fonts, setFonts } = useFontStore();
 
   useEffect(() => {
+    // Load Ephesis from Google Fonts if not already present
+    if (!document.getElementById('ephesis-font')) {
+      const link = document.createElement('link');
+      link.id = 'ephesis-font';
+      link.rel = 'stylesheet';
+      link.href = 'https://fonts.googleapis.com/css2?family=Ephesis&display=swap';
+      document.head.appendChild(link);
+    }
+
     // Apply fonts to CSS variables
     const root = document.documentElement;
     root.style.setProperty('--font-heading', fonts.headingFont);
@@ -16,7 +25,8 @@ export function useFonts() {
     style.id = 'dynamic-fonts';
     style.textContent = `
       .font-heading {
-        font-family: ${fonts.headingFont}, sans-serif !important;
+        font-family: ${fonts.headingFont}, cursive !important;
+        font-weight: 400 !important;
       }
       .font-paragraph {
         font-family: ${fonts.paragraphFont}, sans-serif !important;
