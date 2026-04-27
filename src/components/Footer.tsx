@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-4 text-center">
           <div className="flex items-center gap-2 text-foreground">
             <Heart size={20} className="text-primary fill-primary" />
-            <span className="font-heading text-xl">Dilum & Heshani</span>
+            <span className="text-xl font-mr-de-haviland">Amali & Ashen</span>
             <Heart size={20} className="text-primary fill-primary" />
           </div>
           <p className="font-paragraph text-sm text-muted-foreground">

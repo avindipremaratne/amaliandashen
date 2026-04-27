@@ -28,7 +28,8 @@ export default {
                 fraunces: ["fraunces", "serif"],
                 "pinyon-script": ["pinyon-script", "pinyon script", "cursive"],
                 "victoria-titling-mt-w90": ["victoria-titling-mt-w90", "serif"],
-                "bodoni-moda": ["bodoni-moda", "bodoni moda", "serif"]
+                "bodoni-moda": ["bodoni-moda", "bodoni moda", "serif"],
+                "mr-de-haviland": ["mr de haviland", "cursive"]
             },
             colors: {
                 primary: '#863D24',
