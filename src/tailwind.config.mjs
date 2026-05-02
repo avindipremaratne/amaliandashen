@@ -19,8 +19,8 @@ export default {
                 "9xl": ["6rem", { lineHeight: "1", letterSpacing: "-0.01em", fontWeight: "bold" }],
             },
             fontFamily: {
-                heading: ["Roboto"],
-                paragraph: ["Montserrat"],
+                heading: ["Ephesis", "cursive"],
+                paragraph: ["Montserrat", "sans-serif"],
                 montserrat: ["montserrat", "sans-serif"],
                 "luxurious-script": ["luxurious-script", "cursive"],
                 "dancing-script": ["dancing script", "cursive"],
