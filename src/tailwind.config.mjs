@@ -29,7 +29,8 @@ export default {
                 "pinyon-script": ["pinyon-script", "pinyon script", "cursive"],
                 "victoria-titling-mt-w90": ["victoria-titling-mt-w90", "serif"],
                 "bodoni-moda": ["bodoni-moda", "bodoni moda", "serif"],
-                "mr-de-haviland": ["mr de haviland", "cursive"]
+                "mr-de-haviland": ["mr de haviland", "cursive"],
+                "wixmadefortextapp-regular": ["wixmadefortextapp-regular", "sans-serif"]
             },
             colors: {
                 primary: '#863D24',

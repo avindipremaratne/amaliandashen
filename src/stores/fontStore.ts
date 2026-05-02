@@ -7,7 +7,7 @@ export interface FontSettings {
 }
 
 const DEFAULT_FONTS: FontSettings = {
-  headingFont: 'Ephesis',  // changed from 'Roboto'
+  headingFont: 'Ephesis', 
   paragraphFont: 'Montserrat',
   accentFont: 'Luxurious Script',
 };
