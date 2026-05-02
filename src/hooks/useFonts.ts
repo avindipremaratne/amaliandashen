@@ -19,6 +19,7 @@ export function useFonts() {
     root.style.setProperty('--font-heading', fonts.headingFont);
     root.style.setProperty('--font-paragraph', fonts.paragraphFont);
     root.style.setProperty('--font-accent', fonts.accentFont);
+    root.style.setProperty('--font-countdown', fonts.countdownFont);  // added
 
     // Also update Tailwind font-family classes dynamically
     const style = document.getElementById('dynamic-fonts') || document.createElement('style');
@@ -33,6 +34,10 @@ export function useFonts() {
       }
       .font-accent {
         font-family: ${fonts.accentFont}, cursive !important;
+      }
+      .font-countdown {
+        font-family: ${fonts.countdownFont}, sans-serif !important;
+        font-weight: 600 !important;
       }
     `;
     if (!document.getElementById('dynamic-fonts')) {
