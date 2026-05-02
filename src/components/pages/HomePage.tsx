@@ -308,7 +308,7 @@ export default function HomePage() {
                 <MapPin size={24} />
               </div>
               <h3 className="font-heading text-2xl text-stone-900 mb-4">Wedding Ceremony</h3>
-              <p className="text-stone-600 mb-2">St. Thomas Aquinas Church </p>
+              <p className="text-stone-600 mb-2">St. Thomas Aquinas Church, Halifax </p>
               <p className="text-stone-600 font-medium mb-8">Time : 3.30PM</p>
               <Button
                 onClick={() => window.open('https://maps.google.com/?q=St.+Mary\'s+Church+Thudella+Ja+ela', '_blank')}
