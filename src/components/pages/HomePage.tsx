@@ -155,12 +155,12 @@ export default function HomePage() {
 
           <FadeIn delay={0.6}>
             <div className="flex flex-col items-center gap-2 mt-4 px-4 text-center">
-              <p className="text-white/90 font-light uppercase tracking-widest text-base sm:text-lg md:text-2xl lg:text-3xl bodoni-moda-regular font-bodoni-moda">
-              Save the Date
+              <p className="text-white/90 font-light uppercase tracking-widest text-base sm:text-lg md:text-2xl lg:text-3xl font-paragraph">
+                Save the Date
               </p>
 
               <p
-                className="text-white/90 uppercase text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+                className="text-white/90 uppercase font-paragraph font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl"
                 style={{ letterSpacing: "0.10em" }}
               >
                 27 | August | 2026
