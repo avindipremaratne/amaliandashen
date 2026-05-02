@@ -5,12 +5,12 @@ export function useFonts() {
   const { fonts, setFonts } = useFontStore();
 
   useEffect(() => {
-    // Load Ephesis from Google Fonts if not already present
-    if (!document.getElementById('ephesis-font')) {
+    // Load Google Fonts if not already present
+    if (!document.getElementById('google-fonts')) {
       const link = document.createElement('link');
-      link.id = 'ephesis-font';
+      link.id = 'google-fonts';
       link.rel = 'stylesheet';
-      link.href = 'https://fonts.googleapis.com/css2?family=Ephesis&display=swap';
+      link.href = 'https://fonts.googleapis.com/css2?family=Ephesis&family=Cormorant+Garamond:wght@600&display=swap';
       document.head.appendChild(link);
     }
 
@@ -19,7 +19,7 @@ export function useFonts() {
     root.style.setProperty('--font-heading', fonts.headingFont);
     root.style.setProperty('--font-paragraph', fonts.paragraphFont);
     root.style.setProperty('--font-accent', fonts.accentFont);
-    root.style.setProperty('--font-countdown', fonts.countdownFont);  // added
+    root.style.setProperty('--font-countdown', fonts.countdownFont);
 
     // Also update Tailwind font-family classes dynamically
     const style = document.getElementById('dynamic-fonts') || document.createElement('style');
@@ -36,7 +36,7 @@ export function useFonts() {
         font-family: ${fonts.accentFont}, cursive !important;
       }
       .font-countdown {
-        font-family: ${fonts.countdownFont}, sans-serif !important;
+        font-family: ${fonts.countdownFont}, serif !important;
         font-weight: 600 !important;
       }
     `;
