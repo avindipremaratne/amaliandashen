@@ -250,15 +250,19 @@ export default function HomePage() {
                     <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_0_4px_rgba(134,61,36,0.1)]" />
 
                     {/* Time */}
-                    <div className="md:absolute md:-left-36 md:top-0 md:w-28 md:text-right font-heading text-stone-900 font-semibold text-lg mb-2 md:mb-0">
+                    <div className="md:absolute md:-left-36 md:top-0 md:w-28 md:text-right font-paragraph text-primary font-semibold text-base md:text-lg mb-2 md:mb-0 tracking-wide">
                       {item.startTime}
                     </div>
 
                     {/* Content */}
                     <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow duration-300">
-                      <h3 className="font-heading text-xl text-stone-900 mb-2">{item.eventName}</h3>
+                      <h3 className="font-paragraph text-lg md:text-xl font-semibold text-stone-900 mb-2 tracking-wide">
+                        {item.eventName}
+                      </h3>
                       {item.description && (
-                        <p className="text-stone-500 text-sm leading-relaxed">{item.description}</p>
+                        <p className="font-paragraph text-stone-500 text-sm md:text-base leading-relaxed font-normal">
+                          {item.description}
+                        </p>
                       )}
                     </div>
                   </FadeIn>
@@ -270,7 +274,7 @@ export default function HomePage() {
           </div>
 
           <FadeIn delay={0.4} className="mt-20 text-center">
-            <p className="font-heading text-2xl text-stone-800 mb-8" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
+            <p className="text-2xl md:text-4xl text-stone-800 mb-8" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}>
               Come join us and happily ever after!
             </p>
             <div className="relative aspect-[21/9] overflow-hidden rounded-sm max-w-5xl mx-auto">
