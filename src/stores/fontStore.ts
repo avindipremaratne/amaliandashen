@@ -4,14 +4,14 @@ export interface FontSettings {
   headingFont: string;
   paragraphFont: string;
   accentFont: string;
-  countdownFont: string;  // added
+  countdownFont: string;
 }
 
 const DEFAULT_FONTS: FontSettings = {
   headingFont: 'Ephesis',
   paragraphFont: 'Montserrat',
   accentFont: 'Luxurious Script',
-  countdownFont: 'Montserrat',  // added
+  countdownFont: 'Cormorant Garamond',  // updated
 };
 
 interface FontStore {

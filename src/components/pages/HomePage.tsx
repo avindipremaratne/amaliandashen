@@ -188,34 +188,34 @@ export default function HomePage() {
               The Day is Coming!
             </h2>
 
-            <div className="flex justify-center items-center gap-3 md:gap-6 text-stone-800">
-              {[
-                { value: countdown.days, label: 'Days' },
-                { value: countdown.hours, label: 'Hours' },
-                { value: countdown.minutes, label: 'Minutes' },
-                { value: countdown.seconds, label: 'Seconds' }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="flex flex-col items-center w-16 md:w-24 bg-white/50 backdrop-blur-sm p-4 md:p-6 rounded-lg border border-stone-200/50 hover:bg-white/70 transition-all duration-300"
-                  whileHover={{ scale: 1.05, y: -4 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                >
-                  <motion.span
-                    key={`${index}-${item.value}`}
-                    className="text-4xl md:text-6xl font-bold tracking-tighter text-primary font-paragraph"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {String(item.value).padStart(2, '0')}
-                  </motion.span>
-                  <span className="text-xs md:text-sm uppercase tracking-widest text-stone-500 mt-2 font-medium">
-                    {item.label}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
+            <div className="flex justify-center items-center gap-6 md:gap-12 text-stone-800">
+  {[
+    { value: countdown.days, label: 'Days' },
+    { value: countdown.hours, label: 'Hours' },
+    { value: countdown.minutes, label: 'Minutes' },
+    { value: countdown.seconds, label: 'Seconds' }
+  ].map((item, index) => (
+    <motion.div
+      key={index}
+      className="flex flex-col items-center w-20 md:w-28"
+      whileHover={{ scale: 1.05, y: -4 }}
+      transition={{ type: "spring", stiffness: 300, damping: 10 }}
+    >
+      <motion.span
+        key={`${index}-${item.value}`}
+        className="text-4xl md:text-6xl tracking-tighter text-primary font-countdown"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        {String(item.value).padStart(2, '0')}
+      </motion.span>
+      <span className="text-xs md:text-sm uppercase tracking-widest text-stone-500 mt-3 font-medium">
+        {item.label}
+      </span>
+    </motion.div>
+  ))}
+</div>
           </FadeIn>
 
           <FadeIn delay={0.4} className="w-full max-w-5xl mt-12">
