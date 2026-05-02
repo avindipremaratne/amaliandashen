@@ -7,7 +7,7 @@ import { EventSchedule, GuestPhotos } from '@/entities';
 import { useFonts } from '@/hooks/useFonts';
 import { BaseCrudService } from '@/integrations';
 import { motion } from 'framer-motion';
-import { Calendar, Loader2, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { Calendar, Church, Loader2, MessageCircle, Phone, Wine } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -287,7 +287,7 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
-      {/* 4. ADDRESS / VENUE SECTION */}
+     {/* 4. ADDRESS / VENUE SECTION */}
       <section id="venue" className="scroll-mt-24 py-24 bg-[#EBE9E4] relative overflow-hidden">
         {/* Subtle background texture/image */}
         <div className="absolute inset-0 opacity-20 mix-blend-multiply">
@@ -305,41 +305,46 @@ export default function HomePage() {
             </h2>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Ceremony */}
-            <FadeIn delay={0.2} direction="up" className="flex flex-col items-center text-center">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
-                <MapPin size={24} />
+            <FadeIn delay={0.2} direction="up" className="flex flex-col items-center text-center bg-white/40 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-stone-200/60 hover:bg-white/60 transition-all duration-300">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
+                <Church size={26} />
               </div>
-              <h3 className="font-heading text-2xl text-stone-900 mb-4">Wedding Ceremony</h3>
-              <p className="text-stone-600 mb-2">St. Thomas Aquinas Church, Halifax </p>
-              <p className="text-stone-600 font-medium mb-8">Time : 3.30PM</p>
+              <p className="font-paragraph text-xs uppercase tracking-widest text-stone-400 mb-2">Wedding Ceremony</p>
+              <h3 className="font-paragraph font-semibold text-xl md:text-2xl text-stone-900 mb-4">St. Thomas Aquinas Church</h3>
+              <p className="font-paragraph text-base text-stone-500 mb-1">Halifax</p>
+              <p className="font-paragraph text-base text-stone-500 font-medium mb-8">3:30 PM</p>
               <Button
-                onClick={() => window.open('https://maps.google.com/?q=St.+Mary\'s+Church+Thudella+Ja+ela', '_blank')}
+                onClick={() => window.open('https://maps.google.com/?q=St.+Thomas+Aquinas+Church+Halifax', '_blank')}
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white rounded-none px-8 py-6 tracking-widest uppercase text-xs transition-all duration-300"
+                className="border-primary text-primary hover:bg-primary hover:text-white rounded-none px-8 py-6 tracking-widest uppercase text-xs transition-all duration-300 w-full"
               >
                 Get Directions
               </Button>
             </FadeIn>
 
             {/* Reception */}
-            <FadeIn delay={0.4} direction="up" className="flex flex-col items-center text-center">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
-                <MapPin size={24} />
+            <FadeIn delay={0.4} direction="up" className="flex flex-col items-center text-center bg-white/40 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-stone-200/60 hover:bg-white/60 transition-all duration-300">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
+                <Wine size={26} />
               </div>
-              <h3 className="font-heading text-2xl text-stone-900 mb-4">Reception</h3>
-              <p className="text-stone-600 mb-2">Le Rouge, Beachville</p>
-              <p className="text-stone-600 font-medium mb-8">Time : 7.00PM</p>
+              <p className="font-paragraph text-xs uppercase tracking-widest text-stone-400 mb-2">Reception</p>
+              <h3 className="font-paragraph font-semibold text-xl md:text-2xl text-stone-900 mb-4">Le Rouge</h3>
+              <p className="font-paragraph text-base text-stone-500 mb-1">Beachville</p>
+              <p className="font-paragraph text-base text-stone-500 font-medium mb-8">7:00 PM</p>
               <Button
-                onClick={() => window.open('https://maps.google.com/?q=Hotel+Royal+Ramesses+Seeduwa', '_blank')}
+                onClick={() => window.open('https://maps.google.com/?q=Le+Rouge+Beachville', '_blank')}
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white rounded-none px-8 py-6 tracking-widest uppercase text-xs transition-all duration-300"
+                className="border-primary text-primary hover:bg-primary hover:text-white rounded-none px-8 py-6 tracking-widest uppercase text-xs transition-all duration-300 w-full"
               >
                 Get Directions
               </Button>
             </FadeIn>
           </div>
+
+          {/* Mobile divider between cards */}
+          <div className="md:hidden w-px h-12 bg-stone-300 mx-auto mt-2" />
         </div>
       </section>
       {/* 5. RSVP & CONTACT SECTION */}
