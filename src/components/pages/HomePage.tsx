@@ -312,7 +312,9 @@ export default function HomePage() {
                 <Church size={26} />
               </div>
               <p className="font-paragraph text-xs uppercase tracking-widest text-stone-400 mb-2">Wedding Ceremony</p>
-              <h3 className="font-paragraph font-semibold text-xl md:text-2xl text-stone-900 mb-4">St. Thomas Aquinas Church</h3>
+              <h3 className="font-paragraph font-semibold text-xl md:text-2xl text-stone-900 mb-4 min-h-[4rem] flex items-center justify-center">
+              St. Thomas Aquinas Church
+            </h3>
               <p className="font-paragraph text-base text-stone-500 mb-1">Halifax</p>
               <p className="font-paragraph text-base text-stone-500 font-medium mb-8">3:30 PM</p>
               <Button
