@@ -203,7 +203,7 @@ export default function HomePage() {
                 >
                   <motion.span
                     key={`${index}-${item.value}`}
-                    className="text-4xl md:text-6xl font-bold font-heading tracking-tighter text-primary"
+                    className="text-4xl md:text-6xl font-bold tracking-tighter text-primary"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3 }}
