@@ -327,7 +327,7 @@ export default function HomePage() {
             </FadeIn>
 
             {/* Reception */}
-            <FadeIn delay={0.4} direction="up" className="flex flex-col items-center text-center bg-white/40 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-stone-200/60 hover:bg-white/60 transition-all duration-300">
+            <FadeIn delay={0.4} direction="up" className="flex flex-col items-center text-center bg-white/40 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-stone-200/60 hover:bg-white/60 transition-all duration-300 h-full justify-between">
               <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
                 <Wine size={26} />
               </div>
