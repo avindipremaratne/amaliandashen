@@ -296,8 +296,8 @@ export default function HomePage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl text-stone-800" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
-              Address
+            <h2 className="font-heading text-6xl md:text-8xl text-stone-800" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}>
+              The Venue
             </h2>
           </FadeIn>
 
@@ -308,7 +308,7 @@ export default function HomePage() {
                 <MapPin size={24} />
               </div>
               <h3 className="font-heading text-2xl text-stone-900 mb-4">Wedding Ceremony</h3>
-              <p className="text-stone-600 mb-2">St. Mary&apos;s Church, Thudella, Ja ela</p>
+              <p className="text-stone-600 mb-2">St. Thomas Aquinas Church </p>
               <p className="text-stone-600 font-medium mb-8">Time : 3.30PM</p>
               <Button
                 onClick={() => window.open('https://maps.google.com/?q=St.+Mary\'s+Church+Thudella+Ja+ela', '_blank')}
@@ -325,7 +325,7 @@ export default function HomePage() {
                 <MapPin size={24} />
               </div>
               <h3 className="font-heading text-2xl text-stone-900 mb-4">Reception</h3>
-              <p className="text-stone-600 mb-2">Hotel Royal Ramesses, Adriana Ballroom, Seeduwa</p>
+              <p className="text-stone-600 mb-2">Le Rouge, Beachville</p>
               <p className="text-stone-600 font-medium mb-8">Time : 7.00PM</p>
               <Button
                 onClick={() => window.open('https://maps.google.com/?q=Hotel+Royal+Ramesses+Seeduwa', '_blank')}
