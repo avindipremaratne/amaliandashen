@@ -184,9 +184,9 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.2} className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl text-stone-800 mb-8" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}>
-              The Day is Coming!
-            </h2>
+            <h2 className="font-heading text-6xl md:text-8xl text-stone-800 mb-8" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}>
+            The Day is Coming!
+          </h2>
 
             <div className="flex justify-center items-center gap-6 md:gap-12 text-stone-800">
               {[
