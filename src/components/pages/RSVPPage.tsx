@@ -46,7 +46,7 @@ export default function RSVPPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [submittedAttending, setSubmittedAttending] = useState(true); // add this
+  const [submittedAttending, setSubmittedAttending] = useState(true);
   const [error, setError] = useState('');
   useFonts();
 
@@ -57,13 +57,13 @@ export default function RSVPPage() {
 
     try {
       await BaseCrudService.create<RSVPs>('rsvps', {
-      _id: crypto.randomUUID(),
-      guestName: formData.guestName,
-      emailAddress: formData.emailAddress,
-      isAttending: formData.isAttending,
-      attendingStatus: formData.isAttending ? 'Yes' : 'No',
-    });
-      setSubmittedAttending(formData.isAttending); // add this before setIsSubmitted
+        _id: crypto.randomUUID(),
+        guestName: formData.guestName,
+        emailAddress: formData.emailAddress,
+        isAttending: formData.isAttending,
+        attendingStatus: formData.isAttending ? 'Yes' : 'No',
+      });
+      setSubmittedAttending(formData.isAttending);
       setIsSubmitted(true);
       setFormData({ guestName: '', emailAddress: '', isAttending: true });
     } catch (error) {
@@ -97,11 +97,9 @@ export default function RSVPPage() {
             >
               RSVP
             </h1>
-            <p className="font-paragraph text-lg text-stone-500 mb-8">
-            {submittedAttending
-              ? "Your RSVP has been received. We look forward to celebrating with you!"
-              : "Thank you for letting us know. We'll miss you on our special day!"}
-          </p>
+            <p className="font-paragraph text-lg md:text-xl text-stone-500 max-w-2xl mx-auto">
+              We would be honored by your presence on our special day. Please let us know if you&apos;ll be joining us!
+            </p>
           </AnimatedElement>
         </div>
       </section>
@@ -111,22 +109,22 @@ export default function RSVPPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             {isSubmitted ? (
-            <AnimatedElement>
-              <div className="bg-white rounded-2xl p-8 md:p-12 border border-stone-200 shadow-sm text-center">
-                <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
-                <h2
-                  className="text-4xl md:text-5xl text-stone-800 mb-4"
-                  style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
-                >
-                  Thank You!
-                </h2>
-                <p className="font-paragraph text-lg text-stone-500 mb-8">
-                  {formData.isAttending
-                    ? "Your RSVP has been received. We look forward to celebrating with you!"
-                    : "Thank you for letting us know. We'll miss you on our special day!"}
-                </p>
-              </div>
-            </AnimatedElement>
+              <AnimatedElement>
+                <div className="bg-white rounded-2xl p-8 md:p-12 border border-stone-200 shadow-sm text-center">
+                  <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
+                  <h2
+                    className="text-4xl md:text-5xl text-stone-800 mb-4"
+                    style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
+                  >
+                    Thank You!
+                  </h2>
+                  <p className="font-paragraph text-lg text-stone-500">
+                    {submittedAttending
+                      ? "Your RSVP has been received. We look forward to celebrating with you!"
+                      : "Thank you for letting us know. We'll miss you on our special day!"}
+                  </p>
+                </div>
+              </AnimatedElement>
             ) : (
               <AnimatedElement>
                 <div className="bg-white rounded-2xl p-8 md:p-12 border border-stone-200 shadow-sm">
