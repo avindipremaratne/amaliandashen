@@ -7,7 +7,7 @@ import { EventSchedule, GuestPhotos } from '@/entities';
 import { useFonts } from '@/hooks/useFonts';
 import { BaseCrudService } from '@/integrations';
 import { motion } from 'framer-motion';
-import { Calendar, Church, Loader2, Wine } from 'lucide-react';
+import { Church, Loader2, Wine } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -390,15 +390,6 @@ export default function HomePage() {
             <p className="text-stone-600 leading-relaxed text-lg">
               We would be honored by your presence on our special day. Please let us know if you&apos;ll be joining us!
             </p>
-          </FadeIn>
-          <FadeIn delay={0.5}>
-            <Button
-              onClick={handleAddToCalendar}
-              className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 py-6 tracking-widest uppercase text-xs transition-all duration-300 flex items-center gap-2"
-            >
-              <Calendar size={16} />
-              Add to Calendar
-            </Button>
           </FadeIn>
         </div>
       </section>
