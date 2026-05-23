@@ -125,12 +125,6 @@ export default function RSVPPage() {
                     ? "Your RSVP has been received. We look forward to celebrating with you!"
                     : "Thank you for letting us know. We'll miss you on our special day!"}
                 </p>
-                <Button
-                  onClick={() => setIsSubmitted(false)}
-                  className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-paragraph rounded-none tracking-widest uppercase transition-all duration-300"
-                >
-                  Submit Another RSVP
-                </Button>
               </div>
             </AnimatedElement>
             ) : (
