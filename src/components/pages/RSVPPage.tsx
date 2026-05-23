@@ -63,6 +63,7 @@ export default function RSVPPage() {
         emailAddress: formData.emailAddress,
         isAttending: formData.isAttending,
         attendingStatus: formData.isAttending ? 'Yes' : 'No',
+        message: formData.message,
       });
       setSubmittedAttending(formData.isAttending);
       setIsSubmitted(true);
