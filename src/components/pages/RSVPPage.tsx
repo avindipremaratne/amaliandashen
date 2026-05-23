@@ -56,12 +56,12 @@ export default function RSVPPage() {
 
     try {
       await BaseCrudService.create<RSVPs>('rsvps', {
-  _id: crypto.randomUUID(),
-  guestName: formData.guestName,
-  emailAddress: formData.emailAddress,
-  isAttending: formData.isAttending,
-  attendingStatus: formData.isAttending ? 'Yes' : 'No',
-});
+      _id: crypto.randomUUID(),
+      guestName: formData.guestName,
+      emailAddress: formData.emailAddress,
+      isAttending: formData.isAttending,
+      attendingStatus: formData.isAttending ? 'Yes' : 'No',
+    });
 
       setIsSubmitted(true);
       setFormData({ guestName: '', emailAddress: '', isAttending: true });
