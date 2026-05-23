@@ -43,6 +43,7 @@ export default function RSVPPage() {
     guestName: '',
     emailAddress: '',
     isAttending: true,
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
