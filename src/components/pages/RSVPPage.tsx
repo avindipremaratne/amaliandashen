@@ -100,7 +100,7 @@ export default function RSVPPage() {
               RSVP
             </h1>
             <p className="font-paragraph text-lg md:text-xl text-stone-500 max-w-2xl mx-auto">
-              We would be honored by your presence on our special day. Please let us know if you&apos;ll be joining us!
+              Will you join us as we become us?
             </p>
           </AnimatedElement>
         </div>
