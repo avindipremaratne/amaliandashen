@@ -67,7 +67,7 @@ export default function RSVPPage() {
       });
       setSubmittedAttending(formData.isAttending);
       setIsSubmitted(true);
-      setFormData({ guestName: '', emailAddress: '', isAttending: true });
+      setFormData({ guestName: '', emailAddress: '', isAttending: true, message: '' });
     } catch (error) {
       console.error('Error submitting RSVP:', error);
       setError('Something went wrong. Please try again.');
