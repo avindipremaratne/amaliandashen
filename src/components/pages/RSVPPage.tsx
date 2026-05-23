@@ -108,28 +108,28 @@ export default function RSVPPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             {isSubmitted ? (
-  <AnimatedElement>
-    <div className="bg-white rounded-2xl p-8 md:p-12 border border-stone-200 shadow-sm text-center">
-      <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
-      <h2
-        className="text-4xl md:text-5xl text-stone-800 mb-4"
-        style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
-      >
-        Thank You!
-      </h2>
-      <p className="font-paragraph text-lg text-stone-500 mb-8">
-        {formData.isAttending
-          ? "Your RSVP has been received. We look forward to celebrating with you!"
-          : "Thank you for letting us know. We'll miss you on our special day!"}
-      </p>
-      <Button
-        onClick={() => setIsSubmitted(false)}
-        className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-paragraph rounded-none tracking-widest uppercase transition-all duration-300"
-      >
-        Submit Another RSVP
-      </Button>
-    </div>
-  </AnimatedElement>
+            <AnimatedElement>
+              <div className="bg-white rounded-2xl p-8 md:p-12 border border-stone-200 shadow-sm text-center">
+                <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
+                <h2
+                  className="text-4xl md:text-5xl text-stone-800 mb-4"
+                  style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
+                >
+                  Thank You!
+                </h2>
+                <p className="font-paragraph text-lg text-stone-500 mb-8">
+                  {formData.isAttending
+                    ? "Your RSVP has been received. We look forward to celebrating with you!"
+                    : "Thank you for letting us know. We'll miss you on our special day!"}
+                </p>
+                <Button
+                  onClick={() => setIsSubmitted(false)}
+                  className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-paragraph rounded-none tracking-widest uppercase transition-all duration-300"
+                >
+                  Submit Another RSVP
+                </Button>
+              </div>
+            </AnimatedElement>
             ) : (
               <AnimatedElement>
                 <div className="bg-white rounded-2xl p-8 md:p-12 border border-stone-200 shadow-sm">
