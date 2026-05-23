@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { RSVPs } from '@/entities';
 import { useFonts } from '@/hooks/useFonts';
 import { BaseCrudService } from '@/integrations';
-import { CheckCircle2, MessageCircle, Phone } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className, delay = 0 }) => {
@@ -238,72 +238,6 @@ export default function RSVPPage() {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section className="py-20 bg-stone-100">
-        <div className="container mx-auto px-4">
-          <AnimatedElement>
-            <h2
-              className="text-5xl md:text-6xl text-center text-stone-800 mb-4"
-              style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
-            >
-              Questions?
-            </h2>
-            <p className="font-paragraph text-center text-stone-500 mb-12 max-w-2xl mx-auto">
-              Feel free to reach out to us if you have any questions about the wedding
-            </p>
-          </AnimatedElement>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <AnimatedElement delay={200}>
-              <div className="bg-white rounded-xl p-8 border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300">
-                <h3 className="font-paragraph font-semibold text-xl text-stone-900 mb-6 text-center">Contact Amali</h3>
-                <div className="flex flex-col gap-4">
-                  <Button
-                    onClick={() => window.open('https://wa.me/94764919991', '_blank')}
-                    className="w-full bg-primary hover:bg-primary/90 text-white rounded-none tracking-widest uppercase text-xs font-paragraph flex items-center justify-center gap-2 py-6"
-                  >
-                    <MessageCircle size={18} />
-                    WhatsApp
-                  </Button>
-                  <Button
-                    onClick={() => window.open('tel:+94764919991', '_blank')}
-                    variant="outline"
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white rounded-none tracking-widest uppercase text-xs font-paragraph flex items-center justify-center gap-2 py-6"
-                  >
-                    <Phone size={18} />
-                    Call
-                  </Button>
-                </div>
-              </div>
-            </AnimatedElement>
-
-            <AnimatedElement delay={400}>
-              <div className="bg-white rounded-xl p-8 border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300">
-                <h3 className="font-paragraph font-semibold text-xl text-stone-900 mb-6 text-center">Contact Ashen</h3>
-                <div className="flex flex-col gap-4">
-                  <Button
-                    onClick={() => window.open('https://wa.me/94775314997', '_blank')}
-                    className="w-full bg-primary hover:bg-primary/90 text-white rounded-none tracking-widest uppercase text-xs font-paragraph flex items-center justify-center gap-2 py-6"
-                  >
-                    <MessageCircle size={18} />
-                    WhatsApp
-                  </Button>
-                  <Button
-                    onClick={() => window.open('tel:+94775314997', '_blank')}
-                    variant="outline"
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white rounded-none tracking-widest uppercase text-xs font-paragraph flex items-center justify-center gap-2 py-6"
-                  >
-                    <Phone size={18} />
-                    Call
-                  </Button>
-                </div>
-              </div>
-            </AnimatedElement>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
