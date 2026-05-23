@@ -97,9 +97,11 @@ export default function RSVPPage() {
             >
               RSVP
             </h1>
-            <p className="font-paragraph text-lg md:text-xl text-stone-500 max-w-2xl mx-auto">
-              We would be honored by your presence on our special day. Please let us know if you&apos;ll be joining us!
-            </p>
+            <p className="font-paragraph text-lg text-stone-500 mb-8">
+  {submittedAttending
+    ? "Your RSVP has been received. We look forward to celebrating with you!"
+    : "Thank you for letting us know. We'll miss you on our special day!"}
+</p>
           </AnimatedElement>
         </div>
       </section>
