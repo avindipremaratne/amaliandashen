@@ -111,22 +111,40 @@ export default function RSVPPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             {isSubmitted ? (
-              <AnimatedElement>
-                <div className="bg-white rounded-2xl p-8 md:p-12 border border-stone-200 shadow-sm text-center">
-                  <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
-                  <h2
-                    className="text-4xl md:text-5xl text-stone-800 mb-4"
-                    style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
-                  >
-                    Thank You!
-                  </h2>
-                  <p className="font-paragraph text-lg text-stone-500">
-                    {submittedAttending
-                      ? "Your RSVP has been received. We look forward to celebrating with you!"
-                      : "Thank you for letting us know. We'll miss you on our special day!"}
-                  </p>
-                </div>
-              </AnimatedElement>
+  <AnimatedElement>
+    <div className="bg-white rounded-2xl p-8 md:p-12 border border-stone-200 shadow-sm text-center">
+      <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
+      <h2
+        className="text-4xl md:text-5xl text-stone-800 mb-4"
+        style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
+      >
+        Thank You!
+      </h2>
+      <p className="font-paragraph text-lg text-stone-500 mb-8">
+        {submittedAttending
+          ? "Your RSVP has been received. We look forward to celebrating with you!"
+          : "Thank you for letting us know. We'll miss you on our special day!"}
+      </p>
+      {submittedAttending && (
+        <Button
+          onClick={() => {
+            const event = {
+              title: 'Amali and Ashen Wedding',
+              description: 'Join us to celebrate our wedding day!',
+              start: '20260827T153000Z',
+              end: '20260827T230000Z'
+            };
+            const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&details=${encodeURIComponent(event.description)}&dates=${event.start}/${event.end}`;
+            window.open(url, '_blank');
+          }}
+          className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-paragraph rounded-none tracking-widest uppercase transition-all duration-300 flex items-center gap-2 mx-auto"
+        >
+          <Calendar size={16} />
+          Add to Calendar
+        </Button>
+      )}
+    </div>
+  </AnimatedElement>
             ) : (
               <AnimatedElement>
                 <div className="bg-white rounded-2xl p-8 md:p-12 border border-stone-200 shadow-sm">
