@@ -195,10 +195,33 @@ export default function RSVPPage() {
                       </div>
                     </div>
 
+                    {/* Message */}
+                    <div>
+                      <Label htmlFor="message" className="text-stone-700 font-paragraph text-sm uppercase tracking-widest mb-2 block">
+                        Message for the Couple (optional)
+                      </Label>
+                      <textarea
+                        id="message"
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        className="w-full bg-stone-50 border border-stone-200 text-stone-800 focus:border-primary rounded-none font-paragraph p-3 min-h-[120px] resize-none focus:outline-none focus:ring-1 focus:ring-primary"
+                        placeholder="Write us a few words..."
+                      />
+                    </div>
+
                     {/* Error message */}
                     {error && (
                       <p className="font-paragraph text-sm text-red-500">{error}</p>
                     )}
+
+                    {/* Submit */}
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-base font-paragraph rounded-none tracking-widest uppercase shadow-sm hover:shadow-md transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? 'Submitting...' : 'Submit RSVP'}
+                    </Button>
 
                     {/* Submit */}
                     <Button
