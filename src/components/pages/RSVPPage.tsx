@@ -107,7 +107,7 @@ export default function RSVPPage() {
       </section>
 
       {/* RSVP Form Section */}
-      <section className="py-20 bg-stone-50">
+      <section className="py-8 bg-stone-50">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             {isSubmitted ? (
