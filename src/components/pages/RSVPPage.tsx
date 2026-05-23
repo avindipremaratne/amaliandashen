@@ -7,9 +7,8 @@ import { Label } from '@/components/ui/label';
 import { RSVPs } from '@/entities';
 import { useFonts } from '@/hooks/useFonts';
 import { BaseCrudService } from '@/integrations';
-import { CheckCircle2 } from 'lucide-react';
+import { Calendar, CheckCircle2 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import { CheckCircle2, MessageCircle, Phone, Calendar } from 'lucide-react';
 
 const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className, delay = 0 }) => {
   const ref = useRef<HTMLDivElement>(null);
