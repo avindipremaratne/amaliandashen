@@ -64,8 +64,6 @@ export default function RSVPPage() {
       attendingStatus: formData.isAttending ? 'Yes' : 'No',
     });
       setSubmittedAttending(formData.isAttending); // add this before setIsSubmitted
-setIsSubmitted(true);
-setFormData({ guestName: '', emailAddress: '', isAttending: true });
       setIsSubmitted(true);
       setFormData({ guestName: '', emailAddress: '', isAttending: true });
     } catch (error) {
