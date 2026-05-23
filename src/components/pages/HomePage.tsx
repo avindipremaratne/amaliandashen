@@ -388,7 +388,7 @@ export default function HomePage() {
 
           <FadeIn delay={0.2} className="max-w-2xl text-center mb-16">
             <p className="text-stone-600 leading-relaxed text-lg">
-              We would be honored by your presence on our special day. Please let us know if you&apos;ll be joining us!
+              Will you join us as we become us?
             </p>
           </FadeIn>
         </div>
