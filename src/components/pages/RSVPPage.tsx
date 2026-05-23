@@ -98,10 +98,10 @@ export default function RSVPPage() {
               RSVP
             </h1>
             <p className="font-paragraph text-lg text-stone-500 mb-8">
-  {submittedAttending
-    ? "Your RSVP has been received. We look forward to celebrating with you!"
-    : "Thank you for letting us know. We'll miss you on our special day!"}
-</p>
+            {submittedAttending
+              ? "Your RSVP has been received. We look forward to celebrating with you!"
+              : "Thank you for letting us know. We'll miss you on our special day!"}
+          </p>
           </AnimatedElement>
         </div>
       </section>
