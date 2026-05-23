@@ -46,6 +46,7 @@ export default function RSVPPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submittedAttending, setSubmittedAttending] = useState(true); // add this
   const [error, setError] = useState('');
   useFonts();
 
