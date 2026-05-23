@@ -1,10 +1,26 @@
 import { Image } from '@/components/ui/image';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavClick = (sectionId: string) => {
+    setIsMenuOpen(false);
+    if (location.pathname === '/') {
+      // Already on home page, just scroll
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // On another page, navigate to home then scroll
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
@@ -16,45 +32,44 @@ export default function Header() {
             <Image
               src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
               width={70}
-            height={70}
-      sizes="(max-width: 768px) 64px, 80px"
-
+              height={70}
+              sizes="(max-width: 768px) 64px, 80px"
               className="rounded-lg"
-               />
+            />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link
-              to="#home"
+            <button
+              onClick={() => handleNavClick('home')}
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
               Home
-            </Link>
-            <Link
-              to="#schedule"
+            </button>
+            <button
+              onClick={() => handleNavClick('schedule')}
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
               Schedule
-            </Link>
-            <Link
-              to="#venue"
+            </button>
+            <button
+              onClick={() => handleNavClick('venue')}
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
               Venue
-            </Link>
-            <Link
-              to="#rsvp"
+            </button>
+            <button
+              onClick={() => handleNavClick('rsvp')}
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
               RSVP
-            </Link>
-            <Link
-              to="#gallery"
+            </button>
+            <button
+              onClick={() => handleNavClick('gallery')}
               className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
             >
               Gallery
-            </Link>
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -70,40 +85,36 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4 border-t border-border pt-4">
-            <Link
-              to="#home"
-              onClick={() => setIsMenuOpen(false)}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+            <button
+              onClick={() => handleNavClick('home')}
+              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200 text-left"
             >
               Home
-            </Link>
-            <Link
-              to="#schedule"
-              onClick={() => setIsMenuOpen(false)}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+            </button>
+            <button
+              onClick={() => handleNavClick('schedule')}
+              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200 text-left"
             >
               Schedule
-            </Link>
-            <Link
-              to="#venue"
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+            </button>
+            <button
+              onClick={() => handleNavClick('venue')}
+              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200 text-left"
             >
               Venue
-            </Link>
-            <Link
-              to="#rsvp"
-              onClick={() => setIsMenuOpen(false)}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+            </button>
+            <button
+              onClick={() => handleNavClick('rsvp')}
+              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200 text-left"
             >
               RSVP
-            </Link>
-            <Link
-              to="#gallery"
-              onClick={() => setIsMenuOpen(false)}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+            </button>
+            <button
+              onClick={() => handleNavClick('gallery')}
+              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200 text-left"
             >
               Gallery
-            </Link>
+            </button>
           </nav>
         )}
       </div>
