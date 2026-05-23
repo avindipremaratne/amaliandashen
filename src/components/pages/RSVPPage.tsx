@@ -81,7 +81,7 @@ export default function RSVPPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <section className="relative py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <Image
             src="https://wedding-invitation-68o0.onrender.com/Rsvp.jpeg"
