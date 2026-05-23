@@ -222,15 +222,6 @@ export default function RSVPPage() {
                     >
                       {isSubmitting ? 'Submitting...' : 'Submit RSVP'}
                     </Button>
-
-                    {/* Submit */}
-                    <Button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-base font-paragraph rounded-none tracking-widest uppercase shadow-sm hover:shadow-md transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {isSubmitting ? 'Submitting...' : 'Submit RSVP'}
-                    </Button>
                   </form>
                 </div>
               </AnimatedElement>
