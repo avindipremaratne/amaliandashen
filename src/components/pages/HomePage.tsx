@@ -114,18 +114,6 @@ export default function HomePage() {
     fetchPhotos();
   }, []);
 
-  // Handlers
-  const handleAddToCalendar = () => {
-    const event = {
-      title: 'Amali and Ashen Wedding',
-      description: 'Join us to celebrate our wedding day!',
-      start: '20251213T100000Z', // UTC time
-      end: '20251213T183000Z'
-    };
-    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&details=${encodeURIComponent(event.description)}&dates=${event.start}/${event.end}`;
-    window.open(url, '_blank');
-  };
-
   return (
     <div className="min-h-screen bg-stone-50 font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Header />
