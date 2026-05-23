@@ -149,7 +149,7 @@ export default function HomePage() {
               data-editable="true"style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
               data-editable-type="heading"
             >
-              Amali & Ashen
+              Ashen & Amali
             </h1>
           </FadeIn>
 
