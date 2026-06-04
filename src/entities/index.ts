@@ -65,4 +65,8 @@ export interface RSVPs {
   numberOfGuests?: number;
   /** @wixFieldType text */
   dietaryRestrictions?: string;
+  /** @wixFieldType text */
+  attendingStatus?: string;
+  /** @wixFieldType text */
+  message?: string;
 }
