@@ -126,7 +126,7 @@ export default function HomePage() {
       }}
     >
       {/* Background overlay for content readability */}
-      <div className="absolute inset-0 bg-stone-50/85 pointer-events-none" />
+      <div className="absolute inset-0 bg-stone-50/40 pointer-events-none" />
       <div className="relative z-10">
         <Header />
       {/* 1. HERO SECTION */}
