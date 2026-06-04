@@ -33,20 +33,23 @@ export default {
                 "wixmadefortextapp-regular": ["wixmadefortextapp-regular", "sans-serif"]
             },
             colors: {
-                primary: '#863D24',
-                'primary-foreground': '#FFFFFF',
-                accent: '#D4CDBF',
-                'accent-foreground': '#1A1A1A',
-                background: '#0A0A0A',
-                foreground: '#F5F5F5',
-                secondary: '#1A1A1A',
-                'secondary-foreground': '#F5F5F5',
-                muted: '#2A2A2A',
-                'muted-foreground': '#A0A0A0',
-                card: '#1A1A1A',
-                'card-foreground': '#F5F5F5',
-                border: '#3A3A3A',
-                link: '#D4CDBF'
+                 primary: '#1F2A44',          // Deep Midnight Navy (buttons)
+  'primary-foreground': '#FFFFFF',
+  'primary-hover': '#C8A96A',  // Champagne Gold (hover)
+  accent: '#C8A96A',           // Champagne Gold (icons, dividers)
+  'accent-foreground': '#1C1C1C',
+  background: '#F7F3EE',       // Ivory Silk
+  foreground: '#1C1C1C',       // Soft Black Ink
+  secondary: '#FCFAF7',        // Soft Porcelain (cards)
+  'secondary-foreground': '#1C1C1C',
+  muted: '#F0EDE8',
+  'muted-foreground': '#3A3A3A', // Charcoal Grey
+  card: '#FCFAF7',             // Soft Porcelain
+  'card-foreground': '#1C1C1C',
+  border: '#E8E3DC',
+  link: '#3A3A3A',             // Charcoal Grey
+  gold: '#C8A96A',             // Champagne Gold utility
+  navy: '#1F2A44',             // Navy utility
             },
         },
     },
