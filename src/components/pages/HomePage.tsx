@@ -114,7 +114,7 @@ export default function HomePage() {
           backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_e12fd9866ed34e1182fb41bbd1b324be~mv2.jpg))',
           backgroundPosition: 'top right',
           backgroundRepeat: 'no-repeat',
-          backgroundSize: '100%'
+          backgroundSize: 'auto'
         }}
       />
 
