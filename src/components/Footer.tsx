@@ -6,8 +6,7 @@ export default function Footer() {
         backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_e12fd9866ed34e1182fb41bbd1b324be~mv2.jpg)',
         backgroundPosition: 'bottom center',
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        opacity: 0.4
+        backgroundRepeat: 'no-repeat'
       }} />
 
       <div className="relative z-10 container mx-auto px-4">
