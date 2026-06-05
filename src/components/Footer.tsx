@@ -20,7 +20,7 @@ export default function Footer() {
             className="text-4xl md:text-5xl"
             style={{ fontFamily: "Ephesis, cursive", fontWeight: 400, color: '#1C1C1C' }}
           >
-            Ashen & Amali
+            Amali & Ashen
           </span>
 
           {/* Tagline */}
