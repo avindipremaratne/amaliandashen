@@ -116,7 +116,7 @@ export default function HomePage() {
     backgroundPosition: 'top center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    opacity: 0.3
+    opacity: 0.1
         }}
       />
 
