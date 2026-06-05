@@ -115,20 +115,20 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div 
-      className="min-h-screen font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden"
-      style={{
-        backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_e12fd9866ed34e1182fb41bbd1b324be~mv2.jpg)',
-        backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
-      }}
-    >
-      {/* Background overlay for content readability */}
-      <div className="absolute inset-0 bg-stone-50/40 pointer-events-none" />
-      <div className="relative z-10">
-        <Header />
+    <div
+  className="min-h-screen font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden"
+  style={{
+    backgroundImage: 'url(https://drive.google.com/uc?export=view&id=1BPx5ewy3D62EnO7gdssAJgQH8cM7T7-W)',
+    backgroundAttachment: 'fixed',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
+  }}
+>
+  {/* Background overlay for content readability */}
+  <div className="absolute inset-0 bg-[#F7F3EE]/70 pointer-events-none" />
+  <div className="relative z-10">
+    <Header />
       {/* 1. HERO SECTION */}
       <section id="home" className=" scroll-mt-24 relative h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
