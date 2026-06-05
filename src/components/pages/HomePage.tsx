@@ -115,8 +115,7 @@ export default function HomePage() {
           backgroundAttachment: 'fixed',
     backgroundPosition: 'top center',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    opacity: 0.1
+    backgroundSize: 'cover'
         }}
       />
 
