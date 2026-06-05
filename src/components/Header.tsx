@@ -8,7 +8,6 @@
           src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
           width={70}
           height={70}
-          sizes="(max-width: 768px) 64px, 80px"
           className="rounded-lg"
         />
       </div>
