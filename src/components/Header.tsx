@@ -55,10 +55,10 @@ export default function Header() {
             onClick={() => handleNavClick(item.id)}
             className="font-paragraph text-xs uppercase tracking-widest transition-all duration-200 pb-1 border-b-2 border-transparent hover:border-current"
             style={{
-              color: '#1C1C1C',
-              borderBottomColor: location.hash === `#${item.id}` ||
-                (location.pathname === '/rsvp' && item.id === 'rsvp') ? '#C8A96A' : 'transparent'
-            }}
+  color: '#1C1C1C',
+  borderBottomColor: location.hash === `#${item.id}` ||
+    (location.pathname === '/rsvp' && item.id === 'rsvp') ? '#C8A96A' : 'transparent'
+}}
           >
             {item.label}
           </button>
