@@ -112,6 +112,7 @@ export default function HomePage() {
         className="fixed inset-0 pointer-events-none z-0"
         style={{
           backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_cd2aed73ea0c404f826bc9a96e467619~mv2.jpg))',
+          backgroundAttachment: 'fixed',
           backgroundPosition: 'top right',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover'
