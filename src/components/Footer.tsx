@@ -1,7 +1,16 @@
 export default function Footer() {
   return (
-    <footer className="py-12 border-t" style={{ borderColor: '#C8A96A33'}}>
-      <div className="container mx-auto px-4">
+    <footer className="py-12 border-t relative overflow-hidden" style={{ borderColor: '#C8A96A33' }}>
+      {/* Bottom floral decoration */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_e12fd9866ed34e1182fb41bbd1b324be~mv2.jpg)',
+        backgroundPosition: 'bottom center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        opacity: 0.4
+      }} />
+
+      <div className="relative z-10 container mx-auto px-4">
         <div className="flex flex-col items-center gap-4 text-center">
 
           {/* Gold divider top */}
