@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-4 text-center">
 
           {/* Gold divider top */}
-          <div className="w-16 h-px mb-4" />
+          <div className="w-16 h-px mb-4" style={{ backgroundColor: '#C8A96A' }} />
 
           {/* Names */}
           <span
