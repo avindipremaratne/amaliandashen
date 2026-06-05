@@ -4,7 +4,7 @@ export default function Footer() {
       {/* Bottom floral decoration */}
       <div className="absolute inset-0 pointer-events-none" style={{
         backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_e12fd9866ed34e1182fb41bbd1b324be~mv2.jpg)',
-        backgroundPosition: 'bottom center',
+        backgroundPosition: 'bottom',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }} />
