@@ -113,10 +113,10 @@ export default function HomePage() {
         style={{
           backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_cd2aed73ea0c404f826bc9a96e467619~mv2.jpg)',
           backgroundAttachment: 'fixed',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          //opacity: 0.15
+    backgroundPosition: 'top right',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'auto 100%',
+    opacity: 0.4
         }}
       />
 
