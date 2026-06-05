@@ -21,7 +21,12 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
+    <header className="fixed top-0 left-0 w-full z-50 border-b"
+  style={{
+    backgroundColor: '#F7F3EEE0',
+    backdropFilter: 'blur(8px)',
+    borderColor: '#C8A96A33'
+  }}>
   <div className="container mx-auto px-6 py-4">
     <div className="flex items-center justify-between">
 
