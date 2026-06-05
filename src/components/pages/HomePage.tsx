@@ -104,19 +104,22 @@ export default function HomePage() {
   }, []);
 
   return (
-   <div
-  className="min-h-screen font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden relative"
-  style={{
-    backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_e12fd9866ed34e1182fb41bbd1b324be~mv2.jpg)',
-    backgroundPosition: 'top right',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
-    backgroundAttachment: 'scroll',
-    backgroundColor: '#F7F3EE',
-  }}
->
-  <div className="relative z-10">
-    <Header />
+    <div
+      className="min-h-screen font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden"
+    >
+      {/* Fixed background image */}
+      <div
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_e12fd9866ed34e1182fb41bbd1b324be~mv2.jpg))',
+          backgroundPosition: 'top right',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }}
+      />
+
+      <div className="relative z-10">
+        <Header />
 
         {/* 1. HERO SECTION */}
         <section id="home" className="scroll-mt-24 relative h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
