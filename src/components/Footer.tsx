@@ -35,12 +35,6 @@ export default function Footer() {
 
           {/* Gold divider bottom */}
           <div className="w-16 h-px mt-4" style={{ backgroundColor: '#C8A96A' }} />
-
-          {/* Copyright */}
-          <p className="font-paragraph text-xs mt-2" style={{ color: '#3A3A3A99' }}>
-            © 2026 Ashen & Amali. All rights reserved.
-          </p>
-
         </div>
       </div>
     </footer>
