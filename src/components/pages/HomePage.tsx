@@ -106,7 +106,6 @@ export default function HomePage() {
   return (
     <div
       className="min-h-screen font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden"
-      style={{ backgroundColor: '#F7F3EE' }}
     >
       {/* Fixed background image */}
       <div
