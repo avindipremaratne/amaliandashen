@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="py-12 border-t" style={{ borderColor: '#C8A96A33', backgroundColor: '#F7F3EE' }}>
+    <footer className="py-12 border-t" style={{ borderColor: '#C8A96A33'}}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-4 text-center">
 
