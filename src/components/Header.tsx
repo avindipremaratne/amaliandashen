@@ -11,10 +11,8 @@ export default function Header() {
   const handleNavClick = (sectionId: string) => {
     setIsMenuOpen(false);
     if (location.pathname === '/') {
-      // Already on home page, just scroll
       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // On another page, navigate to home then scroll
       navigate('/');
       setTimeout(() => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -23,8 +21,11 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-      <div className="container mx-auto px-2 py-2">
+    <header
+      className="fixed top-0 left-0 w-full z-50 border-b"
+      style={{ backgroundColor: '#F7F3EEE0', backdropFilter: 'blur(8px)', borderColor: '#C8A96A33' }}
+    >
+      <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
 
           {/* Logo/Image Box */}
@@ -39,34 +40,39 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             <button
               onClick={() => handleNavClick('home')}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+              className="font-paragraph text-xs uppercase tracking-widest transition-colors duration-200 hover:opacity-60"
+              style={{ color: '#1C1C1C' }}
             >
               Home
             </button>
             <button
               onClick={() => handleNavClick('schedule')}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+              className="font-paragraph text-xs uppercase tracking-widest transition-colors duration-200 hover:opacity-60"
+              style={{ color: '#1C1C1C' }}
             >
               Schedule
             </button>
             <button
               onClick={() => handleNavClick('venue')}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+              className="font-paragraph text-xs uppercase tracking-widest transition-colors duration-200 hover:opacity-60"
+              style={{ color: '#1C1C1C' }}
             >
               Venue
             </button>
             <button
               onClick={() => handleNavClick('rsvp')}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+              className="font-paragraph text-xs uppercase tracking-widest transition-colors duration-200 hover:opacity-60"
+              style={{ color: '#1C1C1C' }}
             >
               RSVP
             </button>
             <button
               onClick={() => handleNavClick('gallery')}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200"
+              className="font-paragraph text-xs uppercase tracking-widest transition-colors duration-200 hover:opacity-60"
+              style={{ color: '#1C1C1C' }}
             >
               Gallery
             </button>
@@ -75,7 +81,8 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-foreground hover:text-link transition-colors duration-200"
+            className="md:hidden transition-colors duration-200"
+            style={{ color: '#1C1C1C' }}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -84,34 +91,39 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4 border-t border-border pt-4">
+          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-6 border-t pt-4" style={{ borderColor: '#C8A96A33' }}>
             <button
               onClick={() => handleNavClick('home')}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200 text-left"
+              className="font-paragraph text-xs uppercase tracking-widest text-left hover:opacity-60 transition-colors duration-200"
+              style={{ color: '#1C1C1C' }}
             >
               Home
             </button>
             <button
               onClick={() => handleNavClick('schedule')}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200 text-left"
+              className="font-paragraph text-xs uppercase tracking-widest text-left hover:opacity-60 transition-colors duration-200"
+              style={{ color: '#1C1C1C' }}
             >
               Schedule
             </button>
             <button
               onClick={() => handleNavClick('venue')}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200 text-left"
+              className="font-paragraph text-xs uppercase tracking-widest text-left hover:opacity-60 transition-colors duration-200"
+              style={{ color: '#1C1C1C' }}
             >
               Venue
             </button>
             <button
               onClick={() => handleNavClick('rsvp')}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200 text-left"
+              className="font-paragraph text-xs uppercase tracking-widest text-left hover:opacity-60 transition-colors duration-200"
+              style={{ color: '#1C1C1C' }}
             >
               RSVP
             </button>
             <button
               onClick={() => handleNavClick('gallery')}
-              className="font-paragraph text-sm text-link hover:text-foreground transition-colors duration-200 text-left"
+              className="font-paragraph text-xs uppercase tracking-widest text-left hover:opacity-60 transition-colors duration-200"
+              style={{ color: '#1C1C1C' }}
             >
               Gallery
             </button>
