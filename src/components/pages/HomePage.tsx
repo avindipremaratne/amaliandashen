@@ -327,7 +327,7 @@ export default function HomePage() {
 
               {/* Reception */}
               <FadeIn delay={0.4} direction="up" className="h-full">
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-center rounded-xl p-8 md:p-12 border h-full justify-between hover:shadow-md transition-all duration-300" style={{ backgroundColor: '#FCFAF7', borderColor: '#C8A96A33' }}>
                   <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: '#C8A96A20', color: '#C8A96A' }}>
                     <Wine size={26} />
                   </div>
