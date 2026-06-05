@@ -118,7 +118,7 @@ export default function HomePage() {
     <div
   className="min-h-screen font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden"
   style={{
-    backgroundImage: 'url(wix:image://v1/b5e630_e12fd9866ed34e1182fb41bbd1b324be~mv2.jpg/bg.jpg#originWidth=1024&originHeight=1536)',
+    backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_e12fd9866ed34e1182fb41bbd1b324be~mv2.jpg)',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
