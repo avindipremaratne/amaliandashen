@@ -101,7 +101,7 @@ export default function RSVPPage() {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#F7F3EE' }}>
+    <div className="min-h-screen">
       <Header />
 
       {/* Hero Section */}
