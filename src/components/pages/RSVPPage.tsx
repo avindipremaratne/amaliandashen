@@ -101,7 +101,7 @@ export default function RSVPPage() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: '#F7F3EE' }}>
       <Header />
 
       {/* Hero Section */}
@@ -119,6 +119,7 @@ export default function RSVPPage() {
         {/* Soft overlay */}
         <div
           className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(247, 243, 238, 0.45)' }}
         />
 
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -174,6 +175,7 @@ export default function RSVPPage() {
       </section>
 
       {/* RSVP Form Section */}
+      <section className="py-8" style={{ backgroundColor: 'transparent' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             {isSubmitted ? (
@@ -181,7 +183,7 @@ export default function RSVPPage() {
                 <div
                   className="rounded-2xl p-8 md:p-12 text-center"
                   style={{
-                    //backgroundColor: 'rgba(252, 250, 247, 0.92)',
+                    backgroundColor: 'rgba(252, 250, 247, 0.92)',
                     border: '1px solid #E8E0D5',
                     boxShadow: '0 4px 32px rgba(200, 169, 106, 0.10)',
                   }}
@@ -513,6 +515,7 @@ export default function RSVPPage() {
             )}
           </div>
         </div>
+      </section>
       <Footer />
     </div>
   );
