@@ -6,7 +6,7 @@ export default function Footer() {
         backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_bf488c1f65c446f1aa985e7b5c076cf5~mv2.jpg)',
         backgroundAttachment: 'fixed',
         backgroundPosition: 'bottom',
-        backgroundSize: 'auto',
+        backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }} />
 
