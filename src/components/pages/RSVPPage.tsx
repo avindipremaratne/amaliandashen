@@ -513,7 +513,6 @@ export default function RSVPPage() {
             )}
           </div>
         </div>
-      </section>
       <Footer />
     </div>
   );
