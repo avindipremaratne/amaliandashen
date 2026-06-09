@@ -132,13 +132,14 @@ export default function RSVPPage() {
               <h1
                 className="mb-0"
                 style={{
-                  fontFamily: 'Ephesis, cursive',
-                  fontWeight: 400,
-                  fontSize: 'clamp(4rem, 12vw, 8rem)',
-                  letterSpacing: '0.15em',
-                  color: '#1C1C1C',
-                  lineHeight: 1,
-                }}
+    fontFamily: 'Cormorant Garamond, serif',
+    fontWeight: 700,
+    fontSize: 'clamp(4rem, 12vw, 8rem)',
+    letterSpacing: '0.2em',
+    color: '#1C1C1C',
+    lineHeight: 1,
+    textTransform: 'uppercase',
+  }}
               >
                 RSVP
               </h1>
