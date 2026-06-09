@@ -175,7 +175,7 @@ export default function RSVPPage() {
       </section>
 
       {/* RSVP Form Section */}
-      <section className="py-8" style={{ backgroundColor: 'transparent' }}>
+      {/* <section className="py-8" style={{ backgroundColor: 'transparent' }}> */}
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             {isSubmitted ? (
@@ -515,7 +515,7 @@ export default function RSVPPage() {
             )}
           </div>
         </div>
-      </section>
+      {/* </section> */}
       <Footer />
     </div>
   );
