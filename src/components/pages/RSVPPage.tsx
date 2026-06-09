@@ -181,7 +181,7 @@ export default function RSVPPage() {
                 <div
                   className="rounded-2xl p-8 md:p-12 text-center"
                   style={{
-                    backgroundColor: 'rgba(252, 250, 247, 0.92)',
+                    //backgroundColor: 'rgba(252, 250, 247, 0.92)',
                     border: '1px solid #E8E0D5',
                     boxShadow: '0 4px 32px rgba(200, 169, 106, 0.10)',
                   }}
