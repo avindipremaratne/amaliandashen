@@ -7,7 +7,7 @@ import { EventSchedule, GuestPhotos } from '@/entities';
 import { useFonts } from '@/hooks/useFonts';
 import { BaseCrudService } from '@/integrations';
 import { motion } from 'framer-motion';
-import { Church, Loader2, Wine } from 'lucide-react';
+import { Church, Loader2 } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -314,30 +314,6 @@ export default function HomePage() {
                 </div>
                 <Button
                   onClick={() => window.open('https://maps.google.com/?q=St.+Thomas+Aquinas+Church+Halifax', '_blank')}
-                  className="rounded-none px-8 py-6 tracking-widest uppercase text-xs transition-all duration-300 w-full text-white"
-                  style={{ backgroundColor: '#1F2A44' }}
-                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C8A96A')}
-                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#1F2A44')}
-                >
-                  Get Directions
-                </Button>
-              </FadeIn>
-
-              {/* Reception */}
-              <FadeIn delay={0.4} direction="up" className="h-full">
-                <div className="flex flex-col items-center text-center rounded-xl p-8 md:p-12 border h-full justify-between hover:shadow-md transition-all duration-300" style={{ backgroundColor: '#FCFAF7', borderColor: '#C8A96A33' }}>
-                  <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: '#C8A96A20', color: '#C8A96A' }}>
-                    <Wine size={26} />
-                  </div>
-                  <p className="font-paragraph text-xs uppercase tracking-widest mb-2" style={{ color: '#C8A96A' }}>Reception</p>
-                  <h3 className="font-paragraph font-semibold text-xl md:text-2xl mb-4 min-h-[4rem] flex items-center justify-center" style={{ color: '#1C1C1C' }}>
-                    Le Rouge
-                  </h3>
-                  <p className="font-paragraph text-base mb-1" style={{ color: '#3A3A3A' }}>Beachville</p>
-                  <p className="font-paragraph text-base font-medium mb-8" style={{ color: '#3A3A3A' }}>7:00 PM</p>
-                </div>
-                <Button
-                  onClick={() => window.open('https://maps.google.com/?q=Le+Rouge+Beachville', '_blank')}
                   className="rounded-none px-8 py-6 tracking-widest uppercase text-xs transition-all duration-300 w-full text-white"
                   style={{ backgroundColor: '#1F2A44' }}
                   onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C8A96A')}
