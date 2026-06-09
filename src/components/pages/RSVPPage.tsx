@@ -116,11 +116,10 @@ export default function RSVPPage() {
             backgroundRepeat: 'no-repeat',
           }}
         />
-        {/* Soft overlay
+        {/* Soft overlay */}
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(247, 243, 238, 0.45)' }}
-        /> */}
+        />
 
         <div className="relative z-10 container mx-auto px-4 text-center">
           <AnimatedElement>
