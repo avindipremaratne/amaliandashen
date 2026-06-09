@@ -128,21 +128,27 @@ export default function RSVPPage() {
                 Kindly
               </p>
 
-              {/* RSVP heading */}
-              <h1
-                className="mb-0"
-                style={{
-    fontFamily: 'Cormorant Garamond, serif',
-    fontWeight: 600,
+              {/* Inject this once inside your component return */}
+<style>{`
+  .rsvp-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.25em !important;
+    text-transform: uppercase !important;
+  }
+`}</style>
+
+{/* Then on the h1 */}
+<h1
+  className="rsvp-title mb-0"
+  style={{
     fontSize: 'clamp(4rem, 12vw, 8rem)',
-    letterSpacing: '0.25em',
     color: '#1C1C1C',
     lineHeight: 1,
-    textTransform: 'uppercase',
   }}
-              >
-                RSVP
-              </h1>
+>
+  RSVP
+</h1>
 
               {/* Diamond separator */}
               <DiamondSeparator />
