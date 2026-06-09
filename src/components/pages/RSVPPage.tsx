@@ -133,7 +133,7 @@ export default function RSVPPage() {
                 className="mb-0"
                 style={{
     fontFamily: 'Cormorant Garamond, serif',
-    fontWeight: 700,
+    fontWeight: 400,
     fontSize: 'clamp(4rem, 12vw, 8rem)',
     letterSpacing: '0.2em',
     color: '#1C1C1C',
