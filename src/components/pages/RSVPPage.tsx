@@ -49,15 +49,17 @@ const DiamondSeparator = () => (
 // Decorative stem after submit button
 const DecorativeStem = () => (
   <div className="flex justify-center mt-6">
-    <svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Main curved stem */}
-      <path d="M20 32 C50 32 70 8 80 8 C90 8 110 32 140 32" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
-      {/* Small leaf left */}
-      <path d="M52 24 C46 18 40 20 42 26 C44 28 52 24 52 24Z" stroke="#C8A96A" strokeWidth="0.8" fill="none"/>
-      {/* Small leaf right */}
-      <path d="M108 24 C114 18 120 20 118 26 C116 28 108 24 108 24Z" stroke="#C8A96A" strokeWidth="0.8" fill="none"/>
+    <svg width="200" height="30" viewBox="0 0 200 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Left curl */}
+      <path d="M10 15 C14 8 20 8 18 15 C16 20 12 18 14 15" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
+      {/* Left arm extending right */}
+      <path d="M17 14 C35 14 55 14 95 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
       {/* Center small diamond */}
-      <rect x="78" y="6" width="4" height="4" rx="0.5" transform="rotate(45 80 8)" fill="#C8A96A"/>
+      <rect x="97" y="12" width="4" height="4" rx="0.3" transform="rotate(45 99 14)" fill="#C8A96A"/>
+      {/* Right arm extending left */}
+      <path d="M103 14 C140 14 160 14 183 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
+      {/* Right curl */}
+      <path d="M183 14 C185 8 192 9 190 15 C188 20 184 19 186 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
     </svg>
   </div>
 );
