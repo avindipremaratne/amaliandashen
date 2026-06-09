@@ -46,15 +46,18 @@ const DiamondSeparator = () => (
   </div>
 );
 
-// Decorative stem / branch SVG (after submit button)
+// Decorative stem after submit button
 const DecorativeStem = () => (
   <div className="flex justify-center mt-6">
-    <svg width="120" height="36" viewBox="0 0 120 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 28 Q30 10 60 18 Q90 26 110 8" stroke="#C8A96A" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
-      <path d="M35 18 Q28 8 22 12" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
-      <path d="M55 19 Q50 8 46 10" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
-      <path d="M75 20 Q72 9 68 11" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
-      <path d="M95 14 Q93 4 89 6" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
+    <svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Main curved stem */}
+      <path d="M20 32 C50 32 70 8 80 8 C90 8 110 32 140 32" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
+      {/* Small leaf left */}
+      <path d="M52 24 C46 18 40 20 42 26 C44 28 52 24 52 24Z" stroke="#C8A96A" strokeWidth="0.8" fill="none"/>
+      {/* Small leaf right */}
+      <path d="M108 24 C114 18 120 20 118 26 C116 28 108 24 108 24Z" stroke="#C8A96A" strokeWidth="0.8" fill="none"/>
+      {/* Center small diamond */}
+      <rect x="78" y="6" width="4" height="4" rx="0.5" transform="rotate(45 80 8)" fill="#C8A96A"/>
     </svg>
   </div>
 );
@@ -113,7 +116,7 @@ export default function RSVPPage() {
             backgroundRepeat: 'no-repeat',
           }}
         />
-        {/* Soft overlay to keep text readable */}
+        {/* Soft overlay */}
         <div
           className="absolute inset-0"
           style={{ backgroundColor: 'rgba(247, 243, 238, 0.45)' }}
@@ -135,12 +138,12 @@ export default function RSVPPage() {
               Kindly
             </p>
 
-            {/* Big RSVP heading */}
+            {/* RSVP heading — Ephesis font, just with letter spacing added */}
             <h1
               className="mb-0"
               style={{
-                fontFamily: 'Montserrat, sans-serif',
-                fontWeight: 700,
+                fontFamily: 'Ephesis, cursive',
+                fontWeight: 400,
                 fontSize: 'clamp(4rem, 12vw, 8rem)',
                 letterSpacing: '0.15em',
                 color: '#1C1C1C',
@@ -185,9 +188,7 @@ export default function RSVPPage() {
                     boxShadow: '0 4px 32px rgba(200, 169, 106, 0.10)',
                   }}
                 >
-                  {/* Top diamond ornament */}
                   <DiamondSeparator />
-
                   <CheckCircle2 className="w-16 h-16 mx-auto mb-6" style={{ color: '#C8A96A' }} />
                   <h2
                     className="mb-4"
