@@ -35,7 +35,6 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
   );
 };
 
-// Decorative diamond separator
 const DiamondSeparator = () => (
   <div className="flex items-center justify-center gap-3 my-6">
     <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
@@ -46,19 +45,13 @@ const DiamondSeparator = () => (
   </div>
 );
 
-// Decorative stem after submit button
 const DecorativeStem = () => (
   <div className="flex justify-center mt-6">
     <svg width="200" height="30" viewBox="0 0 200 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Left curl */}
       <path d="M10 15 C14 8 20 8 18 15 C16 20 12 18 14 15" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
-      {/* Left arm extending right */}
       <path d="M17 14 C35 14 55 14 95 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
-      {/* Center small diamond */}
       <rect x="97" y="12" width="4" height="4" rx="0.3" transform="rotate(45 99 14)" fill="#C8A96A"/>
-      {/* Right arm extending left */}
       <path d="M103 14 C140 14 160 14 183 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
-      {/* Right curl */}
       <path d="M183 14 C185 8 192 9 190 15 C188 20 184 19 186 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
     </svg>
   </div>
@@ -81,7 +74,6 @@ export default function RSVPPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
-
     try {
       await BaseCrudService.create<RSVPs>('rsvps', {
         _id: crypto.randomUUID(),
@@ -103,91 +95,92 @@ export default function RSVPPage() {
   };
 
   return (
-    <div className="min-h-screen" /*style={{ backgroundColor: '#F7F3EE' }}*/>
-      <Header />
+    // Full page wrapper — background image covers everything including behind the form
+    <div
+      className="min-h-screen relative"
+      style={{
+        backgroundImage: `url('https://static.wixstatic.com/media/b5e630_cd2aed73ea0c404f826bc9a96e467619~mv2.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Warm ivory overlay over entire page */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ backgroundColor: 'rgba(247, 243, 238, 0.55)', zIndex: 0 }}
+      />
 
-      {/* Hero Section */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        {/* Background image */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url('https://static.wixstatic.com/media/b5e630_cd2aed73ea0c404f826bc9a96e467619~mv2.jpg')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-        />
-        {/* Soft overlay */}
-        <div
-          className="absolute inset-0"
-          // style={{ backgroundColor: 'rgba(247, 243, 238, 0.45)' }}
-        />
+      <div className="relative z-10">
+        <Header />
 
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <AnimatedElement>
-            {/* Cursive "Kindly" above */}
-            <p
-              className="mb-2"
-              style={{
-                fontFamily: 'Ephesis, cursive',
-                fontWeight: 400,
-                fontSize: '3rem',
-                color: '#C8A96A',
-                lineHeight: 1.2,
-              }}
-            >
-              Kindly
-            </p>
+        {/* Hero Section */}
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-4 text-center">
+            <AnimatedElement>
+              {/* Cursive "Kindly" above */}
+              <p
+                className="mb-2"
+                style={{
+                  fontFamily: 'Ephesis, cursive',
+                  fontWeight: 400,
+                  fontSize: '3rem',
+                  color: '#C8A96A',
+                  lineHeight: 1.2,
+                }}
+              >
+                Kindly
+              </p>
 
-            {/* RSVP heading — Ephesis font, just with letter spacing added */}
-            <h1
-              className="mb-0"
-              style={{
-                fontFamily: 'Ephesis, cursive',
-                fontWeight: 400,
-                fontSize: 'clamp(4rem, 12vw, 8rem)',
-                letterSpacing: '0.15em',
-                color: '#1C1C1C',
-                lineHeight: 1,
-              }}
-            >
-              RSVP
-            </h1>
+              {/* RSVP heading */}
+              <h1
+                className="mb-0"
+                style={{
+                  fontFamily: 'Ephesis, cursive',
+                  fontWeight: 400,
+                  fontSize: 'clamp(4rem, 12vw, 8rem)',
+                  letterSpacing: '0.15em',
+                  color: '#1C1C1C',
+                  lineHeight: 1,
+                }}
+              >
+                RSVP
+              </h1>
 
-            {/* Diamond separator */}
-            <DiamondSeparator />
+              {/* Diamond separator */}
+              <DiamondSeparator />
 
-            {/* Subheading */}
-            <p
-              style={{
-                fontFamily: 'Montserrat, sans-serif',
-                fontWeight: 400,
-                fontSize: '0.78rem',
-                letterSpacing: '0.22em',
-                color: '#3A3A3A',
-                textTransform: 'uppercase',
-                lineHeight: 1.8,
-              }}
-            >
-              WE CAN&apos;T WAIT TO CELEBRATE<br />THIS SPECIAL DAY WITH YOU.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+              {/* Subheading */}
+              <p
+                style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontWeight: 400,
+                  fontSize: '0.78rem',
+                  letterSpacing: '0.22em',
+                  color: '#3A3A3A',
+                  textTransform: 'uppercase',
+                  lineHeight: 1.8,
+                }}
+              >
+                WE CAN&apos;T WAIT TO CELEBRATE<br />THIS SPECIAL DAY WITH YOU.
+              </p>
+            </AnimatedElement>
+          </div>
+        </section>
 
-      {/* RSVP Form Section */}
-      {/* <section className="py-8" style={{ backgroundColor: 'transparent' }}> */}
-        <div className="container mx-auto px-4">
+        {/* RSVP Form — no wrapping section background, card floats over page bg */}
+        <div className="pb-20 px-4">
           <div className="max-w-2xl mx-auto">
             {isSubmitted ? (
               <AnimatedElement>
                 <div
                   className="rounded-2xl p-8 md:p-12 text-center"
                   style={{
-                    backgroundColor: 'rgba(252, 250, 247, 0.92)',
-                    border: '1px solid #E8E0D5',
-                    boxShadow: '0 4px 32px rgba(200, 169, 106, 0.10)',
+                    backgroundColor: 'rgba(253, 251, 248, 0.88)',
+                    border: '1px solid rgba(200, 169, 106, 0.35)',
+                    boxShadow: '0 8px 48px rgba(0, 0, 0, 0.08)',
+                    backdropFilter: 'blur(6px)',
                   }}
                 >
                   <DiamondSeparator />
@@ -219,7 +212,7 @@ export default function RSVPPage() {
                           title: 'Amali and Ashen Wedding',
                           description: 'Join us to celebrate our wedding day!',
                           start: '20260827T153000Z',
-                          end: '20260827T230000Z'
+                          end: '20260827T230000Z',
                         };
                         const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&details=${encodeURIComponent(event.description)}&dates=${event.start}/${event.end}`;
                         window.open(url, '_blank');
@@ -253,12 +246,12 @@ export default function RSVPPage() {
                 <div
                   className="rounded-2xl p-8 md:p-12"
                   style={{
-                    backgroundColor: 'rgba(252, 250, 247, 0.92)',
-                    border: '1px solid #E8E0D5',
-                    boxShadow: '0 4px 32px rgba(200, 169, 106, 0.10)',
+                    backgroundColor: 'rgba(253, 251, 248, 0.88)',
+                    border: '1px solid rgba(200, 169, 106, 0.35)',
+                    boxShadow: '0 8px 48px rgba(0, 0, 0, 0.08)',
+                    backdropFilter: 'blur(6px)',
                   }}
                 >
-                  {/* Top diamond ornament in card */}
                   <DiamondSeparator />
 
                   {/* Kindly reply by */}
@@ -470,15 +463,9 @@ export default function RSVPPage() {
                       />
                     </div>
 
-                    {/* Error message */}
+                    {/* Error */}
                     {error && (
-                      <p
-                        style={{
-                          fontFamily: 'Montserrat, sans-serif',
-                          fontSize: '0.85rem',
-                          color: '#c0392b',
-                        }}
-                      >
+                      <p style={{ fontFamily: 'Montserrat, sans-serif', fontSize: '0.85rem', color: '#c0392b' }}>
                         {error}
                       </p>
                     )}
@@ -508,17 +495,16 @@ export default function RSVPPage() {
                       {isSubmitting ? 'Submitting...' : 'Submit RSVP'}
                     </button>
 
-                    {/* Decorative stem */}
                     <DecorativeStem />
-
                   </div>
                 </div>
               </AnimatedElement>
             )}
           </div>
         </div>
-      {/* </section> */}
-      <Footer />
+
+        <Footer />
+      </div>
     </div>
   );
 }
