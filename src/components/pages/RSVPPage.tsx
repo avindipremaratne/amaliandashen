@@ -106,11 +106,6 @@ export default function RSVPPage() {
         backgroundAttachment: 'fixed',
       }}
     >
-      {/* Warm ivory overlay over entire page */}
-      {/* <div
-        className="absolute inset-0 pointer-events-none"
-        style={{ backgroundColor: 'rgba(247, 243, 238, 0.55)', zIndex: 0 }}
-      /> */}
 
       <div className="relative z-10">
         <Header />
