@@ -1009,7 +1009,7 @@ export default function HomePage() {
               <circle cx="12" cy="9" r="2.5"/>
             </svg>
             <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600, fontSize: '0.62rem', letterSpacing: '0.15em', color: '#1C1C1C', textTransform: 'uppercase' }}>Address</p>
-            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.75rem', color: '#3A3A3A', lineHeight: 1.5 }}>11725 Oxford St, Halifax, NS B3H 3Z7<br/>Halifax, NS B3R 3H3</p>
+            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.75rem', color: '#3A3A3A', lineHeight: 1.5 }}>11725 Oxford St, <br/>Halifax, NS B3H 3Z7</p>
           </div>
         </div>
 
