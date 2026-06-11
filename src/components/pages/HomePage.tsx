@@ -786,9 +786,9 @@ export default function HomePage() {
 >
   {String(item.value).padStart(2, '0')}
 </motion.span>
-                    <span className="text-xs md:text-sm uppercase tracking-widest mt-3 font-medium" style={{ color: '#3A3A3A' }}>
+                    {/* <span className="text-xs md:text-sm uppercase tracking-widest mt-3 font-medium" style={{ color: '#3A3A3A' }}>
                       {item.label}
-                    </span>
+                    </span> */}
                   </motion.div>
                 ))}
               </div>
