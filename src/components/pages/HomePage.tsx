@@ -116,7 +116,8 @@ export default function HomePage() {
             <Image
   src="https://static.wixstatic.com/media/b5e630_4c158fe70f094a0698a34b7c67105676~mv2.jpg"
   alt="Amali and Ashen"
-  className="w-full h-full object-cover object-top"
+  className="w-full h-full object-cover"
+  style={{ objectPosition: '50% 30%' }}
 />
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent" />
           </div>
