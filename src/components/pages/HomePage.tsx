@@ -1015,7 +1015,7 @@ export default function HomePage() {
 
         {/* View Ceremony Location button */}
         <button
-          onClick={() => window.open('https://maps.google.com/?q=1030+Purcells+Cove+Rd+Halifax+NS', '_blank')}
+          onClick={() => window.open('https://maps.app.goo.gl/Ao3U7iQWuD7CCyQQ8', '_blank')}
           style={{
             width: '100%',
             backgroundColor: '#1F2A44',
