@@ -699,17 +699,7 @@ export default function HomePage() {
             className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6"
             style={{ backgroundColor: 'rgba(200, 169, 106, 0.12)' }}
           >
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C8A96A" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-  {/* Neckline */}
-  <path d="M9 2h6"/>
-  {/* Shoulders sloping out */}
-  <path d="M9 2 L5 8"/>
-  <path d="M15 2 L19 8"/>
-  {/* Waist */}
-  <path d="M5 8 L7 11 L17 11 L19 8"/>
-  {/* Skirt flaring out */}
-  <path d="M7 11 L4 22 L20 22 L17 11"/>
-</svg>
+
           </div>
 
           <p
