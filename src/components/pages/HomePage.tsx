@@ -823,11 +823,11 @@ export default function HomePage() {
     backgroundRepeat: 'no-repeat'
   }}
   />
-  {/* Dark overlay */}
+  {/* Dark overlay
   <div
     className="absolute inset-0 pointer-events-none"
     style={{ backgroundColor: 'rgba(20, 20, 20, 0.45)' }}
-  />
+  /> */}
 
   <div className="container mx-auto px-4 relative z-10">
 
