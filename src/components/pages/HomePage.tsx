@@ -165,146 +165,149 @@ export default function HomePage() {
           </div>
         </section>
 
-       {/* 2. BIBLE VERSE & INVITATION SECTION*/}
-        <section className="py-24 relative">
-          <div className="container mx-auto px-4 max-w-3xl flex flex-col items-center text-center">
+       {/* 2. BIBLE VERSE & INVITATION SECTION */}
+<section className="py-24 relative">
+  <div className="container mx-auto px-4 max-w-3xl flex flex-col items-center text-center">
 
-            {/* Gold diamond separator top */}
-            <FadeIn>
-              <div className="flex items-center justify-center gap-3 mb-12">
-                <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                  <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
-                </svg>
-                <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
-              </div>
-            </FadeIn>
+    <FadeIn className="w-full">
+      <div
+        className="w-full mx-auto px-8 py-12 md:px-16 md:py-16 rounded-2xl"
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.55)',
+          backdropFilter: 'blur(8px)',
+          border: '1px solid rgba(200, 169, 106, 0.2)',
+          boxShadow: '0 8px 48px rgba(0, 0, 0, 0.06)',
+        }}
+      >
+        {/* Gold diamond separator top */}
+        <div className="flex items-center justify-center gap-3 mb-12">
+          <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
+          </svg>
+          <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
+        </div>
 
-            {/* Bible verse — Ephesis */}
-            <FadeIn delay={0.2}>
-              <p
-                className="mb-2 leading-relaxed"
-                style={{
-                  fontFamily: 'Ephesis, cursive',
-                  fontWeight: 400,
-                  fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
-                  color: '#1C1C1C',
-                  lineHeight: 1.6,
-                }}
-              >
-                "Love is patient, love is kind… it always protects, always trusts, always hopes, always perseveres."
-              </p>
-              <p
-                className="mb-16"
-                style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 500,
-                  fontSize: '0.78rem',
-                  letterSpacing: '0.2em',
-                  color: '#C8A96A',
-                  textTransform: 'uppercase',
-                }}
-              >
-                1 Corinthians 13:4–7
-              </p>
-            </FadeIn>
+        {/* Bible verse — Ephesis */}
+        <p
+          className="mb-2 leading-relaxed"
+          style={{
+            fontFamily: 'Ephesis, cursive',
+            fontWeight: 400,
+            fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
+            color: '#1C1C1C',
+            lineHeight: 1.6,
+          }}
+        >
+          "Love is patient, love is kind… it always protects, always trusts, always hopes, always perseveres."
+        </p>
+        <p
+          className="mb-12"
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 500,
+            fontSize: '0.78rem',
+            letterSpacing: '0.2em',
+            color: '#C8A96A',
+            textTransform: 'uppercase',
+          }}
+        >
+          1 Corinthians 13:4–7
+        </p>
 
-            {/* Gold divider */}
-            <FadeIn delay={0.3}>
-              <div className="w-16 h-px mx-auto mb-16" style={{ backgroundColor: '#C8A96A' }} />
-            </FadeIn>
+        {/* Gold divider */}
+        <div className="w-16 h-px mx-auto mb-12" style={{ backgroundColor: '#C8A96A' }} />
 
-            {/* Invitation wording — Montserrat */}
-            <FadeIn delay={0.4}>
-              <p
-                className="mb-4"
-                style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '0.95rem',
-                  letterSpacing: '0.08em',
-                  color: '#3A3A3A',
-                  lineHeight: 2,
-                }}
-              >
-                With hearts full of love and joy,
-              </p>
-              <p
-                className="mb-6"
-                style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 500,
-                  fontSize: '0.95rem',
-                  letterSpacing: '0.1em',
-                  color: '#1C1C1C',
-                  lineHeight: 2,
-                }}
-              >
-                Mr. &amp; Mrs. Perera &amp; Mr. &amp; Mrs. Fernando
-              </p>
-              <p
-                className="mb-8"
-                style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '0.95rem',
-                  letterSpacing: '0.08em',
-                  color: '#3A3A3A',
-                  lineHeight: 2,
-                }}
-              >
-                invite you to celebrate the union of
-              </p>
+        {/* Invitation wording — Montserrat */}
+        <p
+          className="mb-3"
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 300,
+            fontSize: '0.95rem',
+            letterSpacing: '0.08em',
+            color: '#3A3A3A',
+            lineHeight: 2,
+          }}
+        >
+          With hearts full of love and joy,
+        </p>
+        <p
+          className="mb-3"
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 400,
+            fontSize: '0.95rem',
+            letterSpacing: '0.1em',
+            color: '#1C1C1C',
+            lineHeight: 2,
+          }}
+        >
+          Mr. &amp; Mrs. Perera &amp; Mr. &amp; Mrs. Fernando
+        </p>
+        <p
+          className="mb-8"
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 300,
+            fontSize: '0.95rem',
+            letterSpacing: '0.08em',
+            color: '#3A3A3A',
+            lineHeight: 2,
+          }}
+        >
+          invite you to celebrate the union of
+        </p>
 
-              {/* Couple names — Ephesis */}
-              <p
-                style={{
-                  fontFamily: 'Ephesis, cursive',
-                  fontWeight: 400,
-                  fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-                  color: '#1C1C1C',
-                  lineHeight: 1.3,
-                }}
-              >
-                Amali
-              </p>
-              <p
-                style={{
-    fontFamily: 'Ephesis, cursive',
-    fontWeight: 400,
-    fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
-    color: '#C8A96A',
-    margin: '4px 0',
-  }}
-              >
-                &amp;
-              </p>
-              <p
-                style={{
-                  fontFamily: 'Ephesis, cursive',
-                  fontWeight: 400,
-                  fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-                  color: '#1C1C1C',
-                  lineHeight: 1.3,
-                }}
-              >
-                Ashen
-              </p>
-            </FadeIn>
+        {/* Couple names — Ephesis */}
+        <p
+          style={{
+            fontFamily: 'Ephesis, cursive',
+            fontWeight: 400,
+            fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+            color: '#1C1C1C',
+            lineHeight: 1.3,
+          }}
+        >
+          Ashen
+        </p>
+        <p
+          style={{
+            fontFamily: 'Ephesis, cursive',
+            fontWeight: 400,
+            fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+            color: '#C8A96A',
+            margin: '4px 0',
+          }}
+        >
+          &amp;
+        </p>
+        <p
+          style={{
+            fontFamily: 'Ephesis, cursive',
+            fontWeight: 400,
+            fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+            color: '#1C1C1C',
+            lineHeight: 1.3,
+          }}
+        >
+          Amali
+        </p>
 
-            {/* Gold diamond separator bottom */}
-            <FadeIn delay={0.5}>
-              <div className="flex items-center justify-center gap-3 mt-12">
-                <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                  <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
-                </svg>
-                <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
-              </div>
-            </FadeIn>
+        {/* Gold diamond separator bottom */}
+        <div className="flex items-center justify-center gap-3 mt-12">
+          <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
+          </svg>
+          <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
+        </div>
 
-          </div>
-        </section>
+      </div>
+    </FadeIn>
+
+  </div>
+</section>
 
         {/* 3. COUNTDOWN SECTION */}
         <section className="py-24 relative border-t" style={{ borderColor: '#C8A96A33' }}>
