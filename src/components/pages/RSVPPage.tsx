@@ -110,15 +110,14 @@ export default function RSVPPage() {
 
       {/* Full page background — fixed div approach works on iOS Safari */}
       <div
-        className="fixed inset-0 pointer-events-none z-0"
-        style={{
-          backgroundImage: `url('https://static.wixstatic.com/media/b5e630_962afd5611af40a0b1d4e6917aaabb81~mv2.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'scroll',
-        }}
-      />
+  className="fixed inset-0 pointer-events-none z-0 bg-rsvp"
+  style={{
+    backgroundImage: `url('https://static.wixstatic.com/media/b5e630_962afd5611af40a0b1d4e6917aaabb81~mv2.png')`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'scroll',
+  }}
+/>
 
       {/* Warm ivory overlay
       <div
