@@ -868,14 +868,13 @@ export default function HomePage() {
       </div>
       <p
         style={{
-    fontFamily: 'Cormorant Garamond, serif',
-    fontWeight: 600,
-    fontSize: 'clamp(4rem, 12vw, 8rem)',
-    letterSpacing: '0.25em',
-    textTransform: 'uppercase',
-    color: '#FFFFFF',
-    lineHeight: 1,
-  }}
+          fontFamily: 'Montserrat, sans-serif',
+          fontWeight: 400,
+          fontSize: '0.75rem',
+          letterSpacing: '0.25em',
+          color: '#FFFFFF',
+          textTransform: 'uppercase',
+        }}
       >
         Where We Become Us
       </p>
