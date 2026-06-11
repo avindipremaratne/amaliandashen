@@ -121,13 +121,12 @@ export default function HomePage() {
 
       {/* Background image — fixed on desktop, scroll on mobile (iOS fix) */}
 <div
-  className="fixed inset-0 pointer-events-none z-0"
+  className="fixed inset-0 pointer-events-none z-0 bg-rsvp"
   style={{
-    backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_962afd5611af40a0b1d4e6917aaabb81~mv2.png)',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url('https://static.wixstatic.com/media/b5e630_962afd5611af40a0b1d4e6917aaabb81~mv2.png')`,
     backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'scroll',
   }}
 />
 
