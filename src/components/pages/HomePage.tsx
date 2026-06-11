@@ -342,7 +342,7 @@ export default function HomePage() {
                     </motion.span> */}
                     <motion.span
   key={`${index}-${item.value}`}
-  className="text-4xl md:text-7xl tracking-tighter font-countdown"
+  className="text-3xl md:text-7xl tracking-tighter font-countdown"
   style={{ color: '#1F2A44' }}
   initial={{ opacity: 0, y: 10 }}
   animate={{ opacity: 1, y: 0 }}
