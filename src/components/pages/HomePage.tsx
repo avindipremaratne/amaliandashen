@@ -472,7 +472,7 @@ const FadeIn = ({
     right: { x: -40, y: 0 },
     none: { x: 0, y: 0 }
   };
-
+const [heroVisible, setHeroVisible] = useState(false);
   return (
     <motion.div
       initial={{ opacity: 0, ...directions[direction] }}
