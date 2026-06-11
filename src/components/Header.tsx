@@ -102,7 +102,6 @@
 //   );
 // }
 
-
 import { Image } from '@/components/ui/image';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
@@ -146,8 +145,8 @@ export default function Header() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
 
-            {/* Logo */}
-            <div className="hidden md:block">
+            {/* Logo — visible on both mobile and desktop */}
+            <div>
               <Image
                 src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
                 width={70}
@@ -155,20 +154,6 @@ export default function Header() {
                 sizes="(max-width: 768px) 64px, 80px"
                 className="rounded-lg"
               />
-            </div>
-
-            {/* Mobile logo — show on mobile only */}
-            <div className="md:hidden">
-              <span
-                style={{
-                  fontFamily: 'Ephesis, cursive',
-                  fontSize: '1.6rem',
-                  color: '#1C1C1C',
-                  fontWeight: 400,
-                }}
-              >
-                Amali & Ashen
-              </span>
             </div>
 
             {/* Desktop Navigation */}
@@ -255,33 +240,6 @@ export default function Header() {
             {/* Decorative bottom line */}
             <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
 
-            {/* Couple name at bottom of menu */}
-            <p
-              style={{
-                fontFamily: 'Ephesis, cursive',
-                fontSize: '2rem',
-                color: '#1C1C1C',
-                fontWeight: 400,
-                marginTop: '16px',
-              }}
-            >
-              Amali & Ashen
-            </p>
-          </div>
-
-          {/* Date at very bottom */}
-          <div className="pb-12 text-center">
-            <p
-              style={{
-                fontFamily: 'Montserrat, sans-serif',
-                fontSize: '0.75rem',
-                letterSpacing: '0.2em',
-                color: '#C8A96A',
-                textTransform: 'uppercase',
-              }}
-            >
-              27 • August • 2026
-            </p>
           </div>
         </div>
       )}
