@@ -602,26 +602,7 @@ export default function HomePage() {
               Ashen &amp; Amali
             </h1>
 
-            {/* Save the date */}
-            <div
-              className="flex flex-col items-center gap-2 mt-4 px-4 text-center transition-all duration-1000"
-              style={{
-                opacity: heroVisible ? 1 : 0,
-                transform: heroVisible ? 'translateY(0)' : 'translateY(10px)',
-                transitionDelay: '1.7s',
-              }}
-            >
-              <p className="text-white/90 font-light uppercase tracking-widest text-base sm:text-lg md:text-2xl lg:text-3xl font-paragraph">
-                Save the Date
-              </p>
-              <p
-                className="text-white/90 uppercase font-paragraph font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl"
-                style={{ letterSpacing: "0.10em" }}
-              >
-                27 | August | 2026
-              </p>
-              <div className="w-10 sm:w-12 md:w-14 h-px my-2" style={{ backgroundColor: '#C8A96A' }} />
-            </div>
+
 
           </div>
         </section>
