@@ -624,13 +624,21 @@ export default function HomePage() {
             <FadeIn delay={0.2}>
               <p
                 className="mb-2 leading-relaxed"
-                style={{
-                  fontFamily: 'Ephesis, cursive',
-                  fontWeight: 400,
-                  fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
-                  color: '#1C1C1C',
-                  lineHeight: 1.6,
-                }}
+                // style={{
+                //   fontFamily: 'Ephesis, cursive',
+                //   fontWeight: 400,
+                //   fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
+                //   color: '#1C1C1C',
+                //   lineHeight: 1.6,
+                // }}
+
+                fontFamily: 'Cormorant Garamond, serif',
+    fontWeight: 600,
+   fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+    letterSpacing: '0.25em',
+    textTransform: 'uppercase',
+    color: '#FFFFFF',
+    lineHeight: 1,
               >
                 "Love is patient, love is kind… it always protects, always trusts, always hopes, always perseveres."
               </p>
