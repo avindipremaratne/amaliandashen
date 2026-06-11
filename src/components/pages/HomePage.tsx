@@ -801,7 +801,6 @@ export default function HomePage() {
         </section>
 
         {/* 4. VENUE SECTION */}
-       {/* 4. VENUE SECTION */}
 <section
   id="venue"
   className="scroll-mt-24 py-24 relative overflow-hidden border-t"
@@ -813,53 +812,228 @@ export default function HomePage() {
     style={{
       backgroundImage: `url('https://static.wixstatic.com/media/b5e630_93f75fc0cd3443e88029e35fbc854b5f~mv2.jpg')`,
       backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      backgroundPosition: 'top center',
       backgroundRepeat: 'no-repeat',
     }}
   />
-  {/* Dark overlay so card stays readable */}
+  {/* Dark overlay */}
   <div
     className="absolute inset-0 pointer-events-none"
     style={{ backgroundColor: 'rgba(20, 20, 20, 0.45)' }}
   />
 
   <div className="container mx-auto px-4 relative z-10">
-            <FadeIn className="text-center mb-16">
-              <h2 className="text-6xl md:text-8xl" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400, color: '#1C1C1C' }}>
-                The Venue
-              </h2>
-              <div className="w-16 h-px mx-auto mt-6" style={{ backgroundColor: '#C8A96A' }} />
-            </FadeIn>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <FadeIn delay={0.2} direction="up" className="h-full">
-                <div className="flex flex-col items-center text-center rounded-xl p-8 md:p-12 border h-full justify-between hover:shadow-md transition-all duration-300" style={{ backgroundColor: '#FCFAF7', borderColor: '#C8A96A33' }}>
-                  <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: '#C8A96A20', color: '#C8A96A' }}>
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                      <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                    </svg>
-                  </div>
-                  <p className="font-paragraph text-xs uppercase tracking-widest mb-2" style={{ color: '#C8A96A' }}>Wedding Ceremony</p>
-                  <h3 className="font-paragraph font-semibold text-xl md:text-2xl mb-4 min-h-[4rem] flex items-center justify-center" style={{ color: '#1C1C1C' }}>
-                    St. Thomas Aquinas Church
-                  </h3>
-                  <p className="font-paragraph text-base mb-1" style={{ color: '#3A3A3A' }}>Halifax</p>
-                  <p className="font-paragraph text-base font-medium mb-8" style={{ color: '#3A3A3A' }}>3:30 PM</p>
-                </div>
-                <Button
-                  onClick={() => window.open('https://maps.google.com/?q=St.+Thomas+Aquinas+Church+Halifax', '_blank')}
-                  className="rounded-none px-8 py-6 tracking-widest uppercase text-xs transition-all duration-300 w-full text-white"
-                  style={{ backgroundColor: '#1F2A44' }}
-                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C8A96A')}
-                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#1F2A44')}
-                >
-                  Get Directions
-                </Button>
-              </FadeIn>
-            </div>
+    {/* Header */}
+    <FadeIn className="text-center mb-12">
+      <p
+        style={{
+          fontFamily: 'Ephesis, cursive',
+          fontWeight: 400,
+          fontSize: '2.5rem',
+          color: '#C8A96A',
+          lineHeight: 1.2,
+        }}
+      >
+        Join Us
+      </p>
+      <h2
+        style={{
+          fontFamily: 'Montserrat, sans-serif',
+          fontWeight: 700,
+          fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+          letterSpacing: '0.2em',
+          color: '#FFFFFF',
+          textTransform: 'uppercase',
+          lineHeight: 1,
+          marginBottom: '12px',
+        }}
+      >
+        The Venue
+      </h2>
+      <div className="flex items-center justify-center gap-3 my-4">
+        <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
+        <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+          <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
+        </svg>
+        <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
+      </div>
+      <p
+        style={{
+          fontFamily: 'Montserrat, sans-serif',
+          fontWeight: 400,
+          fontSize: '0.75rem',
+          letterSpacing: '0.25em',
+          color: '#FFFFFF',
+          textTransform: 'uppercase',
+        }}
+      >
+        Where We Become Us
+      </p>
+    </FadeIn>
+
+    {/* Venue Card */}
+    <FadeIn delay={0.2} className="max-w-xl mx-auto mb-12">
+      <div
+        className="rounded-2xl p-8 md:p-10 text-center"
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.95)',
+          border: '1px solid rgba(200, 169, 106, 0.25)',
+          boxShadow: '0 8px 48px rgba(0,0,0,0.15)',
+        }}
+      >
+        {/* Church icon */}
+        <div className="flex justify-center mb-6">
+          <div
+            className="w-14 h-14 rounded-full flex items-center justify-center"
+            style={{ backgroundColor: 'rgba(200, 169, 106, 0.12)' }}
+          >
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8A96A" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2v4M10 4h4"/>
+              <path d="M5 10h14"/>
+              <path d="M5 10v10h14V10"/>
+              <path d="M9 20v-5h6v5"/>
+              <path d="M5 10l7-4 7 4"/>
+            </svg>
           </div>
-        </section>
+        </div>
+
+        {/* Wedding Ceremony label */}
+        <p
+          className="mb-3"
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 600,
+            fontSize: '0.65rem',
+            letterSpacing: '0.2em',
+            color: '#C8A96A',
+            textTransform: 'uppercase',
+          }}
+        >
+          Wedding Ceremony
+        </p>
+
+        {/* Church name */}
+        <p
+          className="mb-1"
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 700,
+            fontSize: '0.95rem',
+            letterSpacing: '0.15em',
+            color: '#1C1C1C',
+            textTransform: 'uppercase',
+          }}
+        >
+          St. Thomas Aquinas Church
+        </p>
+        <p
+          className="mb-1"
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 400,
+            fontSize: '0.78rem',
+            letterSpacing: '0.12em',
+            color: '#3A3A3A',
+            textTransform: 'uppercase',
+          }}
+        >
+          Halifax, Nova Scotia
+        </p>
+
+        {/* Gold diamond separator */}
+        <div className="flex items-center justify-center gap-3 my-5">
+          <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
+          <svg width="6" height="6" viewBox="0 0 10 10" fill="none">
+            <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
+          </svg>
+          <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
+        </div>
+
+        {/* Description */}
+        <p
+          className="mb-8"
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 300,
+            fontSize: '0.88rem',
+            color: '#3A3A3A',
+            lineHeight: 1.8,
+            letterSpacing: '0.03em',
+          }}
+        >
+          A place of faith, love and blessings.<br />
+          We are delighted to celebrate this special moment<br />
+          surrounded by our family and friends.
+        </p>
+
+        {/* Date / Time / Address row */}
+        <div
+          className="grid grid-cols-3 gap-4 mb-8 pt-6"
+          style={{ borderTop: '1px solid rgba(200, 169, 106, 0.25)' }}
+        >
+          {/* Date */}
+          <div className="flex flex-col items-center gap-2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A96A" strokeWidth="1.5" strokeLinecap="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <path d="M16 2v4M8 2v4M3 10h18"/>
+            </svg>
+            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600, fontSize: '0.62rem', letterSpacing: '0.15em', color: '#1C1C1C', textTransform: 'uppercase' }}>Date</p>
+            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.75rem', color: '#3A3A3A', lineHeight: 1.5 }}>August 27,<br/>2026</p>
+          </div>
+
+          {/* Time */}
+          <div
+            className="flex flex-col items-center gap-2"
+            style={{ borderLeft: '1px solid rgba(200,169,106,0.25)', borderRight: '1px solid rgba(200,169,106,0.25)' }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A96A" strokeWidth="1.5" strokeLinecap="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 7v5l3 3"/>
+            </svg>
+            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600, fontSize: '0.62rem', letterSpacing: '0.15em', color: '#1C1C1C', textTransform: 'uppercase' }}>Time</p>
+            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.75rem', color: '#3A3A3A' }}>3:30 PM</p>
+          </div>
+
+          {/* Address */}
+          <div className="flex flex-col items-center gap-2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A96A" strokeWidth="1.5" strokeLinecap="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600, fontSize: '0.62rem', letterSpacing: '0.15em', color: '#1C1C1C', textTransform: 'uppercase' }}>Address</p>
+            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.75rem', color: '#3A3A3A', lineHeight: 1.5 }}>1030 Purcells Cove Rd,<br/>Halifax, NS B3R 3H3</p>
+          </div>
+        </div>
+
+        {/* View Ceremony Location button */}
+        <button
+          onClick={() => window.open('https://maps.google.com/?q=1030+Purcells+Cove+Rd+Halifax+NS', '_blank')}
+          style={{
+            width: '100%',
+            backgroundColor: '#1F2A44',
+            color: '#FFFFFF',
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 500,
+            fontSize: '0.72rem',
+            letterSpacing: '0.2em',
+            textTransform: 'uppercase',
+            padding: '14px 24px',
+            borderRadius: '999px',
+            border: 'none',
+            cursor: 'pointer',
+            transition: 'all 0.3s ease',
+          }}
+          onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C8A96A')}
+          onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#1F2A44')}
+        >
+          View Ceremony Location
+        </button>
+      </div>
+    </FadeIn>
+
+  </div>
+</section>
 
         {/* 5. RSVP SECTION */}
         <section id="rsvp" className="scroll-mt-24 py-24 relative border-t" style={{ borderColor: '#C8A96A33' }}>
