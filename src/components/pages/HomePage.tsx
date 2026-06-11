@@ -590,7 +590,7 @@ export default function HomePage() {
 
             {/* "Ashen & Amali" */}
             <h1
-              className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight font-normal transition-all duration-1000"
+              className="text-6xl md:text-7xl lg:text-[100px] text-white mb-4 leading-tight font-normal transition-all duration-1000"
               style={{
                 fontFamily: "Ephesis, cursive",
                 fontWeight: 400,
