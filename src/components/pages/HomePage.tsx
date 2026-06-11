@@ -735,9 +735,9 @@ export default function HomePage() {
           {/* Gold divider */}
           <div className="flex items-center justify-center gap-3 mb-6">
             <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
-           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C8A96A" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-</svg>
+            <svg width="6" height="6" viewBox="0 0 10 10" fill="none">
+              <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
+            </svg>
             <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
           </div>
 
