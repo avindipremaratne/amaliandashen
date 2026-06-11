@@ -473,6 +473,10 @@ const FadeIn = ({
     none: { x: 0, y: 0 }
   };
 const [heroVisible, setHeroVisible] = useState(false);
+useEffect(() => {
+  const timer = setTimeout(() => setHeroVisible(true), 100);
+  return () => clearTimeout(timer);
+}, []);
   return (
     <motion.div
       initial={{ opacity: 0, ...directions[direction] }}
