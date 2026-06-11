@@ -847,15 +847,14 @@ export default function HomePage() {
       </p>
       <h2
         style={{
-          fontFamily: 'Montserrat, sans-serif',
-          fontWeight: 700,
-          fontSize: 'clamp(2.5rem, 8vw, 5rem)',
-          letterSpacing: '0.2em',
-          color: '#FFFFFF',
-          textTransform: 'uppercase',
-          lineHeight: 1,
-          marginBottom: '12px',
-        }}
+    fontFamily: 'Cormorant Garamond, serif',
+    fontWeight: 600,
+    fontSize: 'clamp(4rem, 12vw, 8rem)',
+    letterSpacing: '0.25em',
+    textTransform: 'uppercase',
+    color: '#FFFFFF',
+    lineHeight: 1,
+  }}
       >
         The Venue
       </h2>
