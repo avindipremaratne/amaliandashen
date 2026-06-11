@@ -700,10 +700,16 @@ export default function HomePage() {
             style={{ backgroundColor: 'rgba(200, 169, 106, 0.12)' }}
           >
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C8A96A" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 2C12 2 8 6 8 10C8 12.2 9.8 14 12 14C14.2 14 16 12.2 16 10C16 6 12 2 12 2Z"/>
-              <path d="M8 14L5 22H19L16 14"/>
-              <path d="M9 18H15"/>
-            </svg>
+  {/* Neckline */}
+  <path d="M9 2h6"/>
+  {/* Shoulders sloping out */}
+  <path d="M9 2 L5 8"/>
+  <path d="M15 2 L19 8"/>
+  {/* Waist */}
+  <path d="M5 8 L7 11 L17 11 L19 8"/>
+  {/* Skirt flaring out */}
+  <path d="M7 11 L4 22 L20 22 L17 11"/>
+</svg>
           </div>
 
           <p
