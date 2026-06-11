@@ -376,17 +376,6 @@ export default function HomePage() {
 
             {/* Gold divider */}
             <div className="w-24 h-px mx-auto mb-12" style={{ backgroundColor: '#C8A96A' }} />
-
-            {/* End of page picture */}
-            <FadeIn delay={0.4} className="w-full max-w-5xl mt-12">
-              <div className="relative aspect-[21/9] overflow-hidden rounded-sm">
-                <Image
-                  src="https://wedding-invitation-68o0.onrender.com/countdownImage.jpg"
-                  alt="Couple"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
-                />
-              </div>
-            </FadeIn>
           </div>
         </section>
 
