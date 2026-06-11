@@ -1009,7 +1009,7 @@ export default function HomePage() {
               <circle cx="12" cy="9" r="2.5"/>
             </svg>
             <p className="font-paragraph uppercase text-[0.58rem] md:text-[0.62rem] tracking-[0.15em] font-semibold" style={{ color: '#1C1C1C' }}>Address</p>
-            <p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A', lineHeight: 1.5 }}>1030 Purcells Cove Rd,<br/>Halifax, NS B3R 3H3</p>
+            <p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A', lineHeight: 1.5 }}>1725 Oxford St, Halifax, NS B3H 3Z7<br/>Halifax, NS B3R 3H3</p>
           </div>
         </div>
 
