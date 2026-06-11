@@ -7,3 +7,12 @@
 html {
   scroll-behavior: smooth;
 }
+.bg-rsvp {
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .bg-rsvp {
+    background-position: top right;
+  }
+}
