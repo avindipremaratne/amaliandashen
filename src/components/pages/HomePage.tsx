@@ -803,8 +803,8 @@ export default function HomePage() {
         {/* 4. VENUE SECTION */}
 <section
   id="venue"
-  className="scroll-mt-24 py-24 relative overflow-hidden border-t"
-   style={{
+  className="scroll-mt-24 relative overflow-hidden border-t"
+  style={{
     borderColor: '#C8A96A33',
     minHeight: '100vh',
     display: 'flex',
@@ -813,15 +813,15 @@ export default function HomePage() {
     paddingBottom: '6rem',
   }}
 >
-  {/* Church background image */}
+  {/* Church background — covers entire section including header */}
   <div
     className="absolute inset-0 pointer-events-none"
     style={{
-    backgroundImage: `url('https://static.wixstatic.com/media/b5e630_93f75fc0cd3443e88029e35fbc854b5f~mv2.jpg')`,
-    backgroundSize: 'contain',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat'
-  }}
+      backgroundImage: `url('https://static.wixstatic.com/media/b5e630_93f75fc0cd3443e88029e35fbc854b5f~mv2.jpg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+    }}
   />
   {/* Dark overlay
   <div
