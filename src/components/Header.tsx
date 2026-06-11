@@ -215,21 +215,22 @@ export default function Header() {
             </nav>
 
             {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden transition-colors duration-200 p-2"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <X size={22} style={{ color: '#1C1C1C' }} />
-              ) : (
-                <div className="flex flex-col gap-1.5">
-                  <div style={{ width: '22px', height: '1px', backgroundColor: '#1C1C1C' }} />
-                  <div style={{ width: '22px', height: '1px', backgroundColor: '#C8A96A' }} />
-                  <div style={{ width: '22px', height: '1px', backgroundColor: '#1C1C1C' }} />
-                </div>
-              )}
-            </button>
+            {/* Mobile Menu Button */}
+<button
+  onClick={() => setIsMenuOpen(!isMenuOpen)}
+  className="md:hidden transition-colors duration-200 p-2"
+  aria-label="Toggle menu"
+>
+  {isMenuOpen ? (
+    <X size={22} style={{ color: '#1C1C1C' }} />
+  ) : (
+    <div className="flex flex-col" style={{ gap: '6px' }}>
+      <div style={{ width: '24px', height: '1.5px', backgroundColor: '#1C1C1C' }} />
+      <div style={{ width: '24px', height: '1.5px', backgroundColor: '#C8A96A' }} />
+      <div style={{ width: '24px', height: '1.5px', backgroundColor: '#1C1C1C' }} />
+    </div>
+  )}
+</button>
 
           </div>
         </div>
