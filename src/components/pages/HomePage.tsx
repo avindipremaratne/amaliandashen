@@ -578,11 +578,12 @@ export default function HomePage() {
 
             {/* "We're getting married." */}
             <p
-              className="text-white/90 font-paragraph font-light text-lg md:text-2xl mb-2 tracking-wide transition-all duration-1000"
+              className="text-white/90 font-paragraph text-lg md:text-2xl mb-2 tracking-wide transition-all duration-1000"
               style={{
                 opacity: heroVisible ? 1 : 0,
                 transform: heroVisible ? 'translateY(0)' : 'translateY(10px)',
                 transitionDelay: '0.7s',
+                 fontWeight: 600,
               }}
             >
               We&apos;re getting married.
