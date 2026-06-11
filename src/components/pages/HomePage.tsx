@@ -817,11 +817,12 @@ export default function HomePage() {
   <div
     className="absolute inset-0 pointer-events-none"
     style={{
-      backgroundImage: `url('https://static.wixstatic.com/media/b5e630_93f75fc0cd3443e88029e35fbc854b5f~mv2.jpg')`,
-      backgroundSize: 'auto',
-      backgroundPosition: 'top center',
-      backgroundRepeat: 'no-repeat',
-    }}
+    backgroundImage: `url('https://static.wixstatic.com/media/b5e630_93f75fc0cd3443e88029e35fbc854b5f~mv2.jpg')`,
+    backgroundSize: 'contain',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: '#1a1a2e',
+  }}
   />
   {/* Dark overlay */}
   <div
