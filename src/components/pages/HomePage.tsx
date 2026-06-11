@@ -696,11 +696,16 @@ export default function HomePage() {
         >
           {/* Icon */}
           <div
-            className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6"
-            style={{ backgroundColor: 'rgba(200, 169, 106, 0.12)' }}
-          >
-
-          </div>
+  className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6"
+  style={{ backgroundColor: 'rgba(200, 169, 106, 0.12)' }}
+>
+  <img
+    src="https://static.wixstatic.com/media/b5e630_5f87fbae0e4344b3873a6f7494e10bb1~mv2.png"
+    width="32"
+    height="32"
+    style={{ filter: 'invert(72%) sepia(35%) saturate(500%) hue-rotate(5deg) brightness(85%)' }}
+  />
+</div>
 
           <p
             className="mb-2"
