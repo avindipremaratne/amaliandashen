@@ -120,11 +120,11 @@ export default function RSVPPage() {
         }}
       />
 
-      {/* Warm ivory overlay */}
+      {/* Warm ivory overlay
       <div
         className="fixed inset-0 pointer-events-none z-0"
         style={{ backgroundColor: 'rgba(247, 243, 238, 0.45)' }}
-      />
+      /> */}
 
       <div className="relative z-10">
         <Header />
