@@ -998,8 +998,8 @@ export default function HomePage() {
               <circle cx="12" cy="12" r="9"/>
               <path d="M12 7v5l3 3"/>
             </svg>
-            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600, fontSize: '0.62rem', letterSpacing: '0.15em', color: '#1C1C1C', textTransform: 'uppercase' }}>Time</p>
-            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.75rem', color: '#3A3A3A' }}>2:00 PM</p>
+           <p className="font-paragraph uppercase text-[0.58rem] md:text-[0.62rem] tracking-[0.15em] font-semibold" style={{ color: '#1C1C1C' }}>Time</p>
+<p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A' }}>2:00 PM</p>
           </div>
 
           {/* Address */}
