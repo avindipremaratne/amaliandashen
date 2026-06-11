@@ -359,7 +359,7 @@ export default function HomePage() {
 <span
   style={{
     fontFamily: 'Montserrat, sans-serif',
-    fontSize: '0.72rem',
+    fontSize: '0.58rem',
     fontWeight: 500,
     letterSpacing: '0.3em',
     textTransform: 'uppercase',
