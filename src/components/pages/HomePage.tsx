@@ -634,7 +634,7 @@ export default function HomePage() {
 
                 fontFamily: 'Cormorant Garamond, serif',
     fontWeight: 600,
-   fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+   fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
     letterSpacing: '0.25em',
     textTransform: 'uppercase',
     color: '#FFFFFF',
