@@ -127,7 +127,7 @@ export default function HomePage() {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundAttachment: 'scroll',
+    backgroundAttachment: 'fixed',
   }}
 />
 
