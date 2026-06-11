@@ -472,11 +472,7 @@ const FadeIn = ({
     right: { x: -40, y: 0 },
     none: { x: 0, y: 0 }
   };
-const [heroVisible, setHeroVisible] = useState(false);
-useEffect(() => {
-  const timer = setTimeout(() => setHeroVisible(true), 100);
-  return () => clearTimeout(timer);
-}, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, ...directions[direction] }}
@@ -494,9 +490,16 @@ export default function HomePage() {
   const navigate = useNavigate();
   useFonts();
 
+  const [heroVisible, setHeroVisible] = useState(false);
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [photos, setPhotos] = useState<GuestPhotos[]>([]);
   const [isLoadingPhotos, setIsLoadingPhotos] = useState(true);
+
+  // Trigger hero fade on load
+  useEffect(() => {
+    const timer = setTimeout(() => setHeroVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const weddingDate = new Date('2026-08-27T15:30:00').getTime();
@@ -562,41 +565,51 @@ export default function HomePage() {
           <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl">
 
             {/* "Where We Become Us" — fades in first */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.2, delay: 0.2 }}
-              className="text-white/80 font-paragraph uppercase tracking-widest text-sm md:text-base mb-6"
+            <p
+              className="text-white/80 font-paragraph uppercase tracking-widest text-sm md:text-base mb-6 transition-all duration-1000"
+              style={{
+                opacity: heroVisible ? 1 : 0,
+                transform: heroVisible ? 'translateY(0)' : 'translateY(10px)',
+                transitionDelay: '0.2s',
+              }}
             >
               Where We Become Us
-            </motion.p>
+            </p>
 
             {/* "We're getting married." */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-white/90 font-paragraph font-light text-lg md:text-2xl mb-2 tracking-wide"
+            <p
+              className="text-white/90 font-paragraph font-light text-lg md:text-2xl mb-2 tracking-wide transition-all duration-1000"
+              style={{
+                opacity: heroVisible ? 1 : 0,
+                transform: heroVisible ? 'translateY(0)' : 'translateY(10px)',
+                transitionDelay: '0.7s',
+              }}
             >
               We&apos;re getting married.
-            </motion.p>
+            </p>
 
             {/* "Ashen & Amali" */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
-              className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight font-normal"
-              style={{ fontFamily: "Ephesis, cursive", fontWeight: 400 }}
+            <h1
+              className="text-6xl md:text-7xl lg:text-[130px] text-white mb-4 leading-tight font-normal transition-all duration-1000"
+              style={{
+                fontFamily: "Ephesis, cursive",
+                fontWeight: 400,
+                opacity: heroVisible ? 1 : 0,
+                transform: heroVisible ? 'translateY(0)' : 'translateY(10px)',
+                transitionDelay: '1.2s',
+              }}
             >
-              Ashen & Amali
-            </motion.h1>
+              Ashen &amp; Amali
+            </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.4 }}
-              className="flex flex-col items-center gap-2 mt-4 px-4 text-center"
+            {/* Save the date */}
+            <div
+              className="flex flex-col items-center gap-2 mt-4 px-4 text-center transition-all duration-1000"
+              style={{
+                opacity: heroVisible ? 1 : 0,
+                transform: heroVisible ? 'translateY(0)' : 'translateY(10px)',
+                transitionDelay: '1.7s',
+              }}
             >
               <p className="text-white/90 font-light uppercase tracking-widest text-base sm:text-lg md:text-2xl lg:text-3xl font-paragraph">
                 Save the Date
@@ -608,7 +621,8 @@ export default function HomePage() {
                 27 | August | 2026
               </p>
               <div className="w-10 sm:w-12 md:w-14 h-px my-2" style={{ backgroundColor: '#C8A96A' }} />
-            </motion.div>
+            </div>
+
           </div>
         </section>
 
@@ -616,7 +630,7 @@ export default function HomePage() {
         <section className="py-24 relative">
           <div className="container mx-auto px-4 max-w-3xl flex flex-col items-center text-center">
 
-            {/* Gold divider top */}
+            {/* Gold diamond separator top */}
             <FadeIn>
               <div className="flex items-center justify-center gap-3 mb-12">
                 <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
@@ -740,7 +754,7 @@ export default function HomePage() {
               </p>
             </FadeIn>
 
-            {/* Gold divider bottom */}
+            {/* Gold diamond separator bottom */}
             <FadeIn delay={0.5}>
               <div className="flex items-center justify-center gap-3 mt-12">
                 <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
@@ -762,7 +776,7 @@ export default function HomePage() {
                 The Day is Coming!
               </h2>
 
-              <div className="flex justify-center items-center gap-6 md:gap-12">
+              <div className="flex justify-center items-center gap-4 md:gap-12">
                 {[
                   { value: countdown.days, label: 'Days' },
                   { value: countdown.hours, label: 'Hours' },
