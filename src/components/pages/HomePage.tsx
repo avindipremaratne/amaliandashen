@@ -801,16 +801,29 @@ export default function HomePage() {
         </section>
 
         {/* 4. VENUE SECTION */}
-        <section id="venue" className="scroll-mt-24 py-24 relative overflow-hidden border-t" style={{ backgroundColor: '#F0EDE8', borderColor: '#C8A96A33' }}>
-          <div className="absolute inset-0 opacity-20 mix-blend-multiply">
-            <Image
-              src="https://wedding-invitation-68o0.onrender.com/Elegant%20Event.png"
-              alt="Texture"
-              className="w-full h-full object-cover"
-            />
-          </div>
+       {/* 4. VENUE SECTION */}
+<section
+  id="venue"
+  className="scroll-mt-24 py-24 relative overflow-hidden border-t"
+  style={{ borderColor: '#C8A96A33' }}
+>
+  {/* Church background image */}
+  <div
+    className="absolute inset-0 pointer-events-none"
+    style={{
+      backgroundImage: `url('https://static.wixstatic.com/media/b5e630_93f75fc0cd3443e88029e35fbc854b5f~mv2.jpg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+    }}
+  />
+  {/* Dark overlay so card stays readable */}
+  <div
+    className="absolute inset-0 pointer-events-none"
+    style={{ backgroundColor: 'rgba(20, 20, 20, 0.45)' }}
+  />
 
-          <div className="container mx-auto px-4 relative z-10">
+  <div className="container mx-auto px-4 relative z-10">
             <FadeIn className="text-center mb-16">
               <h2 className="text-6xl md:text-8xl" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400, color: '#1C1C1C' }}>
                 The Venue
