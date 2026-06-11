@@ -589,7 +589,7 @@ export default function HomePage() {
               We&apos;re getting married.
             </p>
 
-            {/* "Ashen & Amali" */}
+            {/* "Amali & Ashen" */}
             <h1
               className="text-6xl md:text-7xl lg:text-[100px] text-white mb-4 leading-tight font-normal transition-all duration-1000"
               style={{
@@ -600,7 +600,7 @@ export default function HomePage() {
                 transitionDelay: '1.2s',
               }}
             >
-              Ashen &amp; Amali
+              Amali &amp; Ashen
             </h1>
           </div>
         </section>
