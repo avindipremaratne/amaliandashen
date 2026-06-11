@@ -626,7 +626,6 @@ export default function HomePage() {
                 className="mb-2 leading-relaxed"
                 style={{
                   fontFamily: 'Cormorant Garamond, serif',
-                  fontWeight: 400,
                   fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
                   color: '#1C1C1C',
                   lineHeight: 1.6,
