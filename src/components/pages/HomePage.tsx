@@ -326,7 +326,7 @@ export default function HomePage() {
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    className="flex flex-col items-center w-16 md:w-28"
+                    className="flex flex-col items-center w-14 md:w-28"
                     whileHover={{ scale: 1.05, y: -4 }}
                     transition={{ type: "spring", stiffness: 300, damping: 10 }}
                   >
