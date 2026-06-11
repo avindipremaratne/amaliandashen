@@ -976,9 +976,9 @@ export default function HomePage() {
 
         {/* Date / Time / Address row */}
         <div
-          className="grid grid-cols-3 gap-4 mb-8 pt-6"
-          style={{ borderTop: '1px solid rgba(200, 169, 106, 0.25)' }}
-        >
+  className="grid grid-cols-3 gap-2 md:gap-4 mb-8 pt-6"
+  style={{ borderTop: '1px solid rgba(200, 169, 106, 0.25)' }}
+>
           {/* Date */}
           <div className="flex flex-col items-center gap-2">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A96A" strokeWidth="1.5" strokeLinecap="round">
