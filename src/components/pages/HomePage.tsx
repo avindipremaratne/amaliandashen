@@ -637,7 +637,7 @@ style={{
    fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
     letterSpacing: '0.25em',
     textTransform: 'uppercase',
-    color: '#FFFFFF',
+    color: '#1C1C1C',
     lineHeight: 1,
     }}
               >
