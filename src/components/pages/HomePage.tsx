@@ -813,7 +813,7 @@ export default function HomePage() {
     paddingBottom: '6rem',
   }}
 >
-  {/* Church background — covers entire section including header */}
+  {/* Church background */}
   <div
     className="absolute inset-0 pointer-events-none"
     style={{
@@ -823,16 +823,17 @@ export default function HomePage() {
       backgroundRepeat: 'no-repeat',
     }}
   />
-  {/* Dark overlay
+  {/* Dark overlay */}
   <div
     className="absolute inset-0 pointer-events-none"
-    style={{ backgroundColor: 'rgba(20, 20, 20, 0.45)' }}
-  /> */}
+    style={{ backgroundColor: 'rgba(15, 15, 25, 0.55)' }}
+  />
 
-  <div className="container mx-auto px-4 relative z-10">
+  {/* ↓ THIS replaces the old container div and everything inside it ↓ */}
+  <div className="container mx-auto px-4 relative z-10 w-full">
 
     {/* Header */}
-    <FadeIn className="text-center mb-12">
+    <FadeIn className="text-center mb-8">
       <p
         style={{
           fontFamily: 'Ephesis, cursive',
@@ -880,15 +881,15 @@ export default function HomePage() {
     </FadeIn>
 
     {/* Venue Card */}
-    <FadeIn delay={0.2} className="w-full max-w-xl mx-auto mb-12 px-4 md:px-0">
+    <FadeIn delay={0.2} className="w-full max-w-sm md:max-w-xl mx-auto px-2 md:px-0">
       <div
-  className="rounded-2xl p-6 md:p-10 text-center w-full"
-  style={{
-    backgroundColor: 'rgba(255, 255, 255, 0.95)',
-    border: '1px solid rgba(200, 169, 106, 0.25)',
-    boxShadow: '0 8px 48px rgba(0,0,0,0.15)',
-  }}
->
+        className="rounded-2xl p-6 md:p-10 text-center w-full"
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.95)',
+          border: '1px solid rgba(200, 169, 106, 0.25)',
+          boxShadow: '0 8px 48px rgba(0,0,0,0.15)',
+        }}
+      >
         {/* Church icon */}
         <div className="flex justify-center mb-6">
           <div
@@ -966,7 +967,6 @@ export default function HomePage() {
             fontSize: '0.88rem',
             color: '#3A3A3A',
             lineHeight: 1.8,
-            letterSpacing: '0.03em',
           }}
         >
           A place of faith, love and blessings.<br />
@@ -976,9 +976,9 @@ export default function HomePage() {
 
         {/* Date / Time / Address row */}
         <div
-  className="grid grid-cols-3 gap-2 md:gap-4 mb-8 pt-6"
-  style={{ borderTop: '1px solid rgba(200, 169, 106, 0.25)' }}
->
+          className="grid grid-cols-3 gap-2 md:gap-4 mb-8 pt-6"
+          style={{ borderTop: '1px solid rgba(200, 169, 106, 0.25)' }}
+        >
           {/* Date */}
           <div className="flex flex-col items-center gap-2">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A96A" strokeWidth="1.5" strokeLinecap="round">
@@ -986,7 +986,7 @@ export default function HomePage() {
               <path d="M16 2v4M8 2v4M3 10h18"/>
             </svg>
             <p className="font-paragraph uppercase text-[0.58rem] md:text-[0.62rem] tracking-[0.15em] font-semibold" style={{ color: '#1C1C1C' }}>Date</p>
-<p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A', lineHeight: 1.5 }}>August 27,<br/>2026</p>
+            <p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A', lineHeight: 1.5 }}>August 27,<br/>2026</p>
           </div>
 
           {/* Time */}
@@ -998,8 +998,8 @@ export default function HomePage() {
               <circle cx="12" cy="12" r="9"/>
               <path d="M12 7v5l3 3"/>
             </svg>
-           <p className="font-paragraph uppercase text-[0.58rem] md:text-[0.62rem] tracking-[0.15em] font-semibold" style={{ color: '#1C1C1C' }}>Time</p>
-<p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A' }}>2:00 PM</p>
+            <p className="font-paragraph uppercase text-[0.58rem] md:text-[0.62rem] tracking-[0.15em] font-semibold" style={{ color: '#1C1C1C' }}>Time</p>
+            <p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A' }}>3:30 PM</p>
           </div>
 
           {/* Address */}
@@ -1009,7 +1009,7 @@ export default function HomePage() {
               <circle cx="12" cy="9" r="2.5"/>
             </svg>
             <p className="font-paragraph uppercase text-[0.58rem] md:text-[0.62rem] tracking-[0.15em] font-semibold" style={{ color: '#1C1C1C' }}>Address</p>
-<p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A', lineHeight: 1.5 }}>1725 Oxford St,<br/>Halifax, NS B3H 3Z7</p>
+            <p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A', lineHeight: 1.5 }}>1030 Purcells Cove Rd,<br/>Halifax, NS B3R 3H3</p>
           </div>
         </div>
 
