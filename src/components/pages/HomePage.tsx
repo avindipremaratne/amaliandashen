@@ -804,7 +804,14 @@ export default function HomePage() {
 <section
   id="venue"
   className="scroll-mt-24 py-24 relative overflow-hidden border-t"
-  style={{ borderColor: '#C8A96A33' }}
+   style={{
+    borderColor: '#C8A96A33',
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    paddingTop: '6rem',
+    paddingBottom: '6rem',
+  }}
 >
   {/* Church background image */}
   <div
