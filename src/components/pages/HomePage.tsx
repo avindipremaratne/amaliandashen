@@ -165,7 +165,7 @@ export default function HomePage() {
           </div>
         </section>
 
-       {/* 2. BIBLE VERSE & INVITATION SECTION
+       {/* 2. BIBLE VERSE & INVITATION SECTION*/}
         <section className="py-24 relative">
           <div className="container mx-auto px-4 max-w-3xl flex flex-col items-center text-center">
 
