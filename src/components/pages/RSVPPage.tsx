@@ -99,7 +99,7 @@ export default function RSVPPage() {
     <div
       className="min-h-screen relative"
       style={{
-        backgroundImage: `url('https://static.wixstatic.com/media/b5e630_cd2aed73ea0c404f826bc9a96e467619~mv2.jpg')`,
+        backgroundImage: `url('https://static.wixstatic.com/media/b5e630_962afd5611af40a0b1d4e6917aaabb81~mv2.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
