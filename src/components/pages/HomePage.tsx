@@ -789,6 +789,22 @@ export default function HomePage() {
                     {/* <span className="text-xs md:text-sm uppercase tracking-widest mt-3 font-medium" style={{ color: '#3A3A3A' }}>
                       {item.label}
                     </span> */}
+                    {/* Gold separator line */}
+<div style={{ width: '20px', height: '1px', backgroundColor: '#C8A96A', margin: '6px auto' }} />
+
+<span
+  style={{
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '0.72rem',
+    fontWeight: 500,
+    letterSpacing: '0.3em',
+    textTransform: 'uppercase',
+    color: '#C8A96A',
+    display: 'block',
+  }}
+>
+  {item.label}
+</span>
                   </motion.div>
                 ))}
               </div>
