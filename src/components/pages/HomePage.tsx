@@ -625,7 +625,8 @@ export default function HomePage() {
               <p
                 className="mb-2 leading-relaxed"
                 style={{
-                  fontFamily: 'Cormorant Garamond, serif',
+                  fontFamily: 'Ephesis, cursive',
+                  fontWeight: 400,
                   fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
                   color: '#1C1C1C',
                   lineHeight: 1.6,
