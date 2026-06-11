@@ -706,7 +706,7 @@ export default function HomePage() {
                   lineHeight: 1.3,
                 }}
               >
-                Ashen
+                Amali
               </p>
               <p
                 style={{
@@ -728,7 +728,7 @@ export default function HomePage() {
                   lineHeight: 1.3,
                 }}
               >
-                Amali
+                Ashen
               </p>
             </FadeIn>
 
