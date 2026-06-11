@@ -985,8 +985,8 @@ export default function HomePage() {
               <rect x="3" y="4" width="18" height="18" rx="2"/>
               <path d="M16 2v4M8 2v4M3 10h18"/>
             </svg>
-            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600, fontSize: '0.62rem', letterSpacing: '0.15em', color: '#1C1C1C', textTransform: 'uppercase' }}>Date</p>
-            <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.75rem', color: '#3A3A3A', lineHeight: 1.5 }}>August 27,<br/>2026</p>
+            <p className="font-paragraph uppercase text-[0.58rem] md:text-[0.62rem] tracking-[0.15em] font-semibold" style={{ color: '#1C1C1C' }}>Date</p>
+<p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A', lineHeight: 1.5 }}>August 27,<br/>2026</p>
           </div>
 
           {/* Time */}
