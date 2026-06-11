@@ -849,7 +849,7 @@ export default function HomePage() {
         style={{
     fontFamily: 'Cormorant Garamond, serif',
     fontWeight: 600,
-    fontSize: 'clamp(4rem, 12vw, 8rem)',
+   fontSize: 'clamp(2.5rem, 8vw, 5rem)',
     letterSpacing: '0.25em',
     textTransform: 'uppercase',
     color: '#FFFFFF',
