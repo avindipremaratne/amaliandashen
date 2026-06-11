@@ -894,14 +894,11 @@ export default function HomePage() {
               ) : photos.length > 0 ? (
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 auto-rows-[150px] md:auto-rows-[250px]">
                   {photos.map((photo, index) => {
-                    let spanClasses = "col-span-1 row-span-1";
-                    if (index === 0) spanClasses = "col-span-1 row-span-2";
-                    if (index === 1) spanClasses = "col-span-1 row-span-1";
-                    if (index === 2) spanClasses = "col-span-2 row-span-2";
-                    if (index === 3) spanClasses = "col-span-1 row-span-1";
-                    if (index === 4) spanClasses = "col-span-1 row-span-2";
-                    if (index === 5) spanClasses = "col-span-1 row-span-1";
-                    if (index === 6) spanClasses = "col-span-2 row-span-1";
+  let spanClasses = "col-span-1 row-span-1";
+  if (index === 0) spanClasses = "col-span-2 row-span-2";
+  if (index === 1) spanClasses = "col-span-1 row-span-1";
+  if (index === 2) spanClasses = "col-span-1 row-span-1";
+  if (index === 3) spanClasses = "col-span-2 row-span-1";
                     return (
                       <FadeIn
                         key={photo._id || index}
