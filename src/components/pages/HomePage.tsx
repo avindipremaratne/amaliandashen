@@ -867,11 +867,24 @@ export default function HomePage() {
         <section id="gallery" className="scroll-mt-24 py-24 border-t" style={{ borderColor: '#C8A96A33' }}>
           <div className="container mx-auto px-4">
             <FadeIn className="text-center mb-16">
-              <h2 className="text-6xl md:text-8xl mb-4" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400, color: '#1C1C1C' }}>
-                Our Journey Together
-              </h2>
-              <div className="w-16 h-px mx-auto mt-2" style={{ backgroundColor: '#C8A96A' }} />
-            </FadeIn>
+  <h2 className="text-6xl md:text-8xl mb-4" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400, color: '#1C1C1C' }}>
+    Our Journey Together
+  </h2>
+  <div className="w-16 h-px mx-auto mt-2 mb-6" style={{ backgroundColor: '#C8A96A' }} />
+  {/* Add this subtitle */}
+  <p
+    style={{
+      fontFamily: 'Montserrat, sans-serif',
+      fontWeight: 300,
+      fontSize: '0.88rem',
+      letterSpacing: '0.08em',
+      color: '#3A3A3A',
+      lineHeight: 1.8,
+    }}
+  >
+    Before forever, there was this — our story in moments.
+  </p>
+</FadeIn>
 
             <div className="min-h-[400px] relative max-w-5xl mx-auto">
               {isLoadingPhotos ? (
