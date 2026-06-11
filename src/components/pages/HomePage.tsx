@@ -999,7 +999,7 @@ export default function HomePage() {
               <path d="M12 7v5l3 3"/>
             </svg>
             <p className="font-paragraph uppercase text-[0.58rem] md:text-[0.62rem] tracking-[0.15em] font-semibold" style={{ color: '#1C1C1C' }}>Time</p>
-            <p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A' }}>3:30 PM</p>
+            <p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A' }}>2:00 PM</p>
           </div>
 
           {/* Address */}
