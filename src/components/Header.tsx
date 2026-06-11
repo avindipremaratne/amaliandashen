@@ -103,17 +103,62 @@
 // }
 
 import { Image } from '@/components/ui/image';
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   const location = useLocation();
   const navigate = useNavigate();
 
+  const navItems = [
+    { label: 'Home', id: 'home' },
+    { label: 'Schedule', id: 'schedule' },
+    { label: 'Venue', id: 'venue' },
+    { label: 'RSVP', id: 'rsvp' },
+    { label: 'Gallery', id: 'gallery' },
+  ];
+
+  // Intersection Observer — detects which section is in view while scrolling
+  useEffect(() => {
+    // On RSVP page, always highlight RSVP
+    if (location.pathname === '/rsvp') {
+      setActiveSection('rsvp');
+      return;
+    }
+
+    const sectionIds = navItems.map((item) => item.id);
+    const observers: IntersectionObserver[] = [];
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(id);
+          }
+        },
+        {
+          // Trigger when section reaches top third of viewport
+          rootMargin: '-20% 0px -60% 0px',
+          threshold: 0,
+        }
+      );
+
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((obs) => obs.disconnect());
+  }, [location.pathname]);
+
   const handleNavClick = (sectionId: string) => {
     setIsMenuOpen(false);
+    setActiveSection(sectionId);
     if (location.pathname === '/') {
       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     } else {
@@ -124,13 +169,7 @@ export default function Header() {
     }
   };
 
-  const navItems = [
-    { label: 'Home', id: 'home' },
-    { label: 'Schedule', id: 'schedule' },
-    { label: 'Venue', id: 'venue' },
-    { label: 'RSVP', id: 'rsvp' },
-    { label: 'Gallery', id: 'gallery' },
-  ];
+  const isActive = (id: string) => activeSection === id;
 
   return (
     <>
@@ -145,7 +184,7 @@ export default function Header() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
 
-            {/* Logo — visible on both mobile and desktop */}
+            {/* Logo */}
             <div>
               <Image
                 src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
@@ -162,14 +201,12 @@ export default function Header() {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="font-paragraph text-xs uppercase tracking-widest transition-all duration-200 pb-1 border-b-2 border-transparent hover:border-current"
+                  className="font-paragraph text-xs uppercase tracking-widest transition-all duration-200 pb-1"
                   style={{
-                    color: '#1C1C1C',
-                    borderBottomColor:
-                      location.hash === `#${item.id}` ||
-                      (location.pathname === '/rsvp' && item.id === 'rsvp')
-                        ? '#C8A96A'
-                        : 'transparent',
+                    color: isActive(item.id) ? '#C8A96A' : '#1C1C1C',
+                    borderBottom: isActive(item.id)
+                      ? '1px solid #C8A96A'
+                      : '1px solid transparent',
                   }}
                 >
                   {item.label}
@@ -180,12 +217,20 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden transition-colors duration-200"
-              style={{ color: '#1C1C1C' }}
+              className="md:hidden transition-colors duration-200 p-2"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? (
+                <X size={22} style={{ color: '#1C1C1C' }} />
+              ) : (
+                <div className="flex flex-col gap-1.5">
+                  <div style={{ width: '22px', height: '1px', backgroundColor: '#1C1C1C' }} />
+                  <div style={{ width: '22px', height: '1px', backgroundColor: '#C8A96A' }} />
+                  <div style={{ width: '22px', height: '1px', backgroundColor: '#1C1C1C' }} />
+                </div>
+              )}
             </button>
+
           </div>
         </div>
       </header>
@@ -199,20 +244,14 @@ export default function Header() {
             backdropFilter: 'blur(12px)',
           }}
         >
-          {/* Close button top right */}
           <div className="flex justify-end px-6 pt-6">
-            <button
-              onClick={() => setIsMenuOpen(false)}
-              style={{ color: '#1C1C1C' }}
-            >
+            <button onClick={() => setIsMenuOpen(false)} style={{ color: '#1C1C1C' }}>
               <X size={24} />
             </button>
           </div>
 
-          {/* Centered nav items */}
           <div className="flex-1 flex flex-col items-center justify-center gap-10">
 
-            {/* Decorative top line */}
             <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
 
             {navItems.map((item) => (
@@ -221,23 +260,18 @@ export default function Header() {
                 onClick={() => handleNavClick(item.id)}
                 className="font-paragraph text-sm uppercase tracking-widest transition-all duration-200"
                 style={{
-                  color:
-                    location.hash === `#${item.id}` ||
-                    (location.pathname === '/rsvp' && item.id === 'rsvp')
-                      ? '#C8A96A'
-                      : '#1C1C1C',
-                  fontWeight:
-                    location.hash === `#${item.id}` ||
-                    (location.pathname === '/rsvp' && item.id === 'rsvp')
-                      ? 600
-                      : 400,
+                  color: isActive(item.id) ? '#C8A96A' : '#1C1C1C',
+                  fontWeight: isActive(item.id) ? 600 : 400,
+                  borderBottom: isActive(item.id)
+                    ? '1px solid #C8A96A'
+                    : '1px solid transparent',
+                  paddingBottom: '2px',
                 }}
               >
                 {item.label}
               </button>
             ))}
 
-            {/* Decorative bottom line */}
             <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
 
           </div>
