@@ -811,7 +811,7 @@ export default function HomePage() {
     className="absolute inset-0 pointer-events-none"
     style={{
       backgroundImage: `url('https://static.wixstatic.com/media/b5e630_93f75fc0cd3443e88029e35fbc854b5f~mv2.jpg')`,
-      backgroundSize: 'cover',
+      backgroundSize: 'auto',
       backgroundPosition: 'top center',
       backgroundRepeat: 'no-repeat',
     }}
