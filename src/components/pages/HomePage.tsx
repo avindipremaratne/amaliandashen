@@ -82,7 +82,7 @@ export default function HomePage() {
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
-        const result = await BaseCrudService.getAll<GuestPhotos>('guestphotos', {}, { limit: 8 });
+        const result = await BaseCrudService.getAll<GuestPhotos>('guestphotos', {}, { limit: 4 });
         setPhotos(result.items);
       } catch (error) {
         console.error('Error fetching photos:', error);
