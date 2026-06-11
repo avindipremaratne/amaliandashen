@@ -880,7 +880,7 @@ export default function HomePage() {
     </FadeIn>
 
     {/* Venue Card */}
-    <FadeIn delay={0.2} className="max-w-xl mx-auto mb-12">
+    <FadeIn delay={0.2} className="w-full max-w-xl mx-auto mb-12 px-4 md:px-0">
       <div
         className="rounded-2xl p-8 md:p-10 text-center"
         style={{
