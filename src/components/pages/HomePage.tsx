@@ -601,9 +601,6 @@ export default function HomePage() {
             >
               Ashen &amp; Amali
             </h1>
-
-
-
           </div>
         </section>
 
