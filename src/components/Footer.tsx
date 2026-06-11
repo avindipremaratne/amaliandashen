@@ -31,7 +31,7 @@ export default function Footer() {
 
           {/* Date */}
           <p className="font-paragraph text-base font-medium tracking-widest" style={{ color: '#C8A96A' }}>
-            08 • 27 • 2026
+            27 • 08 • 2026
           </p>
 
           {/* Gold divider bottom */}
