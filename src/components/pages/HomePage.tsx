@@ -317,7 +317,7 @@ export default function HomePage() {
                 The Day is Coming!
               </h2>
 
-              <div className="flex justify-center items-center gap-4 md:gap-12">
+              <div className="flex justify-center items-center gap-3 md:gap-12">
                 {[
                   { value: countdown.days, label: 'Days' },
                   { value: countdown.hours, label: 'Hours' },
