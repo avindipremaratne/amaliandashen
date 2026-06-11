@@ -107,7 +107,7 @@ export default function HomePage() {
     <div
       className="min-h-screen font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden"
     >
-      {/* Fixed background image */}
+      {/* Fixed background image
       <div
         className="fixed inset-0 pointer-events-none z-0"
         style={{
@@ -117,7 +117,27 @@ export default function HomePage() {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover'
         }}
-      />
+      /> */}
+
+      {/* Background image — fixed on desktop, scroll on mobile (iOS fix) */}
+<div
+  className="fixed inset-0 pointer-events-none z-0"
+  style={{
+    backgroundImage: 'url(https://static.wixstatic.com/media/b5e630_962afd5611af40a0b1d4e6917aaabb81~mv2.png)',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    // iOS Safari doesn't support fixed attachment — use a pseudo-fixed approach
+    backgroundAttachment: 'scroll',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    width: '100%',
+    height: '100%',
+  }}
+/>
 
       <div className="relative z-10">
         <Header />
