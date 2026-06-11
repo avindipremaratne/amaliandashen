@@ -919,22 +919,6 @@ export default function HomePage() {
                 <div className="text-center py-12" style={{ color: '#3A3A3A' }}>Gallery coming soon.</div>
               )}
             </div>
-
-            <FadeIn delay={0.4} className="mt-24 flex flex-col items-center text-center">
-              <p className="text-2xl mb-6" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400, color: '#1C1C1C' }}>
-                Share Your Memories with us on our wedding day
-              </p>
-              <div className="w-16 h-px mx-auto mb-8" style={{ backgroundColor: '#C8A96A' }} />
-              <Button
-                onClick={() => navigate('/gallery')}
-                className="rounded-none px-10 py-6 tracking-widest uppercase text-xs transition-all duration-300 text-white"
-                style={{ backgroundColor: '#1F2A44' }}
-                onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C8A96A')}
-                onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#1F2A44')}
-              >
-                Upload Photos
-              </Button>
-            </FadeIn>
           </div>
         </section>
 
