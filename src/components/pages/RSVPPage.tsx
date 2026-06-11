@@ -95,17 +95,36 @@ export default function RSVPPage() {
   };
 
   return (
-    // Full page wrapper — background image covers everything including behind the form
-    <div
-      className="min-h-screen relative"
-      style={{
-        backgroundImage: `url('https://static.wixstatic.com/media/b5e630_962afd5611af40a0b1d4e6917aaabb81~mv2.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center top',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'scroll',
-      }}
-    >
+    <div className="min-h-screen relative">
+
+      {/* Cormorant Garamond font injection */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap');
+        .rsvp-title {
+          font-family: 'Cormorant Garamond', serif !important;
+          font-weight: 600 !important;
+          letter-spacing: 0.25em !important;
+          text-transform: uppercase !important;
+        }
+      `}</style>
+
+      {/* Full page background — fixed div approach works on iOS Safari */}
+      <div
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: `url('https://static.wixstatic.com/media/b5e630_962afd5611af40a0b1d4e6917aaabb81~mv2.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'scroll',
+        }}
+      />
+
+      {/* Warm ivory overlay */}
+      <div
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{ backgroundColor: 'rgba(247, 243, 238, 0.45)' }}
+      />
 
       <div className="relative z-10">
         <Header />
@@ -114,7 +133,7 @@ export default function RSVPPage() {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 text-center">
             <AnimatedElement>
-              {/* Cursive "Kindly" above */}
+
               <p
                 className="mb-2"
                 style={{
@@ -128,32 +147,19 @@ export default function RSVPPage() {
                 Kindly
               </p>
 
-              {/* Inject this once inside your component return */}
-<style>{`
-  .rsvp-title {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.25em !important;
-    text-transform: uppercase !important;
-  }
-`}</style>
+              <h1
+                className="rsvp-title mb-0"
+                style={{
+                  fontSize: 'clamp(4rem, 12vw, 8rem)',
+                  color: '#1C1C1C',
+                  lineHeight: 1,
+                }}
+              >
+                RSVP
+              </h1>
 
-{/* Then on the h1 */}
-<h1
-  className="rsvp-title mb-0"
-  style={{
-    fontSize: 'clamp(4rem, 12vw, 8rem)',
-    color: '#1C1C1C',
-    lineHeight: 1,
-  }}
->
-  RSVP
-</h1>
-
-              {/* Diamond separator */}
               <DiamondSeparator />
 
-              {/* Subheading */}
               <p
                 style={{
                   fontFamily: 'Montserrat, sans-serif',
@@ -171,7 +177,7 @@ export default function RSVPPage() {
           </div>
         </section>
 
-        {/* RSVP Form — no wrapping section background, card floats over page bg */}
+        {/* RSVP Form */}
         <div className="pb-20 px-4">
           <div className="max-w-2xl mx-auto">
             {isSubmitted ? (
@@ -256,7 +262,6 @@ export default function RSVPPage() {
                 >
                   <DiamondSeparator />
 
-                  {/* Kindly reply by */}
                   <div className="text-center mb-8">
                     <p
                       style={{
@@ -400,7 +405,7 @@ export default function RSVPPage() {
                             border: `1px solid ${formData.isAttending ? '#1F2A44' : '#3A3A3A'}`,
                           }}
                         >
-                          Accept With Pleasure
+                          Joyfully Accepts
                         </button>
                         <button
                           type="button"
@@ -421,7 +426,7 @@ export default function RSVPPage() {
                             border: `1px solid ${!formData.isAttending ? '#1F2A44' : '#3A3A3A'}`,
                           }}
                         >
-                          Regretfully Decline
+                          Regretfully Declines
                         </button>
                       </div>
                     </div>
