@@ -114,10 +114,10 @@ export default function HomePage() {
         <section id="home" className="scroll-mt-24 relative h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://wedding-invitation-68o0.onrender.com/Hero%20image.jpeg"
-              alt="Amali and Ashen"
-              className="w-full h-full object-cover object-center"
-            />
+  src="https://static.wixstatic.com/media/b5e630_4c158fe70f094a0698a34b7c67105676~mv2.jpg"
+  alt="Amali and Ashen"
+  className="w-full h-full object-cover object-top"
+/>
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent" />
           </div>
 
