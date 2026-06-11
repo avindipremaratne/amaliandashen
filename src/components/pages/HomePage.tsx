@@ -709,13 +709,12 @@ export default function HomePage() {
               </p>
               <p
                 style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '1rem',
-                  letterSpacing: '0.3em',
-                  color: '#C8A96A',
-                  margin: '4px 0',
-                }}
+    fontFamily: 'Ephesis, cursive',
+    fontWeight: 400,
+    fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+    color: '#C8A96A',
+    margin: '4px 0',
+  }}
               >
                 &amp;
               </p>
