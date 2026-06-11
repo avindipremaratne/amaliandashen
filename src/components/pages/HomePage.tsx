@@ -771,15 +771,17 @@ export default function HomePage() {
         >
           {/* Icon */}
           <div
-            className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6"
-            style={{ backgroundColor: 'rgba(200, 169, 106, 0.12)' }}
-          >
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C8A96A" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M9 3H15L17 8L12 10L7 8L9 3Z"/>
-              <path d="M12 10V21"/>
-              <path d="M7 8L5 21H19L17 8"/>
-            </svg>
-          </div>
+  className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6"
+  style={{ backgroundColor: 'rgba(200, 169, 106, 0.12)' }}
+>
+  <Image
+    src="https://static.wixstatic.com/media/b5e630_8fb083ad32d944d5b67d7d2135f0b248~mv2.png"
+    alt="Gentlemen attire"
+    width={32}
+    height={32}
+    style={{ filter: 'invert(72%) sepia(35%) saturate(500%) hue-rotate(5deg) brightness(85%)' }}
+  />
+</div>
 
           <p
             className="mb-2"
