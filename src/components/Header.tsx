@@ -225,9 +225,9 @@ export default function Header() {
     <X size={22} style={{ color: '#1C1C1C' }} />
   ) : (
     <div className="flex flex-col" style={{ gap: '6px' }}>
-      <div style={{ width: '24px', height: '1.5px', backgroundColor: '#1C1C1C' }} />
       <div style={{ width: '24px', height: '1.5px', backgroundColor: '#C8A96A' }} />
-      <div style={{ width: '24px', height: '1.5px', backgroundColor: '#1C1C1C' }} />
+      <div style={{ width: '24px', height: '1.5px', backgroundColor: '#C8A96A' }} />
+      <div style={{ width: '24px', height: '1.5px', backgroundColor: '#C8A96A' }} />
     </div>
   )}
 </button>
