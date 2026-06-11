@@ -882,13 +882,13 @@ export default function HomePage() {
     {/* Venue Card */}
     <FadeIn delay={0.2} className="w-full max-w-xl mx-auto mb-12 px-4 md:px-0">
       <div
-        className="rounded-2xl p-8 md:p-10 text-center"
-        style={{
-          backgroundColor: 'rgba(255, 255, 255, 0.95)',
-          border: '1px solid rgba(200, 169, 106, 0.25)',
-          boxShadow: '0 8px 48px rgba(0,0,0,0.15)',
-        }}
-      >
+  className="rounded-2xl p-6 md:p-10 text-center w-full"
+  style={{
+    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+    border: '1px solid rgba(200, 169, 106, 0.25)',
+    boxShadow: '0 8px 48px rgba(0,0,0,0.15)',
+  }}
+>
         {/* Church icon */}
         <div className="flex justify-center mb-6">
           <div
