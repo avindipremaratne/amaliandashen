@@ -243,7 +243,9 @@ export default function HomePage() {
             lineHeight: 2,
           }}
         >
-          Mr. &amp; Mrs. Fernando <br/> &amp; Mr. &amp; Mrs. Perera
+          Mr. &amp; Mrs. Fernando <br/>
+          &amp; <br/>
+          Mr. &amp; Mrs. Perera
         </p>
         <p
           className="mb-8"
