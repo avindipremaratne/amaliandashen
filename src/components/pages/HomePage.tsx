@@ -761,7 +761,7 @@ export default function HomePage() {
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 300,
               fontSize: '0.78rem',
-              color: '#3A3A3A',
+              color: '#1C1C1C',
               lineHeight: 1.8,
             }}
           >
