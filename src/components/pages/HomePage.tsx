@@ -252,8 +252,8 @@ export default function HomePage() {
           style={{
             fontFamily: 'Montserrat, sans-serif',
             fontWeight: 300,
-            fontSize: '0.95rem',
-            letterSpacing: '0.08em',
+            fontSize: '0.85rem',
+            letterSpacing: '0.04em',
             color: '#3A3A3A',
             lineHeight: 2,
           }}
