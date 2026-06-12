@@ -718,7 +718,7 @@ export default function HomePage() {
               // textTransform: 'uppercase',
 
               fontFamily: 'Cormorant Garamond, serif',
-            fontWeight: 600,
+            fontWeight: 700,
             fontSize: '0.85rem',
             letterSpacing: '0.2em',
             color: '#1C1C1C',
