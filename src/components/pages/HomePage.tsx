@@ -710,19 +710,13 @@ export default function HomePage() {
           <p
             className="mb-3"
             style={{
-              // fontFamily: 'Montserrat, sans-serif',
-              // fontWeight: 600,
-              // fontSize: '0.65rem',
-              // letterSpacing: '0.2em',
-              // color: '#1C1C1C',
-              // textTransform: 'uppercase',
+              fontFamily: 'Montserrat, sans-serif',
+              fontWeight: 600,
+              fontSize: '0.65rem',
+              letterSpacing: '0.2em',
+              color: '#1C1C1C',
+              textTransform: 'uppercase',
 
-              fontFamily: 'Cormorant Garamond, serif',
-            fontWeight: 700,
-            fontSize: '0.85rem',
-            letterSpacing: '0.2em',
-            color: '#1C1C1C',
-            textTransform: 'uppercase',
             }}
           >
             Ladies
