@@ -722,9 +722,9 @@ export default function HomePage() {
           </p>
           <p
             style={{
-              fontFamily: 'Montserrat, sans-serif',
+             fontFamily: 'Montserrat, sans-serif',
               fontWeight: 300,
-              fontSize: '0.78rem',
+              fontSize: '0.88rem',
               color: '#3A3A3A',
               lineHeight: 1.8,
             }}
