@@ -797,7 +797,8 @@ export default function HomePage() {
             fontWeight: 600,
             fontSize: '0.95rem',
             letterSpacing: '0.25em',
-            color: '#C8A96A',
+            //color: '#C8A96A',
+            color: '#3A3A3A'
             textTransform: 'uppercase',
           }}
         >
