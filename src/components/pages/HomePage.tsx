@@ -719,7 +719,7 @@ export default function HomePage() {
 
               fontFamily: 'Cormorant Garamond, serif',
             fontWeight: 600,
-            fontSize: '0.75rem',
+            fontSize: '0.85rem',
             letterSpacing: '0.2em',
             color: '#1C1C1C',
             textTransform: 'uppercase',
