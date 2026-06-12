@@ -632,18 +632,11 @@ export default function HomePage() {
         style={{
           fontFamily: 'Cormorant Garamond, serif',
           fontWeight: 600,
-          fontSize: '0.78rem',
-          letterSpacing: '0.35em',
+          fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+          letterSpacing: '0.25em',
           textTransform: 'uppercase',
           color: '#C8A96A',
-
-          fontFamily: 'Cormorant Garamond, serif',
-    fontWeight: 600,
-   fontSize: 'clamp(2.5rem, 8vw, 5rem)',
-    letterSpacing: '0.25em',
-    textTransform: 'uppercase',
-    color: '#FFFFFF',
-    lineHeight: 1,
+          lineHeight: 1,
         }}
       >
         Attire
