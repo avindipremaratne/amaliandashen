@@ -630,7 +630,7 @@ export default function HomePage() {
       <p
         className="mb-1"
         style={{
-          fontFamily: 'Montserrat, sans-serif',
+          fontFamily: 'Cormorant Garamond, serif',
           fontWeight: 600,
           fontSize: '0.78rem',
           letterSpacing: '0.35em',
