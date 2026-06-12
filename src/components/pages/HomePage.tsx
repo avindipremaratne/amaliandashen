@@ -717,7 +717,7 @@ export default function HomePage() {
               // color: '#1C1C1C',
               // textTransform: 'uppercase',
 
-              fontFamily: 'Montserrat, sans-serif',
+              fontFamily: 'Cormorant Garamond, serif',
             fontWeight: 600,
             fontSize: '0.75rem',
             letterSpacing: '0.2em',
