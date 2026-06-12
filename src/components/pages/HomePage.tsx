@@ -763,6 +763,12 @@ export default function HomePage() {
               fontSize: '0.78rem',
               color: '#1C1C1C',
               lineHeight: 1.8,
+
+              fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 300,
+            fontSize: '0.88rem',
+            color: '#3A3A3A',
+            lineHeight: 1.8,
             }}
           >
             Gentlemen are kindly asked to wear a dark suit; tie is optional.
