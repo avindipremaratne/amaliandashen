@@ -625,22 +625,30 @@ export default function HomePage() {
 <section id="attire" className="scroll-mt-24 py-24 relative border-t" style={{ borderColor: '#C8A96A33' }}>
   <div className="container mx-auto px-4 max-w-3xl">
 
-    <FadeIn className="text-center mb-12">
-      {/* Main heading */}
-      <h2
-        className="mb-2"
+    <FadeIn className="text-center mb-10">
+      {/* ATTIRE heading */}
+      <p
+        className="mb-1"
         style={{
-          fontFamily: 'Cormorant Garamond, serif',
+          fontFamily: 'Montserrat, sans-serif',
           fontWeight: 600,
-          fontSize: 'clamp(3rem, 8vw, 6rem)',
-          letterSpacing: '0.2em',
+          fontSize: '0.78rem',
+          letterSpacing: '0.35em',
           textTransform: 'uppercase',
-          color: '#1C1C1C',
-          lineHeight: 1,
+          color: '#C8A96A',
         }}
       >
         Attire
-      </h2>
+      </p>
+
+      {/* Gold diamond separator */}
+      <div className="flex items-center justify-center gap-3 my-3">
+        <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
+        <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+          <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
+        </svg>
+        <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
+      </div>
 
       {/* Modern Heirloom subtitle */}
       <p
@@ -648,33 +656,24 @@ export default function HomePage() {
         style={{
           fontFamily: 'Ephesis, cursive',
           fontWeight: 400,
-          fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
-          color: '#C8A96A',
+          fontSize: 'clamp(2rem, 5vw, 3rem)',
+          color: '#1C1C1C',
           lineHeight: 1.3,
         }}
       >
         Modern Heirloom
       </p>
 
-      {/* Gold diamond separator */}
-      <div className="flex items-center justify-center gap-3 mb-8">
-        <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-          <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
-        </svg>
-        <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
-      </div>
-
       {/* Intro paragraph */}
       <p
         style={{
           fontFamily: 'Montserrat, sans-serif',
           fontWeight: 300,
-          fontSize: '0.95rem',
-          letterSpacing: '0.06em',
+          fontSize: '0.88rem',
+          letterSpacing: '0.04em',
           color: '#3A3A3A',
-          lineHeight: 2,
-          maxWidth: '600px',
+          lineHeight: 1.9,
+          maxWidth: '520px',
           margin: '0 auto',
         }}
       >
@@ -682,160 +681,196 @@ export default function HomePage() {
       </p>
     </FadeIn>
 
-    {/* Dress code cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-
-      {/* Ladies */}
-      <FadeIn delay={0.4} direction="right">
+    {/* Ladies & Gentlemen columns */}
+    <FadeIn delay={0.2}>
+      <div
+        className="grid grid-cols-2 gap-0 mb-10"
+        style={{
+          border: '1px solid rgba(200, 169, 106, 0.2)',
+          borderRadius: '12px',
+          overflow: 'hidden',
+          backgroundColor: 'rgba(255,255,255,0.45)',
+          backdropFilter: 'blur(8px)',
+        }}
+      >
+        {/* Ladies */}
         <div
-          className="rounded-2xl p-8 md:p-10 text-center h-full"
-          style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.55)',
-            backdropFilter: 'blur(8px)',
-            border: '1px solid rgba(200, 169, 106, 0.2)',
-            boxShadow: '0 8px 48px rgba(0, 0, 0, 0.06)',
-          }}
+          className="flex flex-col items-center text-center p-6 md:p-8"
+          style={{ borderRight: '1px solid rgba(200,169,106,0.2)' }}
         >
-          {/* Icon */}
-          <div
-  className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6"
-  style={{ backgroundColor: 'rgba(200, 169, 106, 0.12)' }}
->
-  <Image
-    src="https://static.wixstatic.com/media/b5e630_5f87fbae0e4344b3873a6f7494e10bb1~mv2.png"
-    alt="Ladies attire"
-    width={32}
-    height={32}
-    style={{ filter: 'invert(72%) sepia(35%) saturate(500%) hue-rotate(5deg) brightness(85%)' }}
-  />
-</div>
-
+          <Image
+            src="https://static.wixstatic.com/media/b5e630_5f87fbae0e4344b3873a6f7494e10bb1~mv2.png"
+            alt="Ladies attire"
+            width={40}
+            height={40}
+            className="mb-4"
+            style={{ filter: 'invert(72%) sepia(35%) saturate(500%) hue-rotate(5deg) brightness(85%)' }}
+          />
           <p
-            className="mb-2"
+            className="mb-3"
             style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 600,
               fontSize: '0.65rem',
               letterSpacing: '0.2em',
-              color: '#C8A96A',
+              color: '#1C1C1C',
               textTransform: 'uppercase',
             }}
           >
-            Dress Code
-          </p>
-
-          <h3
-            className="mb-5"
-            style={{
-              fontFamily: 'Ephesis, cursive',
-              fontWeight: 400,
-              fontSize: '2.2rem',
-              color: '#1C1C1C',
-            }}
-          >
             Ladies
-          </h3>
-
-          {/* Gold divider */}
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
-            <svg width="6" height="6" viewBox="0 0 10 10" fill="none">
-              <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
-            </svg>
-            <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
-          </div>
-
+          </p>
           <p
             style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 300,
-              fontSize: '0.88rem',
+              fontSize: '0.78rem',
               color: '#3A3A3A',
-              lineHeight: 1.9,
-              letterSpacing: '0.03em',
+              lineHeight: 1.8,
             }}
           >
             Ladies are encouraged to choose elegant formal dresses or coordinated ensembles in keeping with the theme.
           </p>
         </div>
-      </FadeIn>
 
-      {/* Gentlemen */}
-      <FadeIn delay={0.2} direction="left">
-        <div
-          className="rounded-2xl p-8 md:p-10 text-center h-full"
-          style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.55)',
-            backdropFilter: 'blur(8px)',
-            border: '1px solid rgba(200, 169, 106, 0.2)',
-            boxShadow: '0 8px 48px rgba(0, 0, 0, 0.06)',
-          }}
-        >
-          {/* Icon */}
-          <div
-  className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6"
-  style={{ backgroundColor: 'rgba(200, 169, 106, 0.12)' }}
->
-  <Image
-    src="https://static.wixstatic.com/media/b5e630_8fb083ad32d944d5b67d7d2135f0b248~mv2.png"
-    alt="Gentlemen attire"
-    width={32}
-    height={32}
-    style={{ filter: 'invert(72%) sepia(35%) saturate(500%) hue-rotate(5deg) brightness(85%)' }}
-  />
-</div>
-
+        {/* Gentlemen */}
+        <div className="flex flex-col items-center text-center p-6 md:p-8">
+          <Image
+            src="https://static.wixstatic.com/media/b5e630_8fb083ad32d944d5b67d7d2135f0b248~mv2.png"
+            alt="Gentlemen attire"
+            width={40}
+            height={40}
+            className="mb-4"
+            style={{ filter: 'invert(72%) sepia(35%) saturate(500%) hue-rotate(5deg) brightness(85%)' }}
+          />
           <p
-            className="mb-2"
+            className="mb-3"
             style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 600,
               fontSize: '0.65rem',
               letterSpacing: '0.2em',
-              color: '#C8A96A',
+              color: '#1C1C1C',
               textTransform: 'uppercase',
             }}
           >
-            Dress Code
-          </p>
-
-          <h3
-            className="mb-5"
-            style={{
-              fontFamily: 'Ephesis, cursive',
-              fontWeight: 400,
-              fontSize: '2.2rem',
-              color: '#1C1C1C',
-            }}
-          >
             Gentlemen
-          </h3>
-
-          {/* Gold divider */}
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
-            <svg width="6" height="6" viewBox="0 0 10 10" fill="none">
-              <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
-            </svg>
-            <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
-          </div>
-
+          </p>
           <p
             style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 300,
-              fontSize: '0.88rem',
+              fontSize: '0.78rem',
               color: '#3A3A3A',
-              lineHeight: 1.9,
-              letterSpacing: '0.03em',
+              lineHeight: 1.8,
             }}
           >
             Gentlemen are kindly asked to wear a dark suit; tie is optional.
           </p>
         </div>
-      </FadeIn>
+      </div>
+    </FadeIn>
 
-    </div>
+    {/* Suggested Color Palette */}
+    <FadeIn delay={0.4}>
+      <div
+        className="rounded-xl p-6 md:p-8 text-center"
+        style={{
+          backgroundColor: 'rgba(255,255,255,0.45)',
+          backdropFilter: 'blur(8px)',
+          border: '1px solid rgba(200, 169, 106, 0.2)',
+        }}
+      >
+        {/* Top diamond separator */}
+        <div className="flex items-center justify-center gap-3 mb-5">
+          <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
+          <svg width="6" height="6" viewBox="0 0 10 10" fill="none">
+            <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
+          </svg>
+          <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
+        </div>
+
+        <p
+          className="mb-6"
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 600,
+            fontSize: '0.65rem',
+            letterSpacing: '0.25em',
+            color: '#C8A96A',
+            textTransform: 'uppercase',
+          }}
+        >
+          Suggested Color Palette
+        </p>
+
+        {/* Color swatches */}
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-3 md:gap-4 mb-6">
+          {[
+            { color: '#F5ECD7', name: 'Champagne' },
+            { color: '#B8A99A', name: 'Taupe' },
+            { color: '#E8D5C0', name: 'Beige' },
+            { color: '#D4A5A5', name: 'Dusty Rose' },
+            { color: '#9CAF9C', name: 'Sage' },
+            { color: '#9B7B5E', name: 'Mocha' },
+            { color: '#B0ADB5', name: 'Stone Grey' },
+            { color: '#8B6F5E', name: 'Soft Cocoa' },
+          ].map((swatch) => (
+            <div key={swatch.name} className="flex flex-col items-center gap-2">
+              <div
+                className="rounded-full"
+                style={{
+                  width: '40px',
+                  height: '40px',
+                  backgroundColor: swatch.color,
+                  border: '1px solid rgba(0,0,0,0.08)',
+                  flexShrink: 0,
+                }}
+              />
+              <p
+                style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontWeight: 500,
+                  fontSize: '0.55rem',
+                  letterSpacing: '0.08em',
+                  color: '#3A3A3A',
+                  textTransform: 'uppercase',
+                  lineHeight: 1.3,
+                  textAlign: 'center',
+                }}
+              >
+                {swatch.name}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Note */}
+        <p
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 300,
+            fontStyle: 'italic',
+            fontSize: '0.78rem',
+            color: '#3A3A3A',
+            lineHeight: 1.8,
+            letterSpacing: '0.03em',
+          }}
+        >
+          We kindly ask that guests refrain from wearing white, ivory, cream, or shades closely resembling the bridal gown.
+        </p>
+
+        {/* Bottom diamond separator */}
+        <div className="flex items-center justify-center gap-3 mt-5">
+          <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
+          <svg width="6" height="6" viewBox="0 0 10 10" fill="none">
+            <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
+          </svg>
+          <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
+        </div>
+
+      </div>
+    </FadeIn>
+
   </div>
 </section>
         {/* 5. RSVP SECTION */}
