@@ -808,7 +808,7 @@ export default function HomePage() {
           {[
   { color: '#F7E6CA', name: 'Champagne' },
   { color: '#b9a281', name: 'Taupe' },
-  { color: '#DCCFC0', name: 'Beige' },
+  { color: '#EDE8D0', name: 'Beige' },
   { color: '#D8B7B2', name: 'Dusty Rose' },
   { color: '#B9C3AE', name: 'Sage' },
   { color: '#6D3B07', name: 'Mocha' },
