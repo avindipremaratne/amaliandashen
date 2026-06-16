@@ -83,12 +83,14 @@ export default function Header() {
             {/* Logo */}
             <div>
               <Image
-                src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
-                width={70}
-                height={70}
-                sizes="(max-width: 768px) 40px, 70px"
-                className="rounded-lg w-10 md:w-[70px] h-10 md:h-[70px]"
-              />
+  src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
+  alt="Logo"
+  style={{
+    width: window.innerWidth < 768 ? '36px' : '70px',
+    height: window.innerWidth < 768 ? '36px' : '70px',
+    borderRadius: '8px',
+  }}
+/>
             </div>
 
             {/* Desktop Navigation */}
