@@ -705,7 +705,6 @@ export default function HomePage() {
             width={40}
             height={40}
             className="mb-4"
-            style={{ filter: 'invert(72%) sepia(35%) saturate(500%) hue-rotate(5deg) brightness(85%)' }}
           />
          <p
   className="mb-3"
@@ -741,7 +740,6 @@ export default function HomePage() {
             width={40}
             height={40}
             className="mb-4"
-            style={{ filter: 'invert(72%) sepia(35%) saturate(500%) hue-rotate(5deg) brightness(85%)' }}
           />
           <p
   className="mb-3"
