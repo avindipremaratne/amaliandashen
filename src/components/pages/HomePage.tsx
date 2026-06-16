@@ -135,7 +135,7 @@ export default function HomePage() {
 
 
             <p className="text-white/90 font-paragraph text-lg md:text-2xl mb-2 tracking-wide wipe-text-2" style={{ fontWeight: 600 }}>
-  We&apos;re getting married.
+  We&apos;re getting married
 </p>
 
             {/* "Amali & Ashen" */}
