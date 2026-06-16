@@ -83,7 +83,7 @@ export default function Header() {
             {/* Logo */}
             <div>
               <Image
-  src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
+  src="https://static.wixstatic.com/media/b5e630_ded37eca146a4ec2852495daf970742e~mv2.png"
   alt="Logo"
   style={{
     width: window.innerWidth < 768 ? '36px' : '70px',
