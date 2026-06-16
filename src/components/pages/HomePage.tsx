@@ -807,7 +807,7 @@ export default function HomePage() {
         <div className="grid grid-cols-4 md:grid-cols-8 gap-3 md:gap-4 mb-6">
           {[
   { color: '#F7E6CA', name: 'Champagne' },
-  { color: '#54463A', name: 'Taupe' },
+  { color: '#b9a281', name: 'Taupe' },
   { color: '#DCCFC0', name: 'Beige' },
   { color: '#D8B7B2', name: 'Dusty Rose' },
   { color: '#B9C3AE', name: 'Sage' },
