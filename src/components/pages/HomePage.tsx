@@ -295,11 +295,11 @@ export default function HomePage() {
                   >
                     <motion.span
                       key={`${index}-${item.value}`}
-                      className="text-3xl md:text-7xl tracking-tighter font-countdown"
-                      style={{ color: '#1F2A44' }}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3 }}
+                      className="text-5xl md:text-7xl tracking-tighter font-countdown"
+  style={{ color: '#1F2A44' }}
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.3 }}
                     >
                       {String(item.value).padStart(2, '0')}
                     </motion.span>
