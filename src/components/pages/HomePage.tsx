@@ -707,20 +707,19 @@ export default function HomePage() {
             className="mb-4"
             style={{ filter: 'invert(72%) sepia(35%) saturate(500%) hue-rotate(5deg) brightness(85%)' }}
           />
-          <p
-            className="mb-3"
-            style={{
-              fontFamily: 'Montserrat, sans-serif',
-              fontWeight: 600,
-              fontSize: '0.88rem',
-              letterSpacing: '0.2em',
-              color: '#1C1C1C',
-              textTransform: 'uppercase',
-
-            }}
-          >
-            Ladies
-          </p>
+         <p
+  className="mb-3"
+  style={{
+    fontFamily: 'Cormorant Garamond, serif',
+    fontWeight: 600,
+    fontSize: '1.1rem',
+    letterSpacing: '0.2em',
+    color: '#1C1C1C',
+    textTransform: 'uppercase',
+  }}
+>
+  Ladies
+</p>
           <p
             style={{
              fontFamily: 'Montserrat, sans-serif',
