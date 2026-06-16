@@ -274,7 +274,7 @@ export default function HomePage() {
         </section>
 
         {/* 3. COUNTDOWN SECTION */}
-        <section className="py-24 relative border-t" style={{ borderColor: '#C8A96A33' }}>
+        <section className="py-12 md:py-24 relative border-t" style={{ borderColor: '#C8A96A33' }}>
           <div className="container mx-auto px-4 flex flex-col items-center">
             <FadeIn className="text-center mb-12">
               <h2 className="text-6xl md:text-8xl mb-8" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400, color: '#1C1C1C' }}>
