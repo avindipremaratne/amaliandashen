@@ -85,10 +85,11 @@ export default function Header() {
               <Image
   src="https://static.wixstatic.com/media/b5e630_ded37eca146a4ec2852495daf970742e~mv2.png"
   alt="Logo"
-  //width={70}
-                //height={70}
-                //sizes="(max-width: 768px) 64px, 80px"
-                className="rounded-lg"
+  style={{
+    width: window.innerWidth < 768 ? '36px' : '70px',
+    height: window.innerWidth < 768 ? '36px' : '70px',
+    borderRadius: '8px',
+  }}
 />
             </div>
 
