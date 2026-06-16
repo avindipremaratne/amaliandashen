@@ -852,7 +852,7 @@ export default function HomePage() {
             fontFamily: 'Montserrat, sans-serif',
             fontWeight: 300,
             fontStyle: 'italic',
-            fontSize: '0.78rem',
+            fontSize: '0.88rem',
             color: '#3A3A3A',
             lineHeight: 1.8,
             letterSpacing: '0.03em',
