@@ -829,19 +829,19 @@ export default function HomePage() {
                 }}
               />
               <p
-                style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 500,
-                  fontSize: '0.55rem',
-                  letterSpacing: '0.08em',
-                  color: '#3A3A3A',
-                  textTransform: 'uppercase',
-                  lineHeight: 1.3,
-                  textAlign: 'center',
-                }}
-              >
-                {swatch.name}
-              </p>
+  style={{
+    fontFamily: 'Cormorant Garamond, serif',
+    fontWeight: 500,
+    fontSize: '0.7rem',
+    letterSpacing: '0.08em',
+    color: '#3A3A3A',
+    textTransform: 'uppercase',
+    lineHeight: 1.3,
+    textAlign: 'center',
+  }}
+>
+  {swatch.name}
+</p>
             </div>
           ))}
         </div>
