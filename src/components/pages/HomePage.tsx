@@ -54,10 +54,6 @@ export default function HomePage() {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [photos, setPhotos] = useState<GuestPhotos[]>([]);
   const [isLoadingPhotos, setIsLoadingPhotos] = useState(true);
-  const [typewriterText1, setTypewriterText1] = useState('');
-  const [typewriterText2, setTypewriterText2] = useState('');
-  const text1 = 'WHERE WE BECOME US';
-  const text2 = "We're getting married.";
 
   // Trigger hero fade on load
   useEffect(() => {
@@ -155,20 +151,8 @@ export default function HomePage() {
 
           <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl pt-16 md:pt-0">
 
-            {/* "Where We Become Us" — typewriter */}
-            {/* <p
-              className="text-white/80 font-paragraph uppercase tracking-widest text-sm md:text-base mb-6"
-              style={{
-                opacity: heroVisible ? 1 : 0,
-                transition: 'opacity 0.5s ease',
-                minHeight: '1.5em',
-              }}
-            >
-              {typewriterText1}
-              {typewriterText1.length < text1.length && typewriterText1.length > 0 && (
-                <span className="animate-pulse">|</span>
-              )}
-            </p> */}
+            {/* "Where We Become Us" & "We're getting married" */}
+
 
 <p className="text-white/80 font-paragraph uppercase tracking-widest text-sm md:text-base mb-6 wipe-text-1">
   Where We Become Us
