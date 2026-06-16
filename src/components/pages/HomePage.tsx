@@ -61,31 +61,6 @@ export default function HomePage() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Typewriter effect
-  useEffect(() => {
-    if (!heroVisible) return;
-    let i = 0;
-    const timer1 = setTimeout(() => {
-      const interval1 = setInterval(() => {
-        if (i < text1.length) {
-          setTypewriterText1(text1.slice(0, i + 1));
-          i++;
-        } else {
-          clearInterval(interval1);
-          let j = 0;
-          const interval2 = setInterval(() => {
-            if (j < text2.length) {
-              setTypewriterText2(text2.slice(0, j + 1));
-              j++;
-            } else {
-              clearInterval(interval2);
-            }
-          }, 50);
-        }
-      }, 60);
-    }, 200);
-    return () => clearTimeout(timer1);
-  }, [heroVisible]);
 
   useEffect(() => {
     const weddingDate = new Date('2026-08-27T15:30:00').getTime();
