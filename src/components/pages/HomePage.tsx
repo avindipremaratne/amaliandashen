@@ -140,15 +140,15 @@ export default function HomePage() {
 
             {/* "Amali & Ashen" */}
             <h1
-              className="text-6xl md:text-7xl lg:text-[100px] text-white mb-4 leading-tight font-normal transition-all duration-1000"
-              style={{
-                fontFamily: "Ephesis, cursive",
-                fontWeight: 400,
-                opacity: heroVisible ? 1 : 0,
-                transform: heroVisible ? 'translateY(0)' : 'translateY(10px)',
-                transitionDelay: '1.2s',
-              }}
-            >
+  className="text-6xl md:text-7xl lg:text-[100px] text-white mb-4 leading-tight font-normal"
+  style={{
+    fontFamily: "Ephesis, cursive",
+    fontWeight: 400,
+    opacity: 0,
+    animation: 'fadeUp 1s ease forwards',
+    animationDelay: '2.8s',
+  }}
+>
               Amali &amp; Ashen
             </h1>
           </div>
