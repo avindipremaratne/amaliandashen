@@ -809,15 +809,15 @@ export default function HomePage() {
         {/* Color swatches */}
         <div className="grid grid-cols-4 md:grid-cols-8 gap-3 md:gap-4 mb-6">
           {[
-            { color: '#F5ECD7', name: 'Champagne' },
-            { color: '#B8A99A', name: 'Taupe' },
-            { color: '#E8D5C0', name: 'Beige' },
-            { color: '#D4A5A5', name: 'Dusty Rose' },
-            { color: '#9CAF9C', name: 'Sage' },
-            { color: '#9B7B5E', name: 'Mocha' },
-            { color: '#B0ADB5', name: 'Stone Grey' },
-            { color: '#8B6F5E', name: 'Soft Cocoa' },
-          ].map((swatch) => (
+  { color: '#E8DCCB', name: 'Champagne' },
+  { color: '#C8B8A6', name: 'Taupe' },
+  { color: '#DCCFC0', name: 'Beige' },
+  { color: '#D8B7B2', name: 'Dusty Rose' },
+  { color: '#B9C3AE', name: 'Sage' },
+  { color: '#9A8572', name: 'Mocha' },
+  { color: '#B7B2AC', name: 'Stone Grey' },
+  { color: '#8A7465', name: 'Soft Cocoa' },
+].map((swatch) => (
             <div key={swatch.name} className="flex flex-col items-center gap-2">
               <div
                 className="rounded-full"
