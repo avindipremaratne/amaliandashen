@@ -156,17 +156,18 @@ export default function HomePage() {
 
           <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl pt-16 md:pt-0">
 
-            {/* "Where We Become Us" — fades in first */}
+            {/* "Where We Become Us" — typewriter */}
             <p
-              className="text-white/80 font-paragraph uppercase tracking-widest text-sm md:text-base mb-6 transition-all duration-1000"
-              style={{
-                opacity: heroVisible ? 1 : 0,
-                transform: heroVisible ? 'translateY(0)' : 'translateY(10px)',
-                transitionDelay: '0.2s',
-              }}
-            >
-              Where We Become Us
-            </p>
+  className="text-white/80 font-paragraph uppercase tracking-widest text-sm md:text-base mb-6"
+  style={{
+    opacity: heroVisible ? 1 : 0,
+    transition: 'opacity 0.5s ease',
+    minHeight: '1.5em',
+  }}
+>
+  {typewriterText1}
+  <span className="animate-pulse">|</span>
+</p>
 
             {/* "We're getting married." */}
             <p
