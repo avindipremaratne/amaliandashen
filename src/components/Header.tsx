@@ -87,7 +87,7 @@ export default function Header() {
   alt="Logo"
   width={70}
                 height={70}
-                sizes="(max-width: 768px) 64px, 80px"
+                //sizes="(max-width: 768px) 64px, 80px"
                 className="rounded-lg"
 />
             </div>
