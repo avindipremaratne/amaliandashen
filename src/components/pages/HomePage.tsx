@@ -156,7 +156,7 @@ export default function HomePage() {
           <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl pt-16 md:pt-0">
 
             {/* "Where We Become Us" — typewriter */}
-            <p
+            {/* <p
               className="text-white/80 font-paragraph uppercase tracking-widest text-sm md:text-base mb-6"
               style={{
                 opacity: heroVisible ? 1 : 0,
@@ -168,7 +168,9 @@ export default function HomePage() {
               {typewriterText1.length < text1.length && typewriterText1.length > 0 && (
                 <span className="animate-pulse">|</span>
               )}
-            </p>
+            </p> */}
+
+
 
             {/* "We're getting married." — typewriter */}
             <p
