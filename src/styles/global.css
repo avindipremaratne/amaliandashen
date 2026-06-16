@@ -30,3 +30,21 @@ html {
     animation-delay: 1.8s;
     clip-path: inset(0 100% 0 0);
   }
+@keyframes wipe {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0% 0 0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .wipe-text-1 {
+    animation: wipe 1.2s ease forwards;
+    animation-delay: 0.3s;
+    clip-path: inset(0 100% 0 0);
+  }
+  .wipe-text-2 {
+    animation: wipe 1s ease forwards;
+    animation-delay: 1.8s;
+    clip-path: inset(0 100% 0 0);
+  }
