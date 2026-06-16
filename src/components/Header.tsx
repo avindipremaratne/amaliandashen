@@ -75,7 +75,7 @@ export default function Header() {
           backgroundColor: '#F7F3EEE0',
     backdropFilter: 'blur(8px)',
     borderColor: '#C8A96A33',
-    maxHeight: '60px',
+    maxHeight: '80px',
     overflow: 'hidden',
         }}
       >
