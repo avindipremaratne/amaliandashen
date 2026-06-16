@@ -81,15 +81,13 @@ export default function Header() {
           <div className="flex items-center justify-between">
 
             {/* Logo */}
-            <div>
-              <Image
-                src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
-                width={70}
-                height={70}
-                sizes="(max-width: 768px) 40px, 70px"
-                className="rounded-lg w-10 md:w-[70px] h-10 md:h-[70px]"
-              />
-            </div>
+           <div className="w-9 h-9 md:w-[70px] md:h-[70px]">
+  <Image
+    src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
+    alt="Logo"
+    className="w-full h-full object-contain rounded-lg"
+  />
+</div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-10">
