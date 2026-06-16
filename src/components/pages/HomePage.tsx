@@ -10,7 +10,10 @@ import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+const [typewriterText1, setTypewriterText1] = useState('');
+const [typewriterText2, setTypewriterText2] = useState('');
+const text1 = 'WHERE WE BECOME US';
+const text2 = "We're getting married.";
 const FadeIn = ({
   children,
   delay = 0,
