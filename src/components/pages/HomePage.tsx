@@ -170,7 +170,9 @@ export default function HomePage() {
               )}
             </p> */}
 
-
+<p className="text-white/80 font-paragraph uppercase tracking-widest text-sm md:text-base mb-6 wipe-text-1">
+  Where We Become Us
+</p>
 
             {/* "We're getting married." — typewriter */}
             <p
