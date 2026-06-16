@@ -85,8 +85,8 @@ export default function Header() {
               <Image
   src="https://static.wixstatic.com/media/b5e630_ded37eca146a4ec2852495daf970742e~mv2.png"
   alt="Logo"
-  width={70}
-                height={70}
+  //width={70}
+                //height={70}
                 //sizes="(max-width: 768px) 64px, 80px"
                 className="rounded-lg"
 />
