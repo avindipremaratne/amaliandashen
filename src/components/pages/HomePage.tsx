@@ -175,7 +175,7 @@ export default function HomePage() {
 </p>
 
             {/* "We're getting married." — typewriter */}
-            <p
+            {/* <p
               className="text-white/90 font-paragraph text-lg md:text-2xl mb-2 tracking-wide"
               style={{
                 fontWeight: 600,
@@ -188,7 +188,11 @@ export default function HomePage() {
               {typewriterText2.length > 0 && typewriterText2.length < text2.length && (
                 <span className="animate-pulse">|</span>
               )}
-            </p>
+            </p> */}
+
+            <p className="text-white/90 font-paragraph text-lg md:text-2xl mb-2 tracking-wide wipe-text-2" style={{ fontWeight: 600 }}>
+  We&apos;re getting married.
+</p>
 
             {/* "Amali & Ashen" */}
             <h1
