@@ -171,16 +171,19 @@ export default function HomePage() {
 
             {/* "We're getting married." */}
             <p
-              className="text-white/90 font-paragraph text-lg md:text-2xl mb-2 tracking-wide transition-all duration-1000"
-              style={{
-                opacity: heroVisible ? 1 : 0,
-                transform: heroVisible ? 'translateY(0)' : 'translateY(10px)',
-                transitionDelay: '0.7s',
-                 fontWeight: 600,
-              }}
-            >
-              We&apos;re getting married.
-            </p>
+  className="text-white/90 font-paragraph text-lg md:text-2xl mb-2 tracking-wide"
+  style={{
+    fontWeight: 600,
+    opacity: typewriterText1.length === text1.length ? 1 : 0,
+    transition: 'opacity 0.3s ease',
+    minHeight: '1.5em',
+  }}
+>
+  {typewriterText2}
+  {typewriterText2.length > 0 && typewriterText2.length < text2.length && (
+    <span className="animate-pulse">|</span>
+  )}
+</p>
 
             {/* "Amali & Ashen" */}
             <h1
