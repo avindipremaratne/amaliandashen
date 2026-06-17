@@ -137,7 +137,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
 >
 
       {/* Background image — iOS Safari fix */}
-      <div
+      {/* <div
         className="fixed inset-0 pointer-events-none z-0 bg-rsvp"
         style={{
           backgroundImage: `url('https://static.wixstatic.com/media/b5e630_962afd5611af40a0b1d4e6917aaabb81~mv2.png')`,
@@ -145,7 +145,19 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
           backgroundRepeat: 'no-repeat',
           backgroundAttachment: 'scroll',
         }}
-      />
+      /> */}
+      <div
+  className="fixed inset-0 pointer-events-none z-0 bg-rsvp"
+  style={{
+    backgroundImage: `url('https://static.wixstatic.com/media/b5e630_962afd5611af40a0b1d4e6917aaabb81~mv2.png')`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'scroll',
+    width: '100vw',
+    height: '100vh',
+    overflow: 'hidden',
+  }}
+/>
 
       <div className="relative z-10">
         <Header />
