@@ -892,10 +892,10 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
   <Image
     src="https://static.wixstatic.com/media/b5e630_13edd328b21044d3bee3032d5d2d58ba~mv2.png"
     alt="Decorative flourish"
-    width={30}
+    width={100}
     height={30}
     className="h-auto"
-    style={{ width: '30px' }}
+    style={{ width: '100px' }}
   />
 </div>
 
