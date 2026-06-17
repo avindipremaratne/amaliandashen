@@ -52,22 +52,45 @@ export default function Header() {
     return () => observers.forEach((obs) => obs.disconnect());
   }, [location.pathname]);
 
+  // const handleNavClick = (sectionId: string) => {
+  //   setIsMenuOpen(false);
+  //   setActiveSection(sectionId);
+  //   if (location.pathname === '/') {
+  //     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  //   } else {
+  //     navigate('/');
+  //     setTimeout(() => {
+  //       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  //     }, 300);
+  //   }
+  // };
+
   const handleNavClick = (sectionId: string) => {
-    setIsMenuOpen(false);
-    setActiveSection(sectionId);
-    if (location.pathname === '/') {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      navigate('/');
-      setTimeout(() => {
-        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-      }, 300);
+  setIsMenuOpen(false);
+  setActiveSection(sectionId);
+  if (location.pathname === '/') {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      const yOffset = -100; // adjust this value to control extra space above
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
-  };
+  } else {
+    navigate('/');
+    setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }, 300);
+  }
+};
 
   const isActive = (id: string) => activeSection === id;
 
-  
+
 
   return (
     <>
