@@ -741,7 +741,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
         }}
       >
         <div className="text-center mb-8">
-          <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontSize: '0.75rem', letterSpacing: '0.22em', color: '#3A3A3A', textTransform: 'uppercase', marginBottom: '4px' }}>
+          <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontSize: '0.88rem', letterSpacing: '0.22em', color: '#3A3A3A', textTransform: 'uppercase', marginBottom: '4px' }}>
             Kindly Reply By
           </p>
           <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '1.5rem', letterSpacing: '0.25em', color: '#C8A96A' }}>
