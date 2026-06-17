@@ -307,8 +307,8 @@ export default function HomePage() {
                     <span
                       style={{
                         fontFamily: 'Montserrat, sans-serif',
-                        fontSize: '0.68rem',
-                        fontWeight: 600,
+                        fontSize: '0.58rem',
+                        fontWeight: 700,
                         letterSpacing: '0.3em',
                         textTransform: 'uppercase',
                         color: '#C8A96A',
