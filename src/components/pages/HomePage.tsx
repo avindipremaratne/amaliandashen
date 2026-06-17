@@ -887,15 +887,17 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
           </button>
 
           {/* Decorative stem */}
-          <div className="flex justify-center mt-6">
-            <svg width="200" height="30" viewBox="0 0 200 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 15 C14 8 20 8 18 15 C16 20 12 18 14 15" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
-              <path d="M17 14 C35 14 55 14 95 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
-              <rect x="97" y="12" width="4" height="4" rx="0.3" transform="rotate(45 99 14)" fill="#C8A96A"/>
-              <path d="M103 14 C140 14 160 14 183 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
-              <path d="M183 14 C185 8 192 9 190 15 C188 20 184 19 186 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
-            </svg>
-          </div>
+         {/* Decorative stem image */}
+<div className="flex justify-center mt-6">
+  <Image
+    src="https://static.wixstatic.com/media/b5e630_13edd328b21044d3bee3032d5d2d58ba~mv2.png"
+    alt="Decorative flourish"
+    width={200}
+    height={30}
+    className="h-auto"
+    style={{ width: '200px' }}
+  />
+</div>
 
         </form>
       </div>
