@@ -649,34 +649,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
             </FadeIn>
           </div>
         </section>
-
-        {/* 6. RSVP SECTION */}
-        <section id="rsvp" className="scroll-mt-24 py-24 relative border-t" style={{ borderColor: '#C8A96A33' }}>
-          <div className="container mx-auto px-4 flex flex-col items-center">
-            <FadeIn className="text-center mb-12">
-              <h2 className="text-6xl md:text-8xl mb-4" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400, color: '#1C1C1C' }}>
-                Join Us
-              </h2>
-              <div className="w-16 h-px mx-auto mb-6" style={{ backgroundColor: '#C8A96A' }} />
-              <p className="font-paragraph text-lg max-w-2xl mx-auto" style={{ color: '#3A3A3A' }}>
-                Will you join us as we become us?
-              </p>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <Button
-                onClick={() => navigate('/rsvp')}
-                className="rounded-none px-12 py-6 tracking-widest uppercase text-sm font-paragraph transition-all duration-300 text-white"
-                style={{ backgroundColor: '#1F2A44' }}
-                onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C8A96A')}
-                onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#1F2A44')}
-              >
-                RSVP Now
-              </Button>
-            </FadeIn>
-          </div>
-        </section>
-
-        {/* 7. GALLERY SECTION */}
+        {/* 6. GALLERY SECTION */}
         <section id="gallery" className="scroll-mt-24 py-24 border-t" style={{ borderColor: '#C8A96A33' }}>
           <div className="container mx-auto px-4">
             <FadeIn className="text-center mb-16">
