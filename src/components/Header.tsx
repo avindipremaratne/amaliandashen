@@ -67,6 +67,8 @@ export default function Header() {
 
   const isActive = (id: string) => activeSection === id;
 
+  
+
   return (
     <>
       <header
