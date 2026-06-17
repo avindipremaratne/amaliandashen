@@ -3,14 +3,13 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
-import { GuestPhotos } from '@/entities';
+import { GuestPhotos, RSVPs } from '@/entities';
 import { useFonts } from '@/hooks/useFonts';
 import { BaseCrudService } from '@/integrations';
 import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { RSVPs } from '@/entities';
 
 const FadeIn = ({
   children,
@@ -95,7 +94,42 @@ export default function HomePage() {
     };
     fetchPhotos();
   }, []);
+const [rsvpData, setRsvpData] = useState({
+  guestName: '',
+  emailAddress: '',
+  isAttending: true,
+  message: '',
+});
+const [isSubmittingRsvp, setIsSubmittingRsvp] = useState(false);
+const [rsvpError, setRsvpError] = useState('');
+const [showToast, setShowToast] = useState(false);
+const [toastAttending, setToastAttending] = useState(true);
 
+const handleRsvpSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmittingRsvp(true);
+  setRsvpError('');
+  try {
+    await BaseCrudService.create<RSVPs>('rsvps', {
+      _id: crypto.randomUUID(),
+      guestName: rsvpData.guestName,
+      emailAddress: rsvpData.emailAddress,
+      isAttending: rsvpData.isAttending,
+      attendingStatus: rsvpData.isAttending ? 'Yes' : 'No',
+      message: rsvpData.message,
+    });
+    setToastAttending(rsvpData.isAttending);
+    setShowToast(true);
+    setRsvpData({ guestName: '', emailAddress: '', isAttending: true, message: '' });
+    // Auto dismiss after 5 seconds
+    setTimeout(() => setShowToast(false), 5000);
+  } catch (error) {
+    console.error('Error submitting RSVP:', error);
+    setRsvpError('Something went wrong. Please try again.');
+  } finally {
+    setIsSubmittingRsvp(false);
+  }
+};
   return (
     <div className="min-h-screen font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden">
 
