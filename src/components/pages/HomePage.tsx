@@ -579,7 +579,7 @@ export default function HomePage() {
                     { color: '#DCCFC0', name: 'Beige' },
                     { color: '#D8B7B2', name: 'Dusty Rose' },
                     { color: '#B9C3AE', name: 'Sage' },
-                    { color: '#9A8572', name: 'Mocha' },
+                    { color: '#6D3B07', name: 'Mocha' },
                     { color: '#B7B2AC', name: 'Stone Grey' },
                     { color: '#8A7465', name: 'Soft Cocoa' },
                   ].map((swatch) => (
