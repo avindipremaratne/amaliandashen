@@ -725,7 +725,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
         </svg>
         <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
       </div>
-      <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontSize: '0.85rem', letterSpacing: '0.04em', color: '#3A3A3A', lineHeight: 1.8 }}>
+      <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontSize: '5.25rem', letterSpacing: '0.04em', color: '#3A3A3A', lineHeight: 1.8 }}>
         Will you join us as we become us?
       </p>
     </FadeIn>
