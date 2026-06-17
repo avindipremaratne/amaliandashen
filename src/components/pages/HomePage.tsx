@@ -724,7 +724,230 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
             </div>
           </div>
         </section>
+         {/* 6. RSVP SECTION */}
+<section id="rsvp" className="scroll-mt-24 py-24 relative border-t" style={{ borderColor: '#C8A96A33' }}>
+  <div className="container mx-auto px-4 max-w-2xl">
 
+    <FadeIn className="text-center mb-10">
+      <p style={{ fontFamily: 'Ephesis, cursive', fontWeight: 400, fontSize: '2.5rem', color: '#C8A96A', lineHeight: 1.2 }}>
+        Kindly
+      </p>
+      <h2
+        className="rsvp-title"
+        style={{
+          fontFamily: 'Cormorant Garamond, serif',
+          fontWeight: 600,
+          fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+          letterSpacing: '0.25em',
+          textTransform: 'uppercase',
+          color: '#1C1C1C',
+          lineHeight: 1,
+        }}
+      >
+        RSVP
+      </h2>
+      <div className="flex items-center justify-center gap-3 my-4">
+        <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
+        <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+          <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
+        </svg>
+        <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
+      </div>
+      <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontSize: '0.85rem', letterSpacing: '0.04em', color: '#3A3A3A', lineHeight: 1.8 }}>
+        Will you join us as we become us?
+      </p>
+    </FadeIn>
+
+    <FadeIn delay={0.2}>
+      <div
+        className="rounded-2xl p-6 md:p-12"
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.65)',
+          backdropFilter: 'blur(8px)',
+          border: '1px solid rgba(200, 169, 106, 0.25)',
+          boxShadow: '0 8px 48px rgba(0,0,0,0.08)',
+        }}
+      >
+        <div className="text-center mb-8">
+          <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400, fontSize: '0.75rem', letterSpacing: '0.22em', color: '#3A3A3A', textTransform: 'uppercase', marginBottom: '4px' }}>
+            Kindly Reply By
+          </p>
+          <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '1.5rem', letterSpacing: '0.25em', color: '#C8A96A' }}>
+            27 . 07 . 2026
+          </p>
+        </div>
+
+        <form onSubmit={handleRsvpSubmit} className="space-y-6">
+
+          {/* Full Name */}
+          <div>
+            <label
+              htmlFor="guestName"
+              style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.18em', color: '#1C1C1C', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}
+            >
+              Full Name *
+            </label>
+            <input
+              id="guestName"
+              type="text"
+              required
+              value={rsvpData.guestName}
+              onChange={(e) => setRsvpData({ ...rsvpData, guestName: e.target.value })}
+              placeholder="e.g. John Doe"
+              style={{
+                width: '100%', backgroundColor: 'transparent', border: 'none', borderBottom: '1px solid #C8A96A',
+                outline: 'none', fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.95rem', color: '#3A3A3A', padding: '8px 0',
+              }}
+            />
+          </div>
+
+          {/* Email */}
+          <div>
+            <label
+              htmlFor="emailAddress"
+              style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.18em', color: '#1C1C1C', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}
+            >
+              Email Address *
+            </label>
+            <input
+              id="emailAddress"
+              type="email"
+              required
+              value={rsvpData.emailAddress}
+              onChange={(e) => setRsvpData({ ...rsvpData, emailAddress: e.target.value })}
+              placeholder="e.g. johndoe@email.com"
+              style={{
+                width: '100%', backgroundColor: 'transparent', border: 'none', borderBottom: '1px solid #C8A96A',
+                outline: 'none', fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.95rem', color: '#3A3A3A', padding: '8px 0',
+              }}
+            />
+          </div>
+
+          {/* Attending */}
+          <div>
+            <label
+              style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.18em', color: '#1C1C1C', textTransform: 'uppercase', display: 'block', marginBottom: '12px' }}
+            >
+              Will you be attending? *
+            </label>
+            <div className="flex flex-col gap-3">
+              <button
+                type="button"
+                onClick={() => setRsvpData({ ...rsvpData, isAttending: true })}
+                style={{
+                  width: '100%', padding: '14px 24px', fontFamily: 'Montserrat, sans-serif', fontWeight: 500, fontSize: '0.78rem',
+                  letterSpacing: '0.2em', textTransform: 'uppercase', borderRadius: '999px', cursor: 'pointer', transition: 'all 0.3s ease',
+                  backgroundColor: rsvpData.isAttending ? '#1F2A44' : 'transparent',
+                  color: rsvpData.isAttending ? '#FFFFFF' : '#1C1C1C',
+                  border: `1px solid ${rsvpData.isAttending ? '#1F2A44' : '#3A3A3A'}`,
+                }}
+              >
+                Joyfully Accepts
+              </button>
+              <button
+                type="button"
+                onClick={() => setRsvpData({ ...rsvpData, isAttending: false })}
+                style={{
+                  width: '100%', padding: '14px 24px', fontFamily: 'Montserrat, sans-serif', fontWeight: 500, fontSize: '0.78rem',
+                  letterSpacing: '0.2em', textTransform: 'uppercase', borderRadius: '999px', cursor: 'pointer', transition: 'all 0.3s ease',
+                  backgroundColor: !rsvpData.isAttending ? '#1F2A44' : 'transparent',
+                  color: !rsvpData.isAttending ? '#FFFFFF' : '#1C1C1C',
+                  border: `1px solid ${!rsvpData.isAttending ? '#1F2A44' : '#3A3A3A'}`,
+                }}
+              >
+                Regretfully Declines
+              </button>
+            </div>
+          </div>
+
+          {/* Message */}
+          <div>
+            <label
+              htmlFor="message"
+              style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.18em', color: '#1C1C1C', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}
+            >
+              Message for the Couple (optional)
+            </label>
+            <textarea
+              id="message"
+              value={rsvpData.message}
+              onChange={(e) => setRsvpData({ ...rsvpData, message: e.target.value })}
+              placeholder="Write us a few words..."
+              style={{
+                width: '100%', backgroundColor: 'transparent', border: 'none', borderBottom: '1px solid #C8A96A',
+                outline: 'none', fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.95rem', color: '#3A3A3A',
+                padding: '8px 0', minHeight: '80px', resize: 'none',
+              }}
+            />
+          </div>
+
+          {rsvpError && (
+            <p style={{ fontFamily: 'Montserrat, sans-serif', fontSize: '0.85rem', color: '#c0392b' }}>{rsvpError}</p>
+          )}
+
+          {/* Submit */}
+          <button
+            type="submit"
+            disabled={isSubmittingRsvp}
+            style={{
+              width: '100%', backgroundColor: '#1F2A44', color: '#FFFFFF', fontFamily: 'Montserrat, sans-serif', fontWeight: 500,
+              fontSize: '0.78rem', letterSpacing: '0.2em', textTransform: 'uppercase', padding: '16px 24px', borderRadius: '999px',
+              border: 'none', cursor: isSubmittingRsvp ? 'not-allowed' : 'pointer', opacity: isSubmittingRsvp ? 0.6 : 1, transition: 'all 0.3s ease',
+            }}
+          >
+            {isSubmittingRsvp ? 'Submitting...' : 'Submit RSVP'}
+          </button>
+
+          {/* Decorative stem */}
+          <div className="flex justify-center mt-6">
+            <svg width="200" height="30" viewBox="0 0 200 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 15 C14 8 20 8 18 15 C16 20 12 18 14 15" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
+              <path d="M17 14 C35 14 55 14 95 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
+              <rect x="97" y="12" width="4" height="4" rx="0.3" transform="rotate(45 99 14)" fill="#C8A96A"/>
+              <path d="M103 14 C140 14 160 14 183 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
+              <path d="M183 14 C185 8 192 9 190 15 C188 20 184 19 186 14" stroke="#C8A96A" strokeWidth="1" fill="none" strokeLinecap="round"/>
+            </svg>
+          </div>
+
+        </form>
+      </div>
+    </FadeIn>
+  </div>
+</section>
+
+{/* Toast notification — top right corner */}
+{showToast && (
+  <div
+    style={{
+      position: 'fixed',
+      top: '24px',
+      right: '24px',
+      zIndex: 9999,
+      backgroundColor: 'rgba(253, 251, 248, 0.97)',
+      border: '1px solid rgba(200, 169, 106, 0.4)',
+      borderRadius: '12px',
+      padding: '16px 24px',
+      boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
+      maxWidth: '320px',
+      animation: 'slideIn 0.4s ease forwards',
+    }}
+  >
+    <style>{`
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateX(20px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+    `}</style>
+    <p style={{ fontFamily: 'Ephesis, cursive', fontWeight: 400, fontSize: '1.4rem', color: '#1C1C1C', marginBottom: '4px' }}>
+      Thank You!
+    </p>
+    <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.85rem', color: '#3A3A3A', lineHeight: 1.5 }}>
+      {toastAttending
+        ? "Your RSVP has been received. We look forward to celebrating with you!"
+        : "Thank you for letting us know. We'll miss you on our special day!"}
+    </p>
+  </div>
+)}
         <Footer />
       </div>
     </div>
