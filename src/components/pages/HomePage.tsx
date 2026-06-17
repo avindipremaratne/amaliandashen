@@ -278,7 +278,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4 flex flex-col items-center">
             <FadeIn className="text-center mb-12">
               <h2 className="text-6xl md:text-8xl mb-8" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400, color: '#1C1C1C' }}>
-                Counting !
+                Counting Down to Forever!
               </h2>
               <div className="flex justify-center items-center gap-2 md:gap-12">
                 {[
