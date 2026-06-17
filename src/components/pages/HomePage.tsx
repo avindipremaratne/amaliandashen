@@ -890,7 +890,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
          {/* Decorative stem image */}
 <div className="flex justify-center mt-6">
   <Image
-    src="https://static.wixstatic.com/media/b5e630_13edd328b21044d3bee3032d5d2d58ba~mv2.png"
+    src="https://static.wixstatic.com/media/b5e630_e17db2bd3b5947b5b7436d2000a22d10~mv2.png"
     alt="Decorative flourish"
     width={100}
     height={30}
