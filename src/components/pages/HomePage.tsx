@@ -697,7 +697,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
           </div>
         </section>
          {/* 6. RSVP SECTION */}
-<section id="rsvp" className="scroll-mt-24 py-24 relative border-t" style={{ borderColor: '#C8A96A33' }}>
+<section id="rsvp" className="scroll-mt-24 py-12 md:py-16 relative border-t" style={{ borderColor: '#C8A96A33' }}>
   <div className="container mx-auto px-4 max-w-2xl">
 
     <FadeIn className="text-center mb-10">
