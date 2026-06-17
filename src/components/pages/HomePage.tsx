@@ -581,7 +581,7 @@ export default function HomePage() {
                     { color: '#B9C3AE', name: 'Sage' },
                     { color: '#6D3B07', name: 'Mocha' },
                     { color: '#B7B2AC', name: 'Stone Grey' },
-                    { color: '#8A7465', name: 'Soft Cocoa' },
+                    { color: '#987b71', name: 'Soft Cocoa' },
                   ].map((swatch) => (
                     <div key={swatch.name} className="flex flex-col items-center gap-2">
                       <div
