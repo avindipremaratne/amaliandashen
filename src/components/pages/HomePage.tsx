@@ -133,7 +133,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
     // <div className="min-h-screen font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden">
     <div
   className="min-h-screen font-paragraph text-stone-800 selection:bg-primary/20 selection:text-primary overflow-x-hidden"
-  style={{ maxWidth: '100vw' }}
+  style={{ width: '100%', maxWidth: '100vw', position: 'relative' }}
 >
 
       {/* Background image — iOS Safari fix */}
