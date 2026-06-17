@@ -14,7 +14,7 @@ export default function Header() {
     { label: 'Venue', id: 'venue' },
     { label: 'Attire', id: 'attire' },
     { label: 'Gallery', id: 'gallery' },
-     { label: 'RSVP', id: 'rsvp' },
+    { label: 'RSVP', id: 'rsvp' },
   ];
 
   // Intersection Observer — detects which section is in view while scrolling
