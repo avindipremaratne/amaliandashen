@@ -308,7 +308,7 @@ export default function HomePage() {
                       style={{
                         fontFamily: 'Montserrat, sans-serif',
                         fontSize: '0.58rem',
-                        fontWeight: 500,
+                        fontWeight: 600,
                         letterSpacing: '0.3em',
                         textTransform: 'uppercase',
                         color: '#C8A96A',
