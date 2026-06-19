@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Tagline */}
           <p className="font-paragraph text-sm uppercase tracking-widest" style={{ color: '#3A3A3A' }}>
-            The
+            The Beginging of Always
           </p>
 
           {/* Date */}
