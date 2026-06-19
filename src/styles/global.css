@@ -48,3 +48,6 @@ html {
     animation-delay: 1.8s;
     clip-path: inset(0 100% 0 0);
   }
+html, body {
+  overscroll-behavior: none;
+}
