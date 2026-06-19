@@ -1,5 +1,4 @@
-import { Image } from '@/components/ui/image';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
 interface EnvelopeIntroProps {
@@ -9,7 +8,7 @@ interface EnvelopeIntroProps {
 export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   const [stage, setStage] = useState<'idle' | 'opening' | 'done'>('idle');
 
-  const handleSealClick = () => {
+  const handleClick = () => {
     if (stage !== 'idle') return;
     setStage('opening');
     setTimeout(() => {
@@ -25,118 +24,90 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.2, ease: 'easeInOut' }}
+          onClick={handleClick}
           style={{
             position: 'fixed',
             inset: 0,
             zIndex: 9999,
-            overflow: 'hidden',
             cursor: stage === 'idle' ? 'pointer' : 'default',
+            overflow: 'hidden',
+            backgroundColor: '#F5ECD7',
           }}
-          onClick={handleSealClick}
         >
-          {/* ── FULL SCREEN ENVELOPE BACKGROUND ── */}
-          {/* Envelope body — fills entire screen */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundColor: '#EDE0C8',
-          }} />
+          {/* Full screen envelope image */}
+          <motion.div
+            animate={stage === 'opening' ? { scale: 1.05 } : { scale: 1 }}
+            transition={{ duration: 1.5, ease: 'easeInOut' }}
+            style={{
+              position: 'absolute',
+              inset: 0,
+              backgroundImage: `url('https://static.wixstatic.com/media/b5e630_b29827d240634a15a20542039e5e7992~mv2.png')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
 
-          {/* Envelope diagonal fold lines from corners to center */}
-          {/* Bottom left diagonal */}
-          <div style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            width: 0,
-            height: 0,
-            borderStyle: 'solid',
-            borderWidth: '50vh 0 0 50vw',
-            borderColor: `transparent transparent transparent rgba(200,169,106,0.15)`,
-          }} />
-          {/* Bottom right diagonal */}
-          <div style={{
-            position: 'absolute',
-            bottom: 0,
-            right: 0,
-            width: 0,
-            height: 0,
-            borderStyle: 'solid',
-            borderWidth: '50vh 50vw 0 0',
-            borderColor: `transparent rgba(200,169,106,0.15) transparent transparent`,
-          }} />
-          {/* Bottom center V */}
-          <div style={{
-            position: 'absolute',
-            bottom: 0,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: 0,
-            height: 0,
-            borderStyle: 'solid',
-            borderWidth: `0 50vw 50vh 50vw`,
-            borderColor: `transparent transparent rgba(200,169,106,0.08) transparent`,
-          }} />
-
-          {/* ── ENVELOPE FLAP — top triangle, full screen width ── */}
+          {/* Flap overlay — animates opening upward */}
           <div style={{
             position: 'absolute',
             top: 0,
             left: 0,
             width: '100%',
             perspective: '1200px',
-            transformStyle: 'preserve-3d',
             zIndex: 10,
+            pointerEvents: 'none',
           }}>
             <motion.div
               initial={{ rotateX: 0 }}
               animate={stage === 'opening' ? { rotateX: -180 } : { rotateX: 0 }}
-              transition={{ duration: 1.4, ease: [0.4, 0, 0.2, 1] }}
+              transition={{ duration: 1.4, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
               style={{
-                width: '100%',
                 transformOrigin: 'top center',
                 transformStyle: 'preserve-3d',
               }}
             >
-              {/* Flap triangle — slightly lighter champagne */}
+              {/* Flap shape matching the envelope */}
               <div style={{
                 width: 0,
                 height: 0,
                 borderStyle: 'solid',
-                borderWidth: `0 50vw 50vh 50vw`,
-                borderColor: `transparent transparent #F5ECD7 transparent`,
-                filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.08))',
+                borderWidth: `0 50vw 45vh 50vw`,
+                borderColor: `transparent transparent #EDE8DC transparent`,
               }} />
             </motion.div>
           </div>
 
-          {/* ── CARD sliding up ── */}
+          {/* Card sliding up after flap opens */}
           <motion.div
-            initial={{ y: '60vh', opacity: 0 }}
-            animate={stage === 'opening' ? { y: '-10vh', opacity: 1 } : { y: '60vh', opacity: 0 }}
-            transition={{ delay: 1.0, duration: 1.2, ease: 'easeOut' }}
+            initial={{ y: '100vh', opacity: 0 }}
+            animate={stage === 'opening' ? { y: '-5vh', opacity: 1 } : { y: '100vh', opacity: 0 }}
+            transition={{ delay: 1.2, duration: 1.2, ease: 'easeOut' }}
             style={{
               position: 'absolute',
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
               zIndex: 20,
-              width: '320px',
+              width: 'min(400px, 85vw)',
               backgroundColor: '#FFFDF9',
               border: '1px solid rgba(200,169,106,0.3)',
-              boxShadow: '0 8px 48px rgba(0,0,0,0.12)',
+              boxShadow: '0 12px 60px rgba(0,0,0,0.15)',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              padding: '40px 32px',
-              gap: '12px',
+              padding: '48px 40px',
+              gap: '16px',
             }}
           >
-            <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
+            {/* Top gold line */}
+            <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
+
+            {/* You are invited */}
             <p style={{
               fontFamily: 'Ephesis, cursive',
-              fontSize: '2.2rem',
+              fontSize: 'clamp(2rem, 5vw, 3rem)',
               color: '#1C1C1C',
               margin: 0,
               lineHeight: 1.2,
@@ -144,54 +115,83 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             }}>
               You are invited
             </p>
-            <div style={{ width: '40px', height: '1px', backgroundColor: '#C8A96A' }} />
+
+            {/* Diamond separator */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
+              <svg width="6" height="6" viewBox="0 0 10 10" fill="none">
+                <rect x="5" y="0.5" width="6.36" height="6.36" rx="0.5" transform="rotate(45 5 0.5)" fill="#C8A96A"/>
+              </svg>
+              <div style={{ width: '30px', height: '1px', backgroundColor: '#C8A96A' }} />
+            </div>
+
+            {/* Names */}
+            <p style={{
+              fontFamily: 'Montserrat, sans-serif',
+              fontSize: '0.72rem',
+              fontWeight: 400,
+              letterSpacing: '0.2em',
+              color: '#C8A96A',
+              textTransform: 'uppercase',
+              margin: 0,
+            }}>
+              Amali & Ashen
+            </p>
+
+            {/* Bottom gold line */}
+            <div style={{ width: '60px', height: '1px', backgroundColor: '#C8A96A' }} />
           </motion.div>
 
-          {/* ── WAX SEAL — centered on flap join ── */}
+          {/* Wax seal fades out when opening */}
           <motion.div
-            animate={stage === 'opening' ? { opacity: 0, scale: 0.7 } : { opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4 }}
+            animate={stage === 'opening' ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
             style={{
               position: 'absolute',
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              zIndex: 30,
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              backgroundColor: '#C8A96A',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 4px 24px rgba(200,169,106,0.6), inset 0 1px 4px rgba(255,255,255,0.3)',
-              cursor: 'pointer',
+              zIndex: 15,
+              pointerEvents: 'none',
             }}
           >
-            {/* Outer ring detail */}
-            <div style={{
-              position: 'absolute',
-              inset: '6px',
-              borderRadius: '50%',
-              border: '1px solid rgba(255,255,255,0.4)',
-            }} />
-            <Image
-              src="https://static.wixstatic.com/media/b5e630_3c43452be4184c6c8a4adc35c634aa03~mv2.png"
-              alt="A&A Monogram"
-              width={64}
-              height={64}
-              style={{ filter: 'brightness(0) invert(1)' }}
-            />
+            {/* Pulse ring animation on seal */}
+            {stage === 'idle' && (
+              <motion.div
+                animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0, 0.4] }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  width: '120px',
+                  height: '120px',
+                  borderRadius: '50%',
+                  border: '2px solid #C8A96A',
+                }}
+              />
+            )}
           </motion.div>
 
-          {/* ── TAP HINT ── */}
+          {/* Gold sparkle corners */}
+          <div style={{
+            position: 'absolute', top: '32px', left: '32px',
+            color: '#C8A96A', fontSize: '1rem', letterSpacing: '8px', zIndex: 30
+          }}>✦ ✦</div>
+          <div style={{
+            position: 'absolute', top: '32px', right: '32px',
+            color: '#C8A96A', fontSize: '1rem', letterSpacing: '8px', zIndex: 30
+          }}>✦ ✦</div>
+
+          {/* Tap hint */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: stage === 'idle' ? 1 : 0 }}
             transition={{ delay: 1.5, duration: 0.8 }}
             style={{
               position: 'absolute',
-              bottom: '48px',
+              bottom: '40px',
               left: '50%',
               transform: 'translateX(-50%)',
               fontFamily: 'Montserrat, sans-serif',
@@ -206,10 +206,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
           >
             Tap to open
           </motion.p>
-
-          {/* Gold sparkle corners */}
-          <div style={{ position: 'absolute', top: '32px', left: '32px', color: '#C8A96A', fontSize: '1rem', letterSpacing: '8px', zIndex: 30 }}>✦ ✦</div>
-          <div style={{ position: 'absolute', top: '32px', right: '32px', color: '#C8A96A', fontSize: '1rem', letterSpacing: '8px', zIndex: 30 }}>✦ ✦</div>
 
         </motion.div>
       )}
