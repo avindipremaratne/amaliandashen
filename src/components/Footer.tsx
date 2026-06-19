@@ -36,6 +36,20 @@ export default function Footer() {
 
           {/* Gold divider bottom */}
           <div className="w-16 h-px mt-4" style={{ backgroundColor: '#C8A96A' }} />
+          {/* Website credit — subtle */}
+<p
+  style={{
+    fontFamily: 'Montserrat, sans-serif',
+    fontWeight: 300,
+    fontSize: '0.65rem',
+    letterSpacing: '0.08em',
+    color: '#3A3A3A',
+    opacity: 0.5,
+    lineHeight: 1.8,
+  }}
+>
+  Website by <span style={{ fontWeight: 400 }}>Your Name</span> · <a href="mailto:your@email.com" style={{ color: '#3A3A3A', textDecoration: 'none' }}>your@email.com</a> · <a href="tel:+1234567890" style={{ color: '#3A3A3A', textDecoration: 'none' }}>+1 234 567 890</a>
+</p>
         </div>
       </div>
     </footer>
