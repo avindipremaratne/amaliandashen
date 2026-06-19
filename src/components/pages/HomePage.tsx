@@ -885,7 +885,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
               placeholder="Write us a few words..."
               style={{
                 width: '100%', backgroundColor: 'transparent', border: 'none', borderBottom: '1px solid #C8A96A',
-                outline: 'none', fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.95rem', color: '#3A3A3A',
+                outline: 'none', fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '16px', color: '#3A3A3A',
                 padding: '8px 0', minHeight: '80px', resize: 'none',
               }}
             />
