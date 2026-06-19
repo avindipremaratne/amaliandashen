@@ -48,7 +48,7 @@ export default function Footer() {
     lineHeight: 1.8,
   }}
 >
-  Website by <span style={{ fontWeight: 400 }}>Your Name</span> · <a href="mailto:your@email.com" style={{ color: '#3A3A3A', textDecoration: 'none' }}>your@email.com</a> · <a href="tel:+1234567890" style={{ color: '#3A3A3A', textDecoration: 'none' }}>+1 234 567 890</a>
+  Website by <span style={{ fontWeight: 400 }}>Avindi Premaratne</span> · <a href="mailto:avindibuthmini@gmail.com" style={{ color: '#3A3A3A', textDecoration: 'none' }}>your@email.com</a> · <a href="tel:+1234567890" style={{ color: '#3A3A3A', textDecoration: 'none' }}>+1 234 567 890</a>
 </p>
         </div>
       </div>
