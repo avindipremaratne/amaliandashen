@@ -713,17 +713,27 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
           </div>
         </section>
         <style>{`
+  input, textarea {
+    -webkit-text-fill-color: #3A3A3A !important;
+  }
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  input:autofill,
   textarea:-webkit-autofill,
   textarea:-webkit-autofill:hover,
-  textarea:-webkit-autofill:focus {
+  textarea:-webkit-autofill:focus,
+  textarea:-webkit-autofill:active {
     -webkit-text-fill-color: #3A3A3A !important;
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-    transition: background-color 5000s ease-in-out 0s;
+    caret-color: #3A3A3A !important;
+    background-color: transparent !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    transition: background-color 0s ease-in-out 99999s !important;
   }
 `}</style>
+
          {/* 6. RSVP SECTION */}
 <section id="rsvp" className="scroll-mt-24 py-12 md:py-16 relative border-t" style={{ borderColor: '#C8A96A33' }}>
   <div className="container mx-auto px-4 max-w-2xl">
