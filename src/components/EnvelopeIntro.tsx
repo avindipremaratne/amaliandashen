@@ -1,5 +1,5 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useRef } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useRef, useState } from 'react';
 
 interface EnvelopeIntroProps {
   onComplete: () => void;
@@ -37,17 +37,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             cursor: playing ? 'default' : 'pointer',
           }}
         >
-          {/* Envelope still image shown before tap */}
-          {!playing && (
-            <div style={{
-              position: 'absolute',
-              inset: 0,
-              backgroundImage: `url('https://static.wixstatic.com/media/b5e630_b29827d240634a15a20542039e5e7992~mv2.png')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }} />
-          )}
-
           {/* Video */}
           <video
             ref={videoRef}
@@ -58,7 +47,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              opacity: playing ? 1 : 0,
             }}
           >
             <source
@@ -75,17 +63,15 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
               transition={{ delay: 1, duration: 0.8 }}
               style={{
                 position: 'absolute',
-                bottom: '40px',
-                left: '50%',
-                transform: 'translateX(-50%)',
+                inset: 0,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                gap: '8px',
+                justifyContent: 'flex-end',
+                paddingBottom: '40px',
                 zIndex: 10,
               }}
             >
-              {/* Pulsing circle */}
               <motion.div
                 animate={{ scale: [1, 1.2, 1], opacity: [0.6, 0.2, 0.6] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
@@ -94,6 +80,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
                   height: '48px',
                   borderRadius: '50%',
                   border: '1.5px solid #C8A96A',
+                  marginBottom: '8px',
                 }}
               />
               <p style={{
