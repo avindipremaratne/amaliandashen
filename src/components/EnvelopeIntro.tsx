@@ -16,7 +16,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
     setIsMobile(window.innerWidth < 768);
   }, []);
 
-  const desktopVideo = 'https://video.wixstatic.com/video/b5e630_429dcaff869a4b9ab6cf13b865baee51/1080p/mp4/file.mp4';
+  const desktopVideo = 'https://video.wixstatic.com/video/b5e630_060e92b416ae4ef8bdcc302ad3e7661e/1080p/mp4/file.mp4';
   const mobileVideo = 'YOUR_MOBILE_VIDEO_URL_HERE';
 
   const handleTap = () => {
