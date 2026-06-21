@@ -50,7 +50,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             }}
           >
             <source
-              src="https://video.wixstatic.com/video/b5e630_429dcaff869a4b9ab6cf13b865baee51/1080p/mp4/file.mp4"
+              src="https://video.wixstatic.com/video/b5e630_54ba2a20c78241b68e04d027bc258282/1080p/mp4/file.mp4"
               type="video/mp4"
             />
           </video>
