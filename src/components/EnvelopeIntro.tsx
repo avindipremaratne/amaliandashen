@@ -95,8 +95,8 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   {/* Tablet video — hidden on mobile and desktop */}
 <style>{`
   .envelope-video-tab {
-    height: 100% !important;
-    width: 100% !important;
+    height: -webkit-fill-available !important;
+    width: -webkit-fill-available !important;
     max-width: unset !important;
   }
 `}</style>
