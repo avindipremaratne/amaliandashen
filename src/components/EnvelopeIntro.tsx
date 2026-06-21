@@ -48,7 +48,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             onEnded={handleEnded}
             style={{
               position: 'absolute',
-              top: '50%',
+              top: '30%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
               //minWidth: '100%',
