@@ -53,7 +53,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
           {/* Desktop video — hidden on mobile */}
 <video
   ref={!isMobile && !isTablet ? videoRef : undefined}
-  muted
   playsInline
   onEnded={handleEnded}
   style={{
@@ -75,7 +74,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
 {/* Mobile video — hidden on desktop */}
 <video
   ref={isMobile ? videoRef : undefined}
-  muted
   playsInline
   onEnded={handleEnded}
   style={{
@@ -97,7 +95,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   {/* Tablet video — hidden on mobile and desktop */}
           <video
             ref={isTablet ? videoRef : undefined}
-            muted
             playsInline
             onEnded={handleEnded}
             style={{
