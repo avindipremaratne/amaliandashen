@@ -15,6 +15,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   // Detect mobile on mount
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
+    setIsTablet(width >= 768 && width < 1024);
   }, []);
 
   const desktopVideo = 'https://video.wixstatic.com/video/b5e630_060e92b416ae4ef8bdcc302ad3e7661e/1080p/mp4/file.mp4';
