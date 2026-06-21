@@ -51,3 +51,12 @@ html {
 html, body {
   overscroll-behavior: none;
 }
+.envelope-video {
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .envelope-video {
+    object-fit: contain;
+  }
+}
