@@ -294,9 +294,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             playsInline
             onEnded={handleEnded}
             className="envelope-video envelope-video-cover desktop-video"
-            style={{
-              objectPosition: 'center',
-            }}
+            style={{ objectPosition: 'center center' }}
           >
             <source src={desktopVideo} type="video/mp4" />
           </video>
@@ -306,11 +304,8 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             ref={isTablet ? videoRef : undefined}
             playsInline
             onEnded={handleEnded}
-            className="envelope-video envelope-video-cover"
-            style={{
-              objectPosition: 'center',
-              display: isTablet ? 'block' : 'none',
-            }}
+            className="envelope-video envelope-video-cover tablet-video"
+  style={{ objectPosition: 'center center' }}
           >
             <source src={tabletVideo} type="video/mp4" />
           </video>
