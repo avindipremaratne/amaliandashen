@@ -238,12 +238,13 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
               object-fit: contain !important;
             }
             .envelope-video-mobile {
-    object-fit: contain !important;
-    max-height: 100vh !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
+   object-fit: cover !important;
+  object-position: center bottom !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100vh !important;
   }
           `}</style>
 
