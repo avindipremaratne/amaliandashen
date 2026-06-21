@@ -9,6 +9,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   const [done, setDone] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsMobile] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Detect mobile on mount
