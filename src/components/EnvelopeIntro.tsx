@@ -91,6 +91,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   />
 </video>
 
+
           {/* Tap hint */}
           {!playing && (
             <motion.div
