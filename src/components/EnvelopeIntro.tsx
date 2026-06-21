@@ -50,7 +50,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
               position: 'fixed',
               top: '50%',
               left: '50%',
-              transform: 'translate(-50%, -50%)',
+              transform: 'translate(-40%, -40%)',
               //minWidth: '100%',
               //minHeight: '100%',
               width: 'auto',
