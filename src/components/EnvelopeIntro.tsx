@@ -100,8 +100,8 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             style={{
               position: 'absolute',
               inset: 0,
-              width: 'auto',
-              height: 'auto',
+              width: 'autofill',
+              height: 'autofill',
               objectFit: 'contain',
               objectPosition: 'center',
               display: isTablet ? 'block' : 'none',
