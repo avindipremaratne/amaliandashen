@@ -93,12 +93,18 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   />
 </video>
   {/* Tablet video — hidden on mobile and desktop */}
-
+<style>{`
+  .envelope-video-tab {
+    height: 100% !important;
+    width: 100% !important;
+    max-width: unset !important;
+  }
+`}</style>
           <video
             ref={isTablet ? videoRef : undefined}
             playsInline
             onEnded={handleEnded}
-            className='envelope-video-tablet'
+            className='envelope-video-tab'
             style={{
               position: 'absolute',
               inset: 0,
