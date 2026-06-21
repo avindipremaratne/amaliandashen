@@ -101,7 +101,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
               position: 'absolute',
               inset: 0,
               width: 'autofill',
-              height: 'autofill',
+              height: 'stretch !important',
               objectFit: 'cover',
               objectPosition: 'center',
               display: isTablet ? 'block' : 'none',
