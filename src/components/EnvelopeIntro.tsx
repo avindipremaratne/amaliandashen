@@ -315,11 +315,8 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             ref={isMobile ? videoRef : undefined}
             playsInline
             onEnded={handleEnded}
-            className="envelope-video envelope-video-mobile"
-            style={{
-              objectPosition: 'center',
-              display: isMobile ? 'block' : 'none',
-            }}
+            className="envelope-video envelope-video-mobile mobile-video"
+  style={{ objectPosition: 'center 60%' }}
           >
             <source src={mobileVideo} type="video/mp4" />
           </video>
