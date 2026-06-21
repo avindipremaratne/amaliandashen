@@ -47,7 +47,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             playsInline
             onEnded={handleEnded}
             style={{
-              position: 'absolute',
+              position: 'fixed',
               top: '30%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
@@ -55,7 +55,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
               //minHeight: '100%',
               width: 'auto',
               height: 'auto',
-              objectFit: 'cover',
+              objectFit: 'fill',
             }}
           >
             <source
