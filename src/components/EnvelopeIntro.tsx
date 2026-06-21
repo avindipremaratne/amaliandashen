@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useRef } from 'react';
 
 interface EnvelopeIntroProps {
   onComplete: () => void;
@@ -35,27 +35,36 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             zIndex: 9999,
             backgroundColor: '#F5ECD7',
             cursor: playing ? 'default' : 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
-          {/* Video */}
+          {/* Video — centered */}
           <video
             ref={videoRef}
             muted
             playsInline
             onEnded={handleEnded}
             style={{
-              width: '100%',
-              height: '100%',
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              minWidth: '100%',
+              minHeight: '100%',
+              width: 'auto',
+              height: 'auto',
               objectFit: 'cover',
             }}
           >
             <source
-              src="https://video.wixstatic.com/video/b5e630_54ba2a20c78241b68e04d027bc258282/1080p/mp4/file.mp4"
+              src="https://video.wixstatic.com/video/b5e630_429dcaff869a4b9ab6cf13b865baee51/1080p/mp4/file.mp4"
               type="video/mp4"
             />
           </video>
 
-          {/* Tap hint — only shows before playing */}
+          {/* Tap hint — centered at bottom, white color for visibility */}
           {!playing && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -63,44 +72,41 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
               transition={{ delay: 1, duration: 0.8 }}
               style={{
                 position: 'absolute',
-                inset: 0,
+                bottom: '48px',
+                left: '0',
+                right: '0',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                justifyContent: 'flex-end',
-                paddingBottom: '40px',
+                gap: '10px',
                 zIndex: 10,
               }}
             >
               <motion.div
-                animate={{ scale: [1, 1.2, 1], opacity: [0.6, 0.2, 0.6] }}
+                animate={{ scale: [1, 1.2, 1], opacity: [0.8, 0.3, 0.8] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 style={{
                   width: '48px',
                   height: '48px',
                   borderRadius: '50%',
                   border: '1.5px solid #C8A96A',
-                  marginBottom: '8px',
                 }}
               />
               <p style={{
                 fontFamily: 'Montserrat, sans-serif',
-                fontSize: '0.65rem',
-                fontWeight: 300,
-                letterSpacing: '0.25em',
+                fontSize: '0.72rem',
+                fontWeight: 400,
+                letterSpacing: '0.3em',
                 textTransform: 'uppercase',
                 color: '#C8A96A',
                 whiteSpace: 'nowrap',
                 margin: 0,
+                textShadow: '0 1px 4px rgba(255,255,255,0.8)',
               }}>
-                Tap to open
+                Tap to Open
               </p>
             </motion.div>
           )}
-
-          {/* Gold sparkle corners */}
-          <div style={{ position: 'absolute', top: '32px', left: '32px', color: '#C8A96A', fontSize: '1rem', letterSpacing: '8px', zIndex: 10 }}>✦ ✦</div>
-          <div style={{ position: 'absolute', top: '32px', right: '32px', color: '#C8A96A', fontSize: '1rem', letterSpacing: '8px', zIndex: 10 }}>✦ ✦</div>
 
         </motion.div>
       )}
