@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface EnvelopeIntroProps {
   onComplete: () => void;
@@ -8,7 +8,16 @@ interface EnvelopeIntroProps {
 export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   const [done, setDone] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Detect mobile on mount
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
+  const desktopVideo = 'https://video.wixstatic.com/video/b5e630_429dcaff869a4b9ab6cf13b865baee51/1080p/mp4/file.mp4';
+  const mobileVideo = 'YOUR_MOBILE_VIDEO_URL_HERE';
 
   const handleTap = () => {
     if (playing) return;
@@ -35,34 +44,29 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             zIndex: 9999,
             backgroundColor: '#F5ECD7',
             cursor: playing ? 'default' : 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
           }}
         >
-          {/* Video — centered */}
           <video
             ref={videoRef}
             muted
             playsInline
             onEnded={handleEnded}
             style={{
-              position: 'fixed',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: 'auto',
-              height: 'auto',
-              objectFit: 'fill',
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+              backgroundColor: '#F5ECD7',
             }}
           >
             <source
-              src="https://video.wixstatic.com/video/b5e630_54ba2a20c78241b68e04d027bc258282/1080p/mp4/file.mp4"
+              src={isMobile ? mobileVideo : desktopVideo}
               type="video/mp4"
             />
           </video>
 
-          {/* Tap hint — centered at bottom, white color for visibility */}
+          {/* Tap hint */}
           {!playing && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -70,7 +74,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
               transition={{ delay: 1, duration: 0.8 }}
               style={{
                 position: 'absolute',
-                bottom: '48px',
+                bottom: '60px',
                 left: '0',
                 right: '0',
                 display: 'flex',
@@ -84,28 +88,29 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
                 animate={{ scale: [1, 1.2, 1], opacity: [0.8, 0.3, 0.8] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 style={{
-                  width: '48px',
-                  height: '48px',
+                  width: '44px',
+                  height: '44px',
                   borderRadius: '50%',
-                  border: '1.5px solid #C8A96A',
+                  border: '1px solid rgba(200,169,106,0.8)',
                 }}
               />
               <p style={{
                 fontFamily: 'Montserrat, sans-serif',
                 fontSize: '0.72rem',
-                fontWeight: 400,
+                fontWeight: 500,
                 letterSpacing: '0.3em',
                 textTransform: 'uppercase',
-                color: '#C8A96A',
+                color: '#1C1C1C',
                 whiteSpace: 'nowrap',
                 margin: 0,
-                textShadow: '0 1px 4px rgba(255,255,255,0.8)',
+                backgroundColor: 'rgba(247,243,238,0.7)',
+                padding: '6px 16px',
+                borderRadius: '999px',
               }}>
                 Tap to Open
               </p>
             </motion.div>
           )}
-
         </motion.div>
       )}
     </AnimatePresence>
