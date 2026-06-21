@@ -75,6 +75,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   onEnded={handleEnded}
   style={{
     position: 'absolute',
+    inset: 0,
     width: 'autofill',
     height: 'autofill',
     top:'-40%',
