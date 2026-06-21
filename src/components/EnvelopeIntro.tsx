@@ -98,6 +98,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             ref={isTablet ? videoRef : undefined}
             playsInline
             onEnded={handleEnded}
+            class
             style={{
               position: 'absolute',
               inset: 0,
