@@ -90,7 +90,24 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
     type="video/mp4"
   />
 </video>
-
+  {/* Tablet video — hidden on mobile and desktop */}
+          <video
+            ref={isTablet ? videoRef : undefined}
+            muted
+            playsInline
+            onEnded={handleEnded}
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: 'auto',
+              height: 'auto',
+              objectFit: 'contain',
+              objectPosition: 'center',
+              display: isTablet ? 'block' : 'none',
+            }}
+          >
+            <source src={tabletVideo} type="video/mp4" />
+          </video>
 
           {/* Tap hint */}
           {!playing && (
