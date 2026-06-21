@@ -17,7 +17,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   }, []);
 
   const desktopVideo = 'https://video.wixstatic.com/video/b5e630_060e92b416ae4ef8bdcc302ad3e7661e/1080p/mp4/file.mp4';
-  const mobileVideo = 'https://video.wixstatic.com/video/b5e630_23db7c8b5b6b4f6283ae84d0c2c92577/1080p/mp4/file.mp4';
+  const mobileVideo = 'https://video.wixstatic.com/video/b5e630_0e92cca087694d7eb79d0074b7027b7c/720p/mp4/file.mp4';
 
   const handleTap = () => {
     if (playing) return;
