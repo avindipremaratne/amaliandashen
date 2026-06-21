@@ -59,4 +59,11 @@ html, body {
   .envelope-video-mobile {
     object-fit: contain !important;
   }
+
+  .envelope-video-tablet {
+    height: 100% !important;
+    width: 100% !important;
+    max-width: unset !important;
+  }
+
 }
