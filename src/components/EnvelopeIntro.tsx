@@ -48,7 +48,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
         >
           {/* Desktop video — hidden on mobile */}
 <video
-  ref={!isMobile ? videoRef : undefined}
+  ref={!isMobile && !isTablet ? videoRef : undefined}
   muted
   playsInline
   onEnded={handleEnded}
