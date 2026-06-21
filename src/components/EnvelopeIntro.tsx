@@ -13,11 +13,19 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
 
   // Detect mobile on mount
   useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
+    const width = window.innerWidth;
+    if (width < 768) {
+      setDeviceType('mobile');
+    } else if (width >= 768 && width < 1024) {
+      setDeviceType('tablet');
+    } else {
+      setDeviceType('desktop');
+    }
   }, []);
 
   const desktopVideo = 'https://video.wixstatic.com/video/b5e630_060e92b416ae4ef8bdcc302ad3e7661e/1080p/mp4/file.mp4';
   const mobileVideo = 'https://video.wixstatic.com/video/b5e630_0e92cca087694d7eb79d0074b7027b7c/720p/mp4/file.mp4';
+  const tabletVideo = 'https://video.wixstatic.com/video/b5e630_060e92b416ae4ef8bdcc302ad3e7661e/1080p/mp4/file.mp4';
 
   const handleTap = () => {
     if (playing) return;
