@@ -1,5 +1,5 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useRef } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useRef, useState } from 'react';
 
 interface EnvelopeIntroProps {
   onComplete: () => void;
@@ -55,7 +55,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
               minHeight: '100%',
               width: 'auto',
               height: 'auto',
-              objectFit: 'cover',
+              objectFit: 'contain',
             }}
           >
             <source
