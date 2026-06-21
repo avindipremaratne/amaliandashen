@@ -55,8 +55,8 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   style={{
     position: 'absolute',
     inset: 0,
-    width: '100%',
-    height: '100%',
+    width: 'auto',
+    height: 'auto',
     left: '10%',
     objectFit: 'cover',
     display: isMobile ? 'none' : 'block',
