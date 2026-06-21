@@ -46,23 +46,48 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             cursor: playing ? 'default' : 'pointer',
           }}
         >
-          <video
-            ref={videoRef}
-            muted
-            playsInline
-            onEnded={handleEnded}
-            style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-            }}
-          >
-            <source
-              src={isMobile ? mobileVideo : desktopVideo}
-              type="video/mp4"
-            />
-          </video>
+          {/* Desktop video — hidden on mobile */}
+<video
+  ref={!isMobile ? videoRef : undefined}
+  muted
+  playsInline
+  onEnded={handleEnded}
+  style={{
+    position: 'absolute',
+    inset: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    backgroundColor: '#F5ECD7',
+    display: isMobile ? 'none' : 'block',
+  }}
+>
+  <source
+    src={desktopVideo}
+    type="video/mp4"
+  />
+</video>
+
+{/* Mobile video — hidden on desktop */}
+<video
+  ref={isMobile ? videoRef : undefined}
+  muted
+  playsInline
+  onEnded={handleEnded}
+  style={{
+    position: 'absolute',
+    inset: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain',
+    display: isMobile ? 'block' : 'none',
+  }}
+>
+  <source
+    src={mobileVideo}
+    type="video/mp4"
+  />
+</video>
 
           {/* Tap hint */}
           {!playing && (
