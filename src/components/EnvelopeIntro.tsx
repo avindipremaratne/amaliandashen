@@ -237,6 +237,14 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             .envelope-video-contain {
               object-fit: contain !important;
             }
+            .envelope-video-mobile {
+    object-fit: contain !important;
+    max-height: 100vh !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
           `}</style>
 
           {/* Desktop video */}
