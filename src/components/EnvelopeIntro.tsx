@@ -296,7 +296,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             className="envelope-video envelope-video-cover"
             style={{
               objectPosition: 'center',
-              display: !isMobile && !isTablet ? 'block' : 'none',
             }}
           >
             <source src={desktopVideo} type="video/mp4" />
