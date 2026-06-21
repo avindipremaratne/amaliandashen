@@ -78,8 +78,9 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
     inset: 0,
     width: 'autofill',
     height: 'autofill',
-    top:'-40%',
-    objectFit: 'center',
+    //top:'-40%',
+    objectFit: 'contain',
+    objectPosition: 'center',
     display: isMobile ? 'block' : 'none',
   }}
 >
