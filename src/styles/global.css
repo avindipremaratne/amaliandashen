@@ -56,7 +56,7 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  .envelope-video {
+  .envelope-video-mobile {
     object-fit: contain;
   }
 }
