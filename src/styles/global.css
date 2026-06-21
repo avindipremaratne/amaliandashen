@@ -52,11 +52,11 @@ html, body {
   overscroll-behavior: none;
 }
 .envelope-video {
-  object-fit: cover;
+  object-fit: cover !important;
 }
 
 @media (max-width: 768px) {
   .envelope-video-mobile {
-    object-fit: contain;
+    object-fit: contain !important;
   }
 }
