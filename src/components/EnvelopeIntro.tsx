@@ -220,7 +220,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
           }}
         >
           {/* Global style override for all envelope videos */}
-          <style>{`
+          {/* <style>{`
             .envelope-video {
               position: absolute !important;
               top: 0 !important;
@@ -246,7 +246,47 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   height: 100% !important;
   max-height: 100vh !important;
   }
-          `}</style>
+          `}</style> */}
+
+          <style>{`
+  .envelope-video {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: unset !important;
+  }
+  .envelope-video-cover {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+  .envelope-video-mobile {
+    object-fit: cover !important;
+    object-position: center 60% !important;
+  }
+
+  /* Desktop — show desktop, hide others */
+  .desktop-video { display: block !important; }
+  .tablet-video  { display: none !important; }
+  .mobile-video  { display: none !important; }
+
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .desktop-video { display: none !important; }
+    .tablet-video  { display: block !important; }
+    .mobile-video  { display: none !important; }
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .desktop-video { display: none !important; }
+    .tablet-video  { display: none !important; }
+    .mobile-video  { display: block !important; }
+  }
+`}</style>
 
           {/* Desktop video */}
           <video
