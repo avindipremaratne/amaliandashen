@@ -58,7 +58,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
-    backgroundColor: '#F5ECD7',
     display: isMobile ? 'none' : 'block',
   }}
 >
