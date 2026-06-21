@@ -293,7 +293,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             ref={!isMobile && !isTablet ? videoRef : undefined}
             playsInline
             onEnded={handleEnded}
-            className="envelope-video envelope-video-cover"
+            className="envelope-video envelope-video-cover desktop-video"
             style={{
               objectPosition: 'center',
             }}
