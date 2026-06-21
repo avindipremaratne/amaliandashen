@@ -239,7 +239,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             }
             .envelope-video-mobile {
    object-fit: cover !important;
-  object-position: center bottom !important;
+  object-position: center 60% !important;
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
