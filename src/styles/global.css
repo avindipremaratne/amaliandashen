@@ -20,33 +20,35 @@ html {
     from { clip-path: inset(0 100% 0 0); }
     to { clip-path: inset(0 0% 0 0); }
   }
-  .wipe-text-1 {
-    animation: wipe 1.2s ease forwards;
-    animation-delay: 0.3s;
-    clip-path: inset(0 100% 0 0);
-  }
-  .wipe-text-2 {
-    animation: wipe 1s ease forwards;
-    animation-delay: 1.8s;
-    clip-path: inset(0 100% 0 0);
-  }
-@keyframes wipe {
-    from { clip-path: inset(0 100% 0 0); }
-    to { clip-path: inset(0 0% 0 0); }
-  }
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  /* Hero reveal animations — paused until the envelope intro closes,
+     so they don't burn through their delay/duration while hidden behind it. */
   .wipe-text-1 {
     animation: wipe 1.2s ease forwards;
     animation-delay: 0.3s;
+    animation-play-state: paused;
     clip-path: inset(0 100% 0 0);
   }
   .wipe-text-2 {
     animation: wipe 1s ease forwards;
     animation-delay: 1.8s;
+    animation-play-state: paused;
     clip-path: inset(0 100% 0 0);
+  }
+  .hero-fadeup {
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 2.8s;
+    animation-play-state: paused;
+  }
+  body.intro-done .wipe-text-1,
+  body.intro-done .wipe-text-2,
+  body.intro-done .hero-fadeup {
+    animation-play-state: running;
   }
 html, body {
   overscroll-behavior: none;
