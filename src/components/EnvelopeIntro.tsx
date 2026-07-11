@@ -308,7 +308,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
     .tap-hint {
       top: 70% !important;
       bottom: auto !important;
-      left: 60% !important;
+      left: 45% !important;
       right: auto !important;
       transform: translate(-50%, -50%) !important;
     }
