@@ -303,6 +303,15 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
     .desktop-video { display: none !important; }
     .tablet-video  { display: none !important; }
     .mobile-video  { display: block !important; }
+
+    /* Center "Tap to Open" on the wax seal instead of near the bottom edge */
+    .tap-hint {
+      top: 50% !important;
+      bottom: auto !important;
+      left: 50% !important;
+      right: auto !important;
+      transform: translate(-50%, -50%) !important;
+    }
   }
 `}</style>
 
@@ -351,6 +360,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
           {/* Tap hint */}
           {!playing && (
             <motion.div
+              className="tap-hint"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.8 }}
