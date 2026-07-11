@@ -174,7 +174,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent" />
           </div>
 
-          <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl pt-16 md:pt-0">
+          <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl pt-6 md:pt-0">
 
             {/* "Where We Become Us" & "We're getting married" */}
 
