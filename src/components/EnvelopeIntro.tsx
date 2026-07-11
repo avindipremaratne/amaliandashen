@@ -306,7 +306,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
 
     /* Center "Tap to Open" on the wax seal instead of near the bottom edge */
     .tap-hint {
-      top: 50% !important;
+      top: 40% !important;
       bottom: auto !important;
       left: 50% !important;
       right: auto !important;
