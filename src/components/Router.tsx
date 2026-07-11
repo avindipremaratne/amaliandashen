@@ -129,10 +129,15 @@ const router = createBrowserRouter([
 export default function AppRouter() {
   const [showIntro, setShowIntro] = useState(true);
 
+  const handleIntroComplete = () => {
+    setShowIntro(false);
+    document.body.classList.add('intro-done');
+  };
+
   return (
     <MemberProvider>
       {showIntro && (
-        <EnvelopeIntro onComplete={() => setShowIntro(false)} />
+        <EnvelopeIntro onComplete={handleIntroComplete} />
       )}
       <RouterProvider router={router} />
     </MemberProvider>
