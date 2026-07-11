@@ -249,7 +249,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.4, ease: 'easeInOut' }}
+          transition={{ duration: 0.6, ease: 'easeInOut' }}
           onClick={handleTap}
           style={{
             position: 'fixed',
