@@ -240,7 +240,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
 
   const handleEnded = () => {
     setDone(true);
-    setTimeout(onComplete, 700);
+    setTimeout(onComplete, 800);
   };
 
   return (
