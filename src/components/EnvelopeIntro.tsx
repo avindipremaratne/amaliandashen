@@ -329,7 +329,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
               transition={{ delay: 1, duration: 0.8 }}
               style={{
                 position: 'absolute',
-                bottom: '60px',
+                bottom: '80px',
                 left: '0',
                 right: '0',
                 display: 'flex',
