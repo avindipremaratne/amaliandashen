@@ -166,7 +166,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
         <section id="home" className="scroll-mt-24 relative h-screen max-h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://static.wixstatic.com/media/b5e630_4c158fe70f094a0698a34b7c67105676~mv2.jpg"
+              src="https://static.wixstatic.com/media/b5e630_5146772074b643ac90882b1e50aba8d2~mv2.jpeg"
               alt="Amali and Ashen"
               className="w-full h-full object-cover"
   style={{ objectPosition: '50% 30%' }}
