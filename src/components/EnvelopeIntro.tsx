@@ -188,6 +188,24 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
     setIsTablet(width >= 768 && width < 1024);
   }, []);
 
+  // Lock page scroll while the envelope is showing. HomePage is mounted
+  // underneath us and is scrollable — even a tiny drag while tapping the
+  // seal counts as a scroll gesture, which makes Safari collapse its
+  // address bar / bottom toolbar. That grows the visual viewport height,
+  // and since this overlay is position:fixed + 100% height, it stretches
+  // into the new space, making the poster/video appear to shift and zoom.
+  // Locking scroll here prevents that gesture from ever firing.
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    const previousTouchAction = document.body.style.touchAction;
+    document.body.style.overflow = 'hidden';
+    document.body.style.touchAction = 'none';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.body.style.touchAction = previousTouchAction;
+    };
+  }, []);
+
   const desktopVideo = 'https://video.wixstatic.com/video/b5e630_060e92b416ae4ef8bdcc302ad3e7661e/1080p/mp4/file.mp4';
   const mobileVideo = 'https://video.wixstatic.com/video/b5e630_0e92cca087694d7eb79d0074b7027b7c/720p/mp4/file.mp4';
   const tabletVideo = 'https://video.wixstatic.com/video/b5e630_060e92b416ae4ef8bdcc302ad3e7661e/1080p/mp4/file.mp4';
