@@ -163,7 +163,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
         <Header />
 
         {/* 1. HERO SECTION */}
-        <section id="home" className="scroll-mt-24 relative h-screen max-h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden">
+        <section id="home" className="scroll-mt-24 relative h-screen max-h-screen min-h-[700px] w-full flex flex-col items-center justify-start pt-16 md:pt-32 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="https://static.wixstatic.com/media/b5e630_5146772074b643ac90882b1e50aba8d2~mv2.jpeg"
