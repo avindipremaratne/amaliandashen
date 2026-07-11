@@ -209,7 +209,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
   const desktopVideo = 'https://video.wixstatic.com/video/b5e630_060e92b416ae4ef8bdcc302ad3e7661e/1080p/mp4/file.mp4';
   const mobileVideo = 'https://video.wixstatic.com/video/b5e630_0e92cca087694d7eb79d0074b7027b7c/720p/mp4/file.mp4';
   const tabletVideo = 'https://video.wixstatic.com/video/b5e630_060e92b416ae4ef8bdcc302ad3e7661e/1080p/mp4/file.mp4';
-  const envelopeImage = 'https://static.wixstatic.com/media/b5e630_b29827d240634a15a20542039e5e7992~mv2.png';
 
   const handleTap = () => {
     if (playing) return;
@@ -313,7 +312,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             playsInline
             muted
             preload="auto"
-            poster={envelopeImage}
+            onLoadedMetadata={(e) => { e.currentTarget.currentTime = 0.01; }}
             onEnded={handleEnded}
             className="envelope-video envelope-video-cover desktop-video"
             style={{ objectPosition: 'center center' }}
@@ -327,7 +326,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             playsInline
             muted
             preload="auto"
-            poster={envelopeImage}
+            onLoadedMetadata={(e) => { e.currentTarget.currentTime = 0.01; }}
             onEnded={handleEnded}
             className="envelope-video envelope-video-cover tablet-video"
   style={{ objectPosition: 'center center' }}
@@ -341,7 +340,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
             playsInline
             muted
             preload="auto"
-            poster={envelopeImage}
+            onLoadedMetadata={(e) => { e.currentTarget.currentTime = 0.01; }}
             onEnded={handleEnded}
             className="envelope-video envelope-video-mobile mobile-video"
   style={{ objectPosition: 'center 60%' }}
