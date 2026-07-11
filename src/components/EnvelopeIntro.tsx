@@ -330,7 +330,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
               style={{
                 position: 'absolute',
                 bottom: '100px',
-                left: '10',
+                left: '20',
                 right: '0',
                 display: 'flex',
                 flexDirection: 'column',
