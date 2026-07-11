@@ -190,13 +190,10 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
 
             {/* "Amali & Ashen" */}
             <h1
-  className="text-6xl md:text-7xl lg:text-[100px] text-white mb-4 leading-tight font-normal"
+  className="text-6xl md:text-7xl lg:text-[100px] text-white mb-4 leading-tight font-normal hero-fadeup"
   style={{
     fontFamily: "Ephesis, cursive",
     fontWeight: 400,
-    opacity: 0,
-    animation: 'fadeUp 1s ease forwards',
-    animationDelay: '2.8s',
   }}
 >
               Amali &amp; Ashen
