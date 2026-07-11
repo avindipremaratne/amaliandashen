@@ -341,7 +341,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
           <video
             ref={!isMobile && !isTablet ? videoRef : undefined}
             playsInline
-            muted
             preload="auto"
             onLoadedMetadata={(e) => { e.currentTarget.currentTime = 0.01; }}
             onEnded={handleEnded}
@@ -355,7 +354,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
           <video
             ref={isTablet ? videoRef : undefined}
             playsInline
-            muted
             preload="auto"
             onLoadedMetadata={(e) => { e.currentTarget.currentTime = 0.01; }}
             onEnded={handleEnded}
@@ -369,7 +367,6 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
           <video
             ref={isMobile ? videoRef : undefined}
             playsInline
-            muted
             preload="auto"
             onLoadedMetadata={(e) => { e.currentTarget.currentTime = 0.01; }}
             onEnded={handleEnded}
