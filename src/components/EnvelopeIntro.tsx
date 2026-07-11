@@ -188,6 +188,28 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
     setIsTablet(width >= 768 && width < 1024);
   }, []);
 
+  // Force the active video to actually fetch and decode its first frame.
+  // A passive `preload="auto"` attribute is only a hint — Safari can and
+  // does ignore it under Low Data Mode / cellular data-saving settings,
+  // leaving nothing rendered until the user taps. Calling .play() (even
+  // muted, even if we immediately .pause() it) is a much stronger signal
+  // that reliably forces the fetch/decode in those cases. Falls back
+  // silently to the onLoadedMetadata seek trick if the browser still
+  // blocks it.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.load();
+    video.play()
+      .then(() => {
+        video.pause();
+        video.currentTime = 0.01;
+      })
+      .catch(() => {
+        // Autoplay blocked outright — onLoadedMetadata's seek is the fallback.
+      });
+  }, [isMobile, isTablet]);
+
   // Lock page scroll while the envelope is showing. HomePage is mounted
   // underneath us and is scrollable — even a tiny drag while tapping the
   // seal counts as a scroll gesture, which makes Safari collapse its
@@ -306,7 +328,7 @@ export default function EnvelopeIntro({ onComplete }: EnvelopeIntroProps) {
 
     /* Center "Tap to Open" on the wax seal instead of near the bottom edge */
     .tap-hint {
-      top: 70% !important;
+      top: 50% !important;
       bottom: auto !important;
       left: 50% !important;
       right: auto !important;
