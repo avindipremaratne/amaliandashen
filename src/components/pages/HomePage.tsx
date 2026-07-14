@@ -171,8 +171,8 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
               className="w-full h-full object-cover"
   style={{ objectPosition: '50% 30%' }}
             />
-            {/* <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent" />
-          </div> */}
+            {/* <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent" /> */}
+          </div>
 
           <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl pt-10 md:pt-0">
 
