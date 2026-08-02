@@ -489,7 +489,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
                 </div>
                 <button
                   //onClick={() => window.open('https://maps.app.goo.gl/Ao3U7iQWuD7CCyQQ8', '_blank')}
-                  onClick={() => window.open('https://maps.app.goo.gl/Ao3U7iQWuD7CCyQQ8', '_blank', 'noopener,noreferrer')}
+                  onClick={() => window.open('https://www.google.com/maps/place/St.+Thomas+Aquinas+%26+Canadian+Martyrs+Church/@44.6414593,-63.5982412,17z/data=!4m6!3m5!1s0x4b5a2227c11922ad:0xc4fd0eb63325b849!8m2!3d44.6414593!4d-63.5982412!16s%2Fg%2F1tj525h4', '_blank', 'noopener,noreferrer')}
                   style={{
                     width: '100%',
                     backgroundColor: '#1F2A44',
