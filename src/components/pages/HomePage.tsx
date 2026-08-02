@@ -488,7 +488,8 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
                   </div>
                 </div>
                 <button
-                  onClick={() => window.open('https://maps.app.goo.gl/Ao3U7iQWuD7CCyQQ8', '_blank')}
+                  //onClick={() => window.open('https://maps.app.goo.gl/Ao3U7iQWuD7CCyQQ8', '_blank')}
+                  onClick={() => window.open('https://maps.app.goo.gl/Ao3U7iQWuD7CCyQQ8', '_blank', 'noopener,noreferrer')}
                   style={{
                     width: '100%',
                     backgroundColor: '#1F2A44',
