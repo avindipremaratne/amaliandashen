@@ -780,7 +780,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
             Kindly Reply By
           </p>
           <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '1.0rem', letterSpacing: '0.22em', color: '#C8A96A' }}>
-            27 . 07 . 2026
+            20 . 08 . 2026
           </p>
         </div>
 
