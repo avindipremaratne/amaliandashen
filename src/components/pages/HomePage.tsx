@@ -662,75 +662,46 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
           </div>
         </section>
         {/* 6. GALLERY SECTION */}
-        <section id="gallery" className="scroll-mt-24 py-24 border-t" style={{ borderColor: '#C8A96A33' }}>
-          <div className="container mx-auto px-4">
-            <FadeIn className="text-center mb-16">
-              <h2 className="text-6xl md:text-8xl mb-4" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400, color: '#1C1C1C' }}>
-                Our Journey Together
-              </h2>
-              <div className="w-16 h-px mx-auto mt-2 mb-6" style={{ backgroundColor: '#C8A96A' }} />
-              <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.88rem', letterSpacing: '0.08em', color: '#3A3A3A', lineHeight: 1.8 }}>
-                Before forever, there was this — our story in moments.
-              </p>
-            </FadeIn>
+<section id="gallery" className="scroll-mt-24 py-24 border-t" style={{ borderColor: '#C8A96A33' }}>
+  <div className="container mx-auto px-4">
+    <FadeIn className="text-center mb-16">
+      <h2 className="text-6xl md:text-8xl mb-4" style={{ fontFamily: "Ephesis, cursive", fontWeight: 400, color: '#1C1C1C' }}>
+        Our Journey Together
+      </h2>
+      <div className="w-16 h-px mx-auto mt-2 mb-6" style={{ backgroundColor: '#C8A96A' }} />
+      <p style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300, fontSize: '0.88rem', letterSpacing: '0.08em', color: '#3A3A3A', lineHeight: 1.8 }}>
+        Before forever, there was this — our story in moments.
+      </p>
+    </FadeIn>
 
-            <div className="min-h-[400px] relative max-w-5xl mx-auto">
-              {isLoadingPhotos ? (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Loader2 className="w-8 h-8 animate-spin" style={{ color: '#C8A96A' }} />
-                </div>
-              ) : photos.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-4 md:auto-rows-[250px]">
-  {photos.map((photo, index) => {
-    let spanClasses = "md:col-span-1 md:row-span-1";
-    if (index === 0) spanClasses = "md:col-span-2 md:row-span-2";
-    if (index === 1) spanClasses = "md:col-span-1 md:row-span-1";
-    if (index === 2) spanClasses = "md:col-span-1 md:row-span-1";
-    if (index === 3) spanClasses = "md:col-span-2 md:row-span-1";
-    if (index === 4) spanClasses = "md:col-span-2 md:row-span-1";
-    return (
-      <FadeIn
-        key={photo._id || index}
-        delay={index * 0.1}
-        className={`relative overflow-hidden group w-full aspect-[4/5] md:aspect-auto ${spanClasses}`}
-      >
-                        <Image
-                          src={photo.photo || 'https://static.wixstatic.com/media/b5e630_50292974e6234a2a9755f1575991a807~mv2.png?originWidth=192&originHeight=192'}
-                          alt={photo.caption || 'Journey moment'}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                      </FadeIn>
-                    );
-                  })}
-                </div>
-              ) : (
-                <div className="text-center py-12" style={{ color: '#3A3A3A' }}>Gallery coming soon.</div>
-              )}
-            </div>
-          </div>
-        </section>
-        <style>{`
-  input, textarea {
-    -webkit-text-fill-color: #3A3A3A !important;
-  }
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active,
-  input:autofill,
-  textarea:-webkit-autofill,
-  textarea:-webkit-autofill:hover,
-  textarea:-webkit-autofill:focus,
-  textarea:-webkit-autofill:active {
-    -webkit-text-fill-color: #3A3A3A !important;
-    caret-color: #3A3A3A !important;
-    background-color: transparent !important;
-    box-shadow: 0 0 0 1000px transparent inset !important;
-    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
-    transition: background-color 0s ease-in-out 99999s !important;
-  }
-`}</style>
+    <div className="relative max-w-5xl mx-auto">
+      {isLoadingPhotos ? (
+        <div className="min-h-[400px] flex items-center justify-center">
+          <Loader2 className="w-8 h-8 animate-spin" style={{ color: '#C8A96A' }} />
+        </div>
+      ) : photos.length > 0 ? (
+        <div className="columns-2 md:columns-3 gap-4">
+          {photos.map((photo, index) => (
+            <FadeIn
+              key={photo._id || index}
+              delay={index * 0.1}
+              className="mb-4 break-inside-avoid relative overflow-hidden group rounded-lg"
+            >
+              <Image
+                src={photo.photo || 'https://static.wixstatic.com/media/b5e630_50292974e6234a2a9755f1575991a807~mv2.png?originWidth=192&originHeight=192'}
+                alt={photo.caption || 'Journey moment'}
+                className="w-full h-auto block rounded-lg transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg" />
+            </FadeIn>
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-12" style={{ color: '#3A3A3A' }}>Gallery coming soon.</div>
+      )}
+    </div>
+  </div>
+</section>
 
          {/* 6. RSVP SECTION */}
 <section id="rsvp" className="scroll-mt-24 py-12 md:py-16 relative border-t" style={{ borderColor: '#C8A96A33' }}>
