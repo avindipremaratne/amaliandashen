@@ -1620,23 +1620,23 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
             </FadeIn>
 
             <div className="relative max-w-5xl mx-auto">
-              <div className="columns-2 md:columns-3 gap-4">
-                {GALLERY_PHOTOS.map((src, index) => (
-                  <FadeIn
-                    key={src}
-                    delay={index * 0.1}
-                    className="mb-4 break-inside-avoid relative overflow-hidden group rounded-lg"
-                  >
-                    <Image
-                      src={src}
-                      alt="Journey moment"
-                      className="w-full h-auto block rounded-lg transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg" />
-                  </FadeIn>
-                ))}
-              </div>
-            </div>
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 items-start">
+    {GALLERY_PHOTOS.map((src, index) => (
+      <FadeIn
+        key={src}
+        delay={index * 0.1}
+        className="relative overflow-hidden group rounded-lg"
+      >
+        <Image
+          src={src}
+          alt="Journey moment"
+          className="w-full h-auto block rounded-lg transition-transform duration-700 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg" />
+      </FadeIn>
+    ))}
+  </div>
+</div>
           </div>
         </section>
         <style>{`
