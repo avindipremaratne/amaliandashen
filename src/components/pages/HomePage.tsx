@@ -80,25 +80,33 @@ export default function HomePage() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    const fetchPhotos = async () => {
-  try {
-    const result = await BaseCrudService.getAll<GuestPhotos>('guestphotos', {}, { limit: 5 });
-    // Manual display order requested: photo 3 → position 2, photo 5 → position 3,
-    // photo 4 stays, photo 2 moves to the last spot. Maps to source indices [0,2,4,3,1].
-    const order = [0, 2, 4, 3, 1];
-    const reordered = order
-      .map((i) => result.items[i])
-      .filter(Boolean);
-    setPhotos(reordered);
-  } catch (error) {
-    console.error('Error fetching photos:', error);
-  } finally {
-    setIsLoadingPhotos(false);
-  }
-};
-    fetchPhotos();
-  }, []);
+ useEffect(() => {
+  const fetchPhotos = async () => {
+    try {
+      const result = await BaseCrudService.getAll<GuestPhotos>('guestphotos', {}, { limit: 5 });
+      // The query has no explicit sort, so the database doesn't guarantee
+      // the same item order on every request — sort by a stable field
+      // first so the base order is identical on every device/load.
+      const stable = [...result.items].sort((a, b) => {
+        const dateA = a._createdDate ? new Date(a._createdDate).getTime() : 0;
+        const dateB = b._createdDate ? new Date(b._createdDate).getTime() : 0;
+        return dateA - dateB;
+      });
+      // Manual display order requested: photo 3 → position 2, photo 5 → position 3,
+      // photo 4 stays, photo 2 moves to the last spot. Maps to indices [0,2,4,3,1].
+      const order = [0, 2, 4, 3, 1];
+      const reordered = order
+        .map((i) => stable[i])
+        .filter(Boolean);
+      setPhotos(reordered);
+    } catch (error) {
+      console.error('Error fetching photos:', error);
+    } finally {
+      setIsLoadingPhotos(false);
+    }
+  };
+  fetchPhotos();
+}, []);
 const [rsvpData, setRsvpData] = useState({
   guestName: '',
   emailAddress: '',
