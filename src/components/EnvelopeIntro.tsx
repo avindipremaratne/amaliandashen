@@ -273,7 +273,7 @@ export default function EnvelopeIntro({ onComplete, onCue }: EnvelopeIntroProps)
   const [isTablet, setIsTablet] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const cueFiredRef = useRef(false);
-  const CUE_TIME_SECONDS = 8; // moment "You're Invited" appears in the video
+  const CUE_TIME_SECONDS = 7; // moment "You're Invited" appears in the video
 
   const handleTimeUpdate = (e: React.SyntheticEvent<HTMLVideoElement>) => {
     if (!cueFiredRef.current && e.currentTarget.currentTime >= CUE_TIME_SECONDS) {
