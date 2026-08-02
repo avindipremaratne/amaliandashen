@@ -482,7 +482,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
                       <path d="M12 7v5l3 3"/>
                     </svg>
                     <p className="font-paragraph uppercase text-[0.58rem] md:text-[0.62rem] tracking-[0.15em] font-semibold" style={{ color: '#1C1C1C' }}>Time</p>
-                    <p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A' }}>3:00 PM AST (4:00 PM EST)</p>
+                    <p className="font-paragraph text-[0.68rem] md:text-[0.75rem]" style={{ color: '#3A3A3A' }}>3:00 PM AST </p> 
                   </div>
                   <div className="flex flex-col items-center gap-2">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A96A" strokeWidth="1.5" strokeLinecap="round">
