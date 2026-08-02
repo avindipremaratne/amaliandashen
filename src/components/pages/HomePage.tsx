@@ -687,6 +687,7 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
                     if (index === 1) spanClasses = "col-span-1 row-span-1";
                     if (index === 2) spanClasses = "col-span-1 row-span-1";
                     if (index === 3) spanClasses = "col-span-2 row-span-1";
+                    if (index === 4) spanClasses = "col-span-2 row-span-1";
                     return (
                       <FadeIn
                         key={photo._id || index}
