@@ -680,20 +680,20 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
                   <Loader2 className="w-8 h-8 animate-spin" style={{ color: '#C8A96A' }} />
                 </div>
               ) : photos.length > 0 ? (
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 auto-rows-[150px] md:auto-rows-[250px]">
-                  {photos.map((photo, index) => {
-                    let spanClasses = "col-span-1 row-span-1";
-                    if (index === 0) spanClasses = "col-span-2 row-span-2";
-                    if (index === 1) spanClasses = "col-span-1 row-span-1";
-                    if (index === 2) spanClasses = "col-span-1 row-span-1";
-                    if (index === 3) spanClasses = "col-span-2 row-span-1";
-                    if (index === 4) spanClasses = "col-span-2 row-span-1";
-                    return (
-                      <FadeIn
-                        key={photo._id || index}
-                        delay={index * 0.1}
-                        className={`relative overflow-hidden group ${spanClasses}`}
-                      >
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-4 md:auto-rows-[250px]">
+  {photos.map((photo, index) => {
+    let spanClasses = "md:col-span-1 md:row-span-1";
+    if (index === 0) spanClasses = "md:col-span-2 md:row-span-2";
+    if (index === 1) spanClasses = "md:col-span-1 md:row-span-1";
+    if (index === 2) spanClasses = "md:col-span-1 md:row-span-1";
+    if (index === 3) spanClasses = "md:col-span-2 md:row-span-1";
+    if (index === 4) spanClasses = "md:col-span-2 md:row-span-1";
+    return (
+      <FadeIn
+        key={photo._id || index}
+        delay={index * 0.1}
+        className={`relative overflow-hidden group w-full aspect-[4/5] md:aspect-auto ${spanClasses}`}
+      >
                         <Image
                           src={photo.photo || 'https://static.wixstatic.com/media/b5e630_50292974e6234a2a9755f1575991a807~mv2.png?originWidth=192&originHeight=192'}
                           alt={photo.caption || 'Journey moment'}
