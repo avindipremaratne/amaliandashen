@@ -88,10 +88,10 @@ export default function HomePage() {
       // the same item order on every request — sort by a stable field
       // first so the base order is identical on every device/load.
       const stable = [...result.items].sort((a, b) => {
-        const dateA = a._createdDate ? new Date(a._createdDate).getTime() : 0;
-        const dateB = b._createdDate ? new Date(b._createdDate).getTime() : 0;
-        return dateA - dateB;
-      });
+  const dateA = a._createdDate ? new Date(a._createdDate).getTime() : 0;
+  const dateB = b._createdDate ? new Date(b._createdDate).getTime() : 0;
+  return dateB - dateA; // flipped: newest first instead of oldest first
+});
       // Manual display order requested: photo 3 → position 2, photo 5 → position 3,
       // photo 4 stays, photo 2 moves to the last spot. Maps to indices [0,2,4,3,1].
       const order = [0, 2, 4, 3, 1];
