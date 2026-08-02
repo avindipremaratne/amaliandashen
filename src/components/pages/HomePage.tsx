@@ -82,15 +82,21 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchPhotos = async () => {
-      try {
-        const result = await BaseCrudService.getAll<GuestPhotos>('guestphotos', {}, { limit: 5 });
-        setPhotos(result.items);
-      } catch (error) {
-        console.error('Error fetching photos:', error);
-      } finally {
-        setIsLoadingPhotos(false);
-      }
-    };
+  try {
+    const result = await BaseCrudService.getAll<GuestPhotos>('guestphotos', {}, { limit: 5 });
+    // Manual display order requested: photo 3 → position 2, photo 5 → position 3,
+    // photo 4 stays, photo 2 moves to the last spot. Maps to source indices [0,2,4,3,1].
+    const order = [0, 2, 4, 3, 1];
+    const reordered = order
+      .map((i) => result.items[i])
+      .filter(Boolean);
+    setPhotos(reordered);
+  } catch (error) {
+    console.error('Error fetching photos:', error);
+  } finally {
+    setIsLoadingPhotos(false);
+  }
+};
     fetchPhotos();
   }, []);
 const [rsvpData, setRsvpData] = useState({
