@@ -966,8 +966,8 @@ const GALLERY_PHOTOS = [
   'https://static.wixstatic.com/media/b5e630_80c27a2802be428a8b3a404cdab5c878~mv2.jpg', // Pic 1
   'https://static.wixstatic.com/media/b5e630_f2ab7a1bc0644fc19d3c1d8837feb462~mv2.jpg', // Pic 3
   'https://static.wixstatic.com/media/b5e630_74ddea6e0f1f4ec28d1135fccb7eb9d6~mv2.jpg', // Pic 5
-  'https://static.wixstatic.com/media/b5e630_1c156a7d317148a89a42dabb06c4df9e~mv2.jpg', // Pic 4
   'https://static.wixstatic.com/media/b5e630_46a0f3cec01a47a99162a0a6cb6fc0ab~mv2.jpg', // Pic 2
+  'https://static.wixstatic.com/media/b5e630_1c156a7d317148a89a42dabb06c4df9e~mv2.jpg', // Pic 4
 ];
 
 const FadeIn = ({
@@ -1892,4 +1892,3 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
     </div>
   );
 }
-
