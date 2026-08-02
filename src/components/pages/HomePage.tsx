@@ -1625,7 +1625,8 @@ const handleRsvpSubmit = async (e: React.FormEvent) => {
       <FadeIn
         key={src}
         delay={index * 0.1}
-        className="relative overflow-hidden group rounded-lg"
+        //className="relative overflow-hidden group rounded-lg"
+        className={`relative overflow-hidden group rounded-lg ${index === 4 ? 'col-span-2' : ''}`}
       >
         <Image
           src={src}
